@@ -1,134 +1,112 @@
-# Softel Solution - Chat Agent Operating System
+# Softel Solutions - Anti-Gravity Master Operating System
 > **AirTalk Wireless & TAG Mobile (US Lifeline / ACP Ecosystem)**  
-> *Hệ thống phím tắt thông minh, tư duy 3 Vùng (Red - Yellow - Green), tra cứu nghiệp vụ siêu tốc và cẩm nang phòng thủ điểm QA.*
+> *Representative: Martin | Triết lý: Zero Fatal Errors | Cognitive Relief | Instant Empathy | Dynamic Forms*
 
 ---
 
-## 📌 1. TỔNG QUAN HỆ THỐNG
+## 📌 1. TỔNG QUAN HỆ THỐNG "ANTI-GRAVITY"
 
-Kho lưu trữ này được xây dựng nhằm giải phóng hoàn toàn đôi bàn tay cho **CSR Chat Agent** tại Softel Solution, giải quyết triệt để áp lực xử lý đồng thời 3–5 ca chat trên LiveChat và CRM Portal giữa "biển chính sách" (hơn 70 SOPs & Policies).
+Hệ thống Master **"Anti-Gravity" (Triệt Tiêu Trọng Lực Vận Hành)** được thiết kế nhằm loại bỏ hoàn toàn ma sát tâm lý, quá tải nhận thức và các lỗi chí mạng (Fatal QA Errors) cho đội ngũ CSR Chat Agent tại Softel Solutions.
 
-### Cốt Lõi: Mindset Xử Lý 3 Vùng (The 3-Zone Framework)
-Toàn bộ phản hồi gửi tới khách hàng Mỹ được cấu trúc thành 3 mảnh ghép Lego:
-1. **Vùng Đỏ (Red Zone - Empathy):** Ghi nhận cảm xúc, đồng cảm sâu sắc với sự cố của khách, hạ nhiệt bức xúc *(Tuyệt đối không giải thích điều khoản tại vùng này)*.
-2. **Vùng Vàng (Yellow Zone - Policy & Limits):** Nêu rõ nguyên nhân, giới hạn kỹ thuật và quy định pháp lý/công ty ngắn gọn *(Hệ thống LÀM ĐƯỢC gì và KHÔNG LÀM ĐƯỢC gì)*.
-3. **Vùng Xanh (Green Zone - Solution & Commitment):** Đưa ra các bước hành động cụ thể, hướng dẫn thao tác kèm mốc thời gian cam kết rõ ràng (SLA/TAT).
-
-$$\text{Tin Nhắn Chuẩn QA} = \mathbf{Red}\ (\text{Đồng cảm}) + \mathbf{Yellow}\ (\text{Quy định}) + \mathbf{Green}\ (\text{Giải pháp/Hẹn giờ})$$
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                          TRIẾT LÝ VẬN HÀNH "ANTI-GRAVITY"                               │
+├─────────────────────────────────────────────────────────────────────────────────────────┤
+│ 1. Zero Fatal Errors    │ Đóng gói 100% quy định FCC/USAC/SLA vào mẫu tin nhắn chuẩn.  │
+│ 2. Cognitive Relief     │ Chuyển thao tác gõ thủ công sang gõ tắt linh hoạt 3-Zone Lego.│
+│ 3. Instant Empathy      │ Tự động hóa lời xoa dịu [RED Zone] trong mọi tình huống.     │
+│ 4. Dynamic Variable     │ Điền tự động biến [[ticket_id]], [[port_out_pin]], [[reason]]. │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## 📂 2. CẤU TRÚC THƯ MỤC
+## 📂 2. CẤU TRÚC THƯ MỤC HỆ THỐNG
 
 ```
 e:\softel\
-├── .gitignore                      # Loại trừ file PDF/DOCX dung lượng lớn
-├── README.md                       # Tài liệu hướng dẫn sử dụng & vận hành
-├── unikey_macro.txt                # File gõ tắt tương thích 100% Unikey / EVKey
+├── .gitignore                          # Loại trừ file PDF/DOCX nội bộ, chỉ quản lý code & docs
+├── README.md                           # Tài liệu tổng quan & hướng dẫn vận hành
+├── unikey_macro.txt                    # Bảng 168 phím tắt tương thích 100% Unikey / EVKey
 │
-├── cheatsheet/                     # Cẩm nang cất cánh cho Agent
-│   ├── MASTER_POLICY_MATRIX.md     # Ma trận 7 phân hệ chính sách cốt lõi & SLA
-│   ├── RAPID_LOOKUP_CTRL_F.md      # Quy trình 3 bước xử lý case lạ & từ khóa Ctrl+F
-│   ├── QA_SURVIVAL_PLAYBOOK.md     # Checklist phòng ngừa lỗi chí mạng (Fatal Errors)
-│   └── CONCURRENCY_WORKFLOW.md     # Chiến thuật băng chuyền xử lý 3-5 chat cùng lúc
+├── cheatsheet/                         # Cẩm nang tác chiến cho CSR
+│   ├── MASTER_POLICY_MATRIX.md         # Ma trận SLA chuẩn hóa 8 trụ cột (Đã sửa sai lệch)
+│   ├── SOFTEL_INTERNAL_SOP_DEEP_DIVE.md# Phân tích chuyên sâu 10 phân hệ từ 57 tài liệu nội bộ
+│   ├── QA_SURVIVAL_PLAYBOOK.md         # Chiến lược phòng thủ 100 điểm QA & Anti-Evasion
+│   ├── RAPID_LOOKUP_CTRL_F.md          # Cẩm nang tra cứu 3 bước siêu tốc
+│   └── CONCURRENCY_WORKFLOW.md         # Băng chuyền 3 giai đoạn xử lý 3-5 chat cùng lúc
 │
-├── espanso/                        # Kho cấu hình Snippet cho Espanso (YAML)
+├── espanso/                            # Kho cấu hình Snippet cho Espanso (YAML)
 │   ├── config/
-│   │   └── default.yml             # Cấu hình clipboard và phím tắt
+│   │   └── default.yml                 # Cấu hình Clipboard và shortcut
 │   └── match/
-│       ├── base_system.yml         # Chào hỏi, Hold 1-2p, Cảnh báo thô tục, Chốt ca
-│       ├── verification_cpni.yml   # Xác thực Full Name, DOB, SSN4, ID Proof
-│       ├── red_empathy.yml         # Kho Lego Vùng Đỏ (Đồng cảm theo từng loại sự cố)
-│       ├── yellow_policy.yml       # Kho Lego Vùng Vàng (Chính sách, mốc 4d, 7d, 15d, 45d)
-│       ├── green_solution.yml      # Kho Lego Vùng Xanh (Khắc phục sự cố, Tạo ticket)
-│       └── combos_speed.yml        # Combo 3 Vùng 1-Hit cho giờ cao điểm
+│       ├── airtalk_tag_master.yml      # Master 3-Zone Lego (:atw-) chuẩn QA (62 snippets)
+│       ├── base_system.yml             # Chào hỏi, Hold 1-2p, Cảnh báo thô tục (16 snippets)
+│       ├── verification_cpni.yml       # Xác thực CPNI, ID proof, Address (11 snippets)
+│       ├── red_empathy.yml             # Kho Vùng Đỏ: Đồng cảm theo loại sự cố (13 snippets)
+│       ├── yellow_policy.yml           # Kho Vùng Vàng: Chính sách & Giới hạn (28 snippets)
+│       ├── green_solution.yml          # Kho Vùng Xanh: Giải pháp & Hành động (24 snippets)
+│       └── combos_speed.yml            # Combo 1-Hit cho giờ cao điểm (14 snippets)
 │
-└── scripts/                        # Bộ công cụ tự động hóa
-    ├── validate_snippets.py        # Kiểm tra tính toàn vẹn và chống trùng lặp trigger
-    ├── export_unikey.py            # Tự động xuất snippet sang bảng Macro Unikey
-    └── sync_espanso.py             # Tự động đồng bộ config vào AppData của Espanso
+└── scripts/                            # Bộ công cụ tự động hóa
+    ├── validate_snippets.py            # Kiểm toán cú pháp & chống trùng lặp (168 snippets)
+    ├── export_unikey.py                # Tự động xuất snippet sang bảng Macro Unikey
+    └── sync_espanso.py                 # Tự động đồng bộ config vào AppData của Espanso
 ```
 
 ---
 
-## ⚡ 3. HƯỚNG DẪN CÀI ĐẶT & SỬ DỤNG
+## ⚡ 3. BẢNG MA TRẬN KHẮC PHỤC SAI LỆCH SLA/POLICY (PHÒNG THỦ FATAL QA)
+
+Hệ thống "Anti-Gravity" đã sửa triệt để các sai lệch so với SOP nội bộ:
+
+| Phân Hệ Nghiệp Vụ | Sai Lệch Trước Đây (Rất Nguy Hiểm) ❌ | Thông Số Chuẩn Theo SOP Mới Nhất ✅ |
+| :--- | :--- | :--- |
+| **Hoàn Tiền (Refund)** | Cào bằng 7 ngày cho mọi loại máy. | • **Free Pre-Owned:** 15 ngày từ ngày nhận.<br>• **Brand-New & Paid Pre-Owned:** 30 ngày từ ngày nhận.<br>• **Non-Defective:** 7 ngày (khách chịu ship).<br>• **ILD/Data/Monthly fee:** Không hoàn tiền. |
+| **Bảo Hành (Warranty)** | Bảo hành duy nhất 15 ngày cho mọi máy. | • **Free Pre-Owned & Phụ kiện:** 15 ngày.<br>• **Brand-New & Paid Upgrade:** 30 ngày.<br>• **Hư hỏng vật lý/rơi vỡ:** Phải báo trong **48 giờ** từ lúc giao.<br>• **Return Label:** Gửi bưu điện trong **7 ngày làm việc**. |
+| **Cam Kết Trợ Giá (Device Subsidy)** | Báo cam kết 365 ngày. | • **Cam kết trợ giá thiết bị:** Đúng **180 ngày** active liên tục. |
+| **Mã Chuyển Mạng (Port-Out PIN)** | Chỉ báo hạn 4 ngày, thiếu cảnh báo. | • Mã PIN hạn **4 ngày**.<br>• Cảnh báo phí vi phạm cam kết trợ giá nếu < 180 ngày.<br>• Cảnh báo mất vĩnh viễn số nếu bị de-enroll do non-usage. |
+| **Non-Usage (NUC)** | 30 ngày + 15 ngày (45 ngày). | • 30 ngày inactive + 15 ngày notice.<br>• Ngày 46 de-enroll, **cập nhật NLAD trong 1 ngày làm việc**. |
+
+---
+
+## 🚀 4. DANH MỤC PHÍM TẮT MASTER :ATW- (QA APPROVED)
+
+### 🔹 Vận Hành Cốt Lõi & Phòng Thủ QA
+- `:atw-hi` : Chào hỏi khách hàng (*"My name is Martin. How may I assist you with your service?"*).
+- `:atw-cpni-ask` : Yêu cầu xác minh 3 yếu tố CPNI: Full Name, DOB, SSN4.
+- `:atw-cpni-pass` : Thông báo xác thực thành công.
+- `:atw-cpni-fail` : Từ chối cung cấp thông tin tài khoản khi sai CPNI (chống mớm dữ liệu).
+- `:atw-hold-check` : Xin phép kiểm tra hệ thống 1–2 phút (*Reset đồng hồ ART*).
+- `:atw-wrapup` : Câu hỏi kết thúc ca chuẩn QA.
+- `:atw-crm-note` : Biểu mẫu điền Activity Log trên CRM tự động.
+
+### 🔹 8 Kịch Bản Nghiệp Vụ Sinh Tử
+1. **Hot Rush Ticket & Out of Stock:** `:atw-rush-red`, `:atw-rush-ylw`, `:atw-rush-grn` (Form Ticket ID), `:atw-rush-combo`.
+2. **Lost/Stolen & Blacklist IMEI:** `:atw-lost-red`, `:atw-lost-ylw` (Hạn báo 48h), `:atw-lost-grn`, `:atw-lost-combo`.
+3. **Return to Sender (RTS):** `:atw-rts-red`, `:atw-rts-ylw` (Hạn 10 ngày POA), `:atw-rts-grn`, `:atw-rts-combo`.
+4. **Cancel Port-Out & Winback:** `:atw-winback-red`, `:atw-winback-ylw` (Cam kết 180 ngày), `:atw-winback-grn`, `:atw-winback-combo`.
+5. **Identity Theft & Slamming:** `:atw-fraud-red`, `:atw-fraud-ylw` (USAC Hotline 1-800-234-9473), `:atw-fraud-grn`, `:atw-fraud-combo`.
+6. **Loyalty Program & Referral:** `:atw-loyalty-red`, `:atw-loyalty-ylw` (2 pts/tháng, Thổ dân 5 pts/tháng), `:atw-loyalty-grn`, `:atw-loyalty-combo`.
+7. **ILD & Cấm Roaming:** `:atw-ild-red`, `:atw-ild-ylw` (Cấm Roaming quốc tế, cước ILD không hoàn tiền), `:atw-ild-grn`, `:atw-ild-combo`.
+8. **Voicemail Setup:** `:atw-vm-red`, `:atw-vm-ylw`, `:atw-vm-grn` (Reset PIN về 4 số cuối MDN), `:atw-vm-combo`.
+9. **Chống Né Tránh Điều Tra Spam:** `:atw-spam-evasion` (Phong tỏa yêu cầu đổi số/mua SIM khi đang điều tra Spam).
+
+---
+
+## 🛠️ 5. HƯỚNG DẪN CÀI ĐẶT & SỬ DỤNG
 
 ### Cách 1: Sử Dụng Phần Mềm Espanso (Khuyến Nghị Tối Đa)
-1. **Cài đặt Espanso qua Windows Terminal (PowerShell):**
+1. Cài đặt Espanso qua Windows Terminal:
    ```powershell
    winget install Espanso.Espanso -e
    ```
-2. **Đồng bộ cấu hình từ thư mục này vào Espanso:**
+2. Đồng bộ toàn bộ 168 phím tắt vào Espanso:
    ```powershell
    python scripts\sync_espanso.py
    ```
-3. **Khởi động Espanso:** Mở Menu Start gõ `Espanso` và bật chạy. Bấm thử `;hi` hoặc `;v_cpni` trên bất kỳ khung chat nào để kiểm tra kết quả!
+3. Mở Espanso và gõ thử `:atw-hi` hoặc `:atw-rush-combo` trên bất kỳ cửa sổ chat nào.
 
----
-
-### Cách 2: Sử Dụng Unikey / EVKey (Không Cần Quyền Administrator)
-Nếu máy tính công ty không cho phép cài phần mềm ngoài:
-1. Mở file `unikey_macro.txt` có sẵn trong thư mục gốc.
-2. Bật bảng điều khiển **Unikey** -> Chọn **Mở rộng** -> Tích chọn **Bật tính năng gõ tắt**.
-3. Bấm nút **Bảng gõ tắt...** -> Nạp toàn bộ danh sách từ file `unikey_macro.txt` vào.
-4. Bấm **Lưu** và gõ thử các phím tắt bình thường.
-
----
-
-## 🚀 4. HƯỚNG DẪN ĐẨY LÊN GITHUB REPOSITORY CÁ NHÂN
-
-Để quản lý và đồng bộ kho script này trên GitHub cá nhân:
-
-1. **Khởi tạo Git cục bộ:**
-   ```powershell
-   cd e:\softel
-   git init
-   git add .
-   git commit -m "feat: initial commit softel chat agent operating system"
-   ```
-2. **Tạo một Repository mới trên GitHub (khuyến nghị để chế độ Private):**
-   - Đặt tên repo, ví dụ: `softel-chat-os`.
-3. **Liên kết và Đẩy mã nguồn lên GitHub:**
-   ```powershell
-   git branch -M main
-   git remote add origin https://github.com/<tai-khoan-cua-ban>/softel-chat-os.git
-   git push -u origin main
-   ```
-4. **Khi làm việc trên máy khác:** Chỉ cần `git clone` về máy và chạy `python scripts\sync_espanso.py` là có ngay toàn bộ kho đạn phím tắt!
-
----
-
-## 📋 5. BẢNG PHÍM TẮT ĐỈNH CAO (QUICK SNIPPET CHEAT SHEET)
-
-### 🔹 Nhóm Cơ Bản & Kiểm Soát Ca Chat (Base & Hold)
-- `;hi` : Chào hỏi chuẩn chuyên nghiệp.
-- `;h_check` : Xin phép kiểm tra hệ thống 1-2 phút (Reset ART timer).
-- `;h_still` : Trấn an khách vẫn đang tra cứu hồ sơ.
-- `;h_lead` : Xin phép tham vấn ý kiến Senior / Supporter.
-- `;wrap` : Câu hỏi kết thúc ca chuẩn QA: *"Is there anything else I can help you with?"*
-- `;bye` : Lời chào tạm biệt chuyên nghiệp.
-- `;r_deescalate` : Xoa dịu khách hàng đang bức xúc, cam kết hỗ trợ.
-- `;r_warning` : Cảnh báo lịch sự khi khách dùng từ ngữ thô tục.
-- `;r_disconnect` : Ngắt chat đúng quy chuẩn khi khách tiếp tục quá khích.
-
-### 🔹 Nhóm Xác Minh CPNI & An Ninh (Security Verification)
-- `;v_cpni` : Yêu cầu xác thực bắt buộc: Full Name + DOB + SSN4.
-- `;v_contact` : Thu thập Email và Số điện thoại liên hệ lại.
-- `;v_pass` : Thông báo xác thực thành công, sẵn sàng hỗ trợ.
-- `;v_fail` : Từ chối cung cấp thông tin tài khoản do sai CPNI.
-- `;v_id_photo` : Hướng dẫn gửi ảnh chụp cầm ID sát mặt.
-- `;v_id_video` : Hướng dẫn gửi video 5-10s đọc tên + ngày sinh (Spam review).
-
-### 🔹 Nhóm Combo 1-Hit Cho Giờ Cao Điểm (Combos Speed)
-- `;c_dcnr` : Trọn gói xử lý kiện hàng Delivered nhưng không thấy máy (GPS trace 24-48h).
-- `;c_lit` : Trọn gói xử lý bưu kiện kẹt tracking quá 7 ngày (Lost in transit).
-- `;c_po` : Trọn gói cấp Port-Out PIN (Cảnh báo hạn 4 ngày, rà soát 24h).
-- `;c_refund_late` : Trọn gói từ chối hoàn tiền lịch sự sau 7 ngày kèm giải pháp đổi máy.
-- `;c_war_free` : Trọn gói bảo hành máy Free Lifeline 15 ngày + gửi return label 7 ngày.
-- `;c_cancel` : Trọn gói giữ chân khách hàng (Retention) cảnh báo mất số/trợ cấp trước khi chuyển Tier 2.
-- `;c_network` : Hướng dẫn khởi động lại máy, tháo lắp SIM và chờ kết quả.
-- `;c_nonuse` : Giải thích luật Lifeline 30+15=45 ngày và hướng dẫn thực hiện cước ngay.
-- `;c_spam` : Hướng dẫn quy trình gửi hồ sơ gỡ chặn nghi ngờ spam.
-
----
-*Tài liệu được thiết kế chuyên biệt cho CSR Softel Solution - Bảo mật nội bộ & Tối ưu hóa hiệu suất.*
+### Cách 2: Sử Dụng Unikey / EVKey
+1. Mở file [unikey_macro.txt](file:///e:/softel/unikey_macro.txt).
+2. Vào **Unikey** -> **Mở rộng** -> Bật **Bảng gõ tắt...** và nạp toàn bộ 168 macro vào.

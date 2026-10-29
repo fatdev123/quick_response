@@ -1,0 +1,248 @@
+# ==============================================================================
+# AIRTALK & TAG MOBILE MASTER SNIPPETS (ANTI-GRAVITY 3-ZONE LEGO SYSTEM)
+# Brand: AirTalk Wireless & TAG Mobile (Softel Solutions)
+# Representative: Martin
+# Triết lý: Zero Fatal Errors | Cognitive Relief | Instant Empathy | Dynamic Forms
+# ==============================================================================
+
+matches:
+  # ============================================================================
+  # 1. CORE OPERATIONAL & QA DEFENSE (Chào hỏi, Xác thực CPNI, Hold, Chốt ca)
+  # ============================================================================
+  - trigger: ":atw-hi"
+    replace: "Hello! Thank you for reaching out to Customer Care today. My name is Martin. How may I assist you with your service?"
+
+  - trigger: ":atw-hi-airtalk"
+    replace: "Thank you for contacting AirTalk Wireless Support! My name is Martin. It's a pleasure to assist you today. How may I help you?"
+
+  - trigger: ":atw-hi-tag"
+    replace: "Thank you for contacting TAG Mobile Customer Service! My name is Martin. How can I help you with your account today?"
+
+  - trigger: ":atw-cpni-ask"
+    replace: "To best protect your personal account security and comply with federal privacy regulations, could you please verify your **Full Name**, **Date of Birth (MM/DD/YYYY)**, and the **Last 4 digits of your SSN**?"
+
+  - trigger: ":atw-cpni-pass"
+    replace: "Thank you very much for verifying your details! Your account has been authenticated successfully. How can I help you with your service today?"
+
+  - trigger: ":atw-cpni-fail"
+    replace: "I appreciate your cooperation; however, the information provided does not match our system records. Due to strict federal CPNI regulations, I am unable to disclose specific account details or make changes. I can answer general policy questions, or you may provide official proof of identity to proceed."
+
+  - trigger: ":atw-hold-check"
+    replace: "I am actively checking your account details in our system right now. Please allow me 1 to 2 minutes, and I will be right back with full details. Thank you for your patience!"
+
+  - trigger: ":atw-wrapup"
+    replace: "I'm glad I could assist you with this today! Is there anything else about your phone, service, or account that I can help you with before we part ways?"
+
+  - trigger: ":atw-bye"
+    replace: "Thank you for choosing us as your service provider! If you need anything else in the future, our support team is always here to help. Have a wonderful rest of your day!"
+
+  - trigger: ":atw-deescalate"
+    replace: "[RED] I hear your frustration completely, and I am genuinely sorry for the trouble this has caused you. I am here to take personal ownership of this issue and work with you step-by-step toward a resolution."
+
+  - trigger: ":atw-warn-profanity"
+    replace: "I truly want to help you resolve this issue today; however, I kindly ask that we keep our conversation respectful. Please avoid using profanity so that we can focus together on getting this solved for you."
+
+  - trigger: ":atw-disconnect"
+    replace: "Since the abusive language has continued after our warning, I will be disconnecting this chat session now. You are welcome to reach back out to us when you are ready to communicate in a professional manner. Thank you."
+
+  - trigger: ":atw-crm-note"
+    form: |
+      [CSR: Martin] [Chat ID: [[chat_id]]]
+      - Reason / Inquiry: [[reason]]
+      - Verification Status: Passed CPNI
+      - Action Taken: [[action]]
+      - Outcome / SLA: [[outcome]]
+
+  # ============================================================================
+  # 2. CHÍNH SÁCH HOÀN TIỀN CHUẨN (REFUND POLICY - CHUẨN MỚI 15D/30D/7D)
+  # ============================================================================
+  - trigger: ":atw-refund-red"
+    replace: "[RED] I completely understand that you are requesting a refund for your order, and I know that any unexpected charge or financial concern is stressful. I am here to review your billing history thoroughly."
+
+  - trigger: ":atw-refund-ylw"
+    replace: "[YELLOW] Under our official refund policy: Free Pre-Owned phones are eligible for return/refund within 15 calendar days of delivery. Brand-New and Paid Pre-Owned devices are eligible within 30 calendar days of delivery. Non-defective equipment returns must be reported within 7 days (customer is responsible for return shipping). Please note that monthly plan fees, activated data top-ups, and ILD packages are strictly non-refundable."
+
+  - trigger: ":atw-refund-grn"
+    form: |
+      [GREEN] I have submitted an official Refund Request ticket (Ticket ID: [[ticket_id]]) to our Accounting department. Approved refunds are credited directly back to the original payment card within 3 to 5 business days."
+
+  - trigger: ":atw-refund-combo"
+    form: |
+      [RED] I completely understand that you are requesting a refund for your order. [YELLOW] Under our official refund policy, Free Pre-Owned phones are eligible for return within 15 calendar days of delivery, while Brand-New and Paid Upgrade devices carry a 30-day return window. Non-defective returns must be initiated within 7 days (customer pays return postage). Monthly service charges, activated data top-ups, and ILD bundles are non-refundable. [GREEN] I have submitted an official Refund Request ticket (Ticket ID: [[ticket_id]]) to our Accounting team. Once verified, refunds return to your original payment method within 3 to 5 business days.
+
+  # ============================================================================
+  # 3. BẢO HÀNH THIẾT BỊ CHUẨN (WARRANTY POLICY - 15D/30D/48H COSMETIC)
+  # ============================================================================
+  - trigger: ":atw-war-red"
+    replace: "[RED] I am very sorry to hear that your device is experiencing technical difficulties. Relying on a phone that is not working properly is a major inconvenience, and I want to help you find a prompt solution."
+
+  - trigger: ":atw-war-ylw"
+    replace: "[YELLOW] Our warranty policy provides 15 calendar days of limited warranty coverage for Free Pre-Owned Lifeline devices and accessories, and 30 calendar days for Brand-New and Paid Upgrade phones from the date of delivery. Any cosmetic defects, physical damage, or cracked screens must be reported within 48 hours of carrier delivery. Once an approved return label is issued, the package must be postmarked within 7 business days."
+
+  - trigger: ":atw-war-grn"
+    form: |
+      [GREEN] I have generated a prepaid USPS Return Shipping Label and emailed it to your registered address (Ticket ID: [[ticket_id]]). Please securely pack the phone and drop it off at any USPS postal facility within 7 business days so our repair and exchange center can promptly dispatch your replacement."
+
+  - trigger: ":atw-war-combo"
+    form: |
+      [RED] I am very sorry to hear that your device is malfunctioning. [YELLOW] Per our warranty policy, Free Pre-Owned Lifeline phones and accessories carry a 15-day limited warranty, while Brand-New and Paid Upgrade phones include 30-day warranty coverage from delivery. Any physical or cosmetic damage must be reported within 48 hours of receipt. Approved return labels must be postmarked within 7 business days. [GREEN] I have submitted a warranty claim (Ticket ID: [[ticket_id]]) and emailed you a prepaid USPS Return Label. Please mail the device back within 7 business days so our fulfillment center can dispatch your replacement.
+
+  # ============================================================================
+  # 4. CHUYỂN MẠNG RA & TRỢ GIÁ (PORT-OUT PIN & 180-DAY DEVICE SUBSIDY)
+  # ============================================================================
+  - trigger: ":atw-po-red"
+    replace: "[RED] I can certainly assist you with your transfer credentials today. At the same time, we are truly sorry to see that you are considering leaving AirTalk Wireless, and we appreciate the opportunity to resolve any concerns you have."
+
+  - trigger: ":atw-po-ylw"
+    replace: "[YELLOW] Per federal porting policy, your Transfer PIN is strictly valid for 4 calendar days from generation. Porting your number out will permanently release your government Lifeline benefit with us. Furthermore, if you received a subsidized device and port out before fulfilling the required 180-day continuous active service commitment, non-commitment hardware fees may apply. Please also be aware that if an account is de-enrolled due to non-usage, the telephone number is released and cannot be ported."
+
+  - trigger: ":atw-po-grn"
+    form: |
+      [GREEN] I have generated your transfer credentials. Your Account Number is your Enrollment ID / MDN, and your 4-day Port-Out PIN is: [[port_out_pin]]. Please share these exact details with your new carrier within 4 days to complete your transfer."
+
+  - trigger: ":atw-po-combo"
+    form: |
+      [RED] I can certainly provide your transfer information today, though we are truly sorry to see you go! [YELLOW] Per FCC porting guidelines, your Transfer PIN is valid for strictly 4 calendar days, and only one carrier port request can be active at a time. Porting out will cancel your free monthly government Lifeline benefit with AirTalk. If you received a subsidized phone and transfer prior to completing the 180-day continuous service commitment, non-commitment hardware fees may apply. [GREEN] Your 4-day Port-Out PIN is: [[port_out_pin]]. Please provide this PIN along with your Account Number to your new service provider within 4 days.
+
+  # ============================================================================
+  # 5. QUY ĐỊNH NON-USAGE (30+15=45D & NLAD UPDATE)
+  # ============================================================================
+  - trigger: ":atw-nonuse-red"
+    replace: "[RED] I completely understand your concern regarding the de-enrollment notice you received! Having your phone service interrupted is very stressful, and I am here to help you keep your line active."
+
+  - trigger: ":atw-nonuse-ylw"
+    replace: "[YELLOW] Under federal Lifeline regulations (FCC/USAC), subscribers must record at least one active usage event every 30 days. If no activity occurs for 30 consecutive days, a 15-day cure period notice is triggered. If no usage is recorded by day 45, the account is permanently de-enrolled on the 46th day, and your status is reported to the National Lifeline Accountability Database (NLAD) within 1 business day."
+
+  - trigger: ":atw-nonuse-grn"
+    replace: "[GREEN] To immediately remove the non-usage warning from your account, please place a test call, send an outbound text message, or tap the 'Keep My Service' banner in your AirTalk mobile app right now. I will confirm that your active usage status updates on our system."
+
+  - trigger: ":atw-nonuse-combo"
+    replace: "[RED] I completely understand your concern regarding the non-usage notice you received! [YELLOW] Federal Lifeline regulations require subscribers to record at least one active usage event every 30 days. If 30 days elapse without activity, a 15-day notice is triggered. If no activity occurs by day 45, the service is automatically terminated on day 46 and reported to NLAD within 1 business day. [GREEN] To protect your line right now, please make a phone call, send an outbound text, or tap 'Keep My Service' in your AirTalk app while we are chatting. I will verify that your active status updates immediately."
+
+  # ============================================================================
+  # 6. HOT RUSH TICKET & OUT OF STOCK ESCALATION
+  # ============================================================================
+  - trigger: ":atw-rush-red"
+    replace: "[RED] I completely understand how frustrating it is to experience a delay in receiving your order, especially when you are eagerly awaiting your new device."
+
+  - trigger: ":atw-rush-ylw"
+    replace: "[YELLOW] Please note that due to high demand, certain promotional devices or combo bundles may occasionally go out of stock. Standard order processing typically takes 3 to 5 business days, but inventory adjustments may require alternative selection or expedited escalation."
+
+  - trigger: ":atw-rush-grn"
+    form: |
+      [GREEN] I have successfully created a Hot Rush Ticket (Ticket ID: [[ticket_id]]) to escalate your order directly to our fulfillment warehouse for priority processing within 24 to 48 business hours. Alternatively, if your selected model is backordered, I can assist you in selecting an equivalent in-stock model right now so we can ship your package immediately.
+
+  - trigger: ":atw-rush-combo"
+    form: |
+      [RED] I completely understand how frustrating it is to experience a delay in receiving your order, especially when you are eagerly awaiting your new device. [YELLOW] Please note that due to high demand, certain promotional devices or combo bundles may occasionally go out of stock. Standard order processing takes 3 to 5 business days, but inventory adjustments may require alternative selection or expedited escalation. [GREEN] I have successfully created a Hot Rush Ticket (Ticket ID: [[ticket_id]]) to escalate your order directly to our fulfillment warehouse for priority processing. If you prefer not to wait for backordered stock, I can immediately help you select an equivalent in-stock device to ensure swift shipment.
+
+  # ============================================================================
+  # 7. LOST/STOLEN DEVICE & IMEI BLACKLISTING
+  # ============================================================================
+  - trigger: ":atw-lost-red"
+    replace: "[RED] I am truly sorry to hear that your device was lost or stolen. We understand how important it is to secure your personal information and line immediately."
+
+  - trigger: ":atw-lost-ylw"
+    replace: "[YELLOW] Per company security policy, subscribers are responsible for all usage until the loss is reported. Once reported, we must suspend your SIM card to prevent unauthorized usage and register the device IMEI on the national carrier blacklist. Please be advised that initial shipping loss claims must be reported within 48 hours of carrier delivery."
+
+  - trigger: ":atw-lost-grn"
+    replace: "[GREEN] I have now placed an immediate security suspend on your line and registered your IMEI on the blacklist to secure your account. To get you back connected, I can help you place an order for a replacement SIM card and an eligible replacement phone directly through your user portal right now."
+
+  - trigger: ":atw-lost-combo"
+    replace: "[RED] I am truly sorry to hear that your device was lost or stolen. We understand how crucial it is to secure your personal data and cellular service right away. [YELLOW] Per company policy, subscribers are responsible for charges incurred prior to reporting. Once reported, we immediately suspend the line and add the IMEI to the national blacklist. Any initial shipping loss claims must be filed within 48 hours of delivery status. [GREEN] I have officially suspended your line and blacklisted the device IMEI to safeguard your account. I am ready to guide you through ordering a replacement SIM card and phone so you can resume your service promptly."
+
+  # ============================================================================
+  # 8. RETURN TO SENDER (RTS) & ADDRESS RE-VERIFICATION
+  # ============================================================================
+  - trigger: ":atw-rts-red"
+    replace: "[RED] I sincerely apologize for the inconvenience caused by your package being returned to our facility by the postal carrier."
+
+  - trigger: ":atw-rts-ylw"
+    replace: "[YELLOW] When a shipment is flagged as Return to Sender due to an undeliverable address, our policy requires address re-verification. Customers must submit valid proof of physical address—such as a utility bill, lease agreement, or government ID—within 10 calendar days of notification. Failure to provide proof within 10 days will result in order cancellation and standard refund processing."
+
+  - trigger: ":atw-rts-grn"
+    replace: "[GREEN] I have opened an Address Re-Verification Ticket for your order. Please log in to your AirTalk portal or email your address proof to info@airtalkwireless.com with your Enrollment ID. Once verified, we will reship your package to the updated address immediately."
+
+  - trigger: ":atw-rts-combo"
+    replace: "[RED] I sincerely apologize for the inconvenience caused by your package being returned to our facility by the shipping carrier. [YELLOW] When an order is returned to sender due to delivery issues, our policy requires address re-verification. You must provide valid proof of physical address (such as a utility bill or ID) within 10 calendar days. If proof is not received within this 10-day timeframe, the order will be cancelled and processed per standard refund rules. [GREEN] I have updated your account status and created an address verification request. Please upload your proof via the user portal or email it to info@airtalkwireless.com so we can expedite reshipping your package."
+
+  # ============================================================================
+  # 9. CANCEL PORT-OUT & WINBACK RETENTION
+  # ============================================================================
+  - trigger: ":atw-winback-red"
+    replace: "[RED] We are truly sorry to see that you are considering leaving AirTalk Wireless, and we appreciate the opportunity to resolve any concerns you have."
+
+  - trigger: ":atw-winback-ylw"
+    replace: "[YELLOW] Please be aware that transferring your service to another provider will cancel your Lifeline benefits with us. Port-out Transfer PINs remain active for only 4 days. Furthermore, if you cancel or port out prior to completing the required 180-day continuous service commitment for discounted hardware, non-commitment fees may apply."
+
+  - trigger: ":atw-winback-grn"
+    replace: "[GREEN] I can immediately cancel your active Port-Out request, invalidate the Transfer PIN, and restore your account to fully active status. Additionally, I would be happy to review your current plan options to ensure you receive the maximum high-speed data allowance available."
+
+  - trigger: ":atw-winback-combo"
+    replace: "[RED] We are truly sorry to hear that you are thinking of switching carriers, as we deeply value having you as a customer. [YELLOW] Please keep in mind that transferring your number will deactivate your free Lifeline monthly benefits with AirTalk. Transfer PINs expire automatically after 4 days. Additionally, if your account is transferred before completing the 180-day subsidized device commitment, non-commitment fees may be charged. [GREEN] I can cancel your port-out request right now, revoke the PIN, and keep your line fully active. Let me also assist in troubleshooting your service or optimizing your data plan so you can continue enjoying free monthly service without interruption."
+
+  # ============================================================================
+  # 10. IDENTITY THEFT & UNAUTHORIZED BENEFIT TRANSFER (SLAMMING)
+  # ============================================================================
+  - trigger: ":atw-fraud-red"
+    replace: "[RED] I am deeply concerned to learn that your Lifeline benefit was transferred away from AirTalk Wireless without your knowledge or authorization."
+
+  - trigger: ":atw-fraud-ylw"
+    replace: "[YELLOW] Please be advised that AirTalk Wireless does not employ independent field or door-to-door sales agents. Federal regulations strictly prohibit unauthorized transfers. If your benefit was fraudulently moved, you must sign a reverse transfer consent form and report the imposter activity to the USAC Lifeline Support Center."
+
+  - trigger: ":atw-fraud-grn"
+    replace: "[GREEN] I have initiated an unauthorized transfer dispute ticket for you. Please complete the digital transfer agreement link sent to your email to immediately pull your benefit back to AirTalk. I also strongly advise contacting the USAC Lifeline Support Center at (800) 234-9473 to file a formal fraud report."
+
+  - trigger: ":atw-fraud-combo"
+    replace: "[RED] I am deeply concerned to learn that your Lifeline benefit was transferred without your permission, and I take this matter very seriously. [YELLOW] Please note that AirTalk Wireless does not hire independent sales agents to solicit enrollments outside official channels. Unauthorized benefit transfers violate federal rules. To restore your service, a reverse transfer consent must be executed and reported to USAC. [GREEN] I have sent a digital reverse transfer form to your registered email. Signing this will allow us to reclaim your Lifeline benefit and restore your service. I also recommend contacting the USAC Lifeline Support Center at (800) 234-9473 to report the imposter agent."
+
+  # ============================================================================
+  # 11. LOYALTY PROGRAM & REFERRAL REWARDS
+  # ============================================================================
+  - trigger: ":atw-loyalty-red"
+    replace: "[RED] Thank you so much for being a loyal AirTalk Wireless customer! We truly appreciate your continued partnership with us."
+
+  - trigger: ":atw-loyalty-ylw"
+    replace: "[YELLOW] Under our Loyalty Program, active subscribers earn 2 loyalty points every month (5 points monthly for Tribal participants). Additionally, our Referral Program allows you to earn up to $25 in rewards for every successful friend referral, while your friend receives up to $10. Points and cash rewards are redeemable only while your account remains active."
+
+  - trigger: ":atw-loyalty-grn"
+    replace: "[GREEN] You can check your real-time point balance and generate your personal referral link by logging into the AirTalk Mobile App or User Portal. Points can be redeemed instantly for free high-speed data top-ups or Amazon e-Gift Cards delivered to your email."
+
+  - trigger: ":atw-loyalty-combo"
+    replace: "[RED] Thank you for being a valued member of the AirTalk Wireless family! We are thrilled to share details about our rewards with you. [YELLOW] Active customers automatically earn 2 monthly loyalty points (5 points for Tribal residents). Furthermore, using your unique referral link lets you earn up to $25 per qualified referral, while your referred friend gets up to $10. Rewards remain valid as long as your account stays active. [GREEN] You can access your account dashboard on our app or website to view your balance, share your referral link, and redeem points for extra high-speed data or Amazon e-Gift cards anytime."
+
+  # ============================================================================
+  # 12. INTERNATIONAL LONG DISTANCE (ILD) & ROAMING RESTRICTIONS
+  # ============================================================================
+  - trigger: ":atw-ild-red"
+    replace: "[RED] Thank you for reaching out regarding international calling capabilities on your AirTalk Wireless account."
+
+  - trigger: ":atw-ild-ylw"
+    replace: "[YELLOW] Please note that AirTalk Wireless services are strictly restricted to operate within the United States. International roaming (using your device while physically located overseas or in international waters) is strictly prohibited. International Long Distance (ILD) calling from the US requires an active ILD feature or Pay-As-You-Go credit, which is non-refundable once activated."
+
+  - trigger: ":atw-ild-grn"
+    replace: "[GREEN] To make international calls from the United States, you can purchase an ILD credit pack directly through the AirTalk Wireless app or website under the 'Add-on' section. I can also assist you right now in verifying if your desired destination country is included in our standard ILD calling list."
+
+  - trigger: ":atw-ild-combo"
+    replace: "[RED] Thank you for contacting us regarding international service functionality. [YELLOW] AirTalk Wireless service is designed for domestic use within the United States. International roaming outside the US is strictly prohibited and unsupported. However, International Long Distance (ILD) calling from within the US is available via prepaid ILD add-ons, which are non-refundable once applied. [GREEN] You can add ILD calling credits instantly via our mobile app or web portal under Plan Add-ons. Let me check our destination rate table to confirm that the country you wish to call is supported."
+
+  # ============================================================================
+  # 13. VOICEMAIL SETUP & PASSWORD RESET
+  # ============================================================================
+  - trigger: ":atw-vm-red"
+    replace: "[RED] I understand how important it is to access your voicemail messages without difficulty, and I apologize for any trouble you have experienced accessing your mailbox."
+
+  - trigger: ":atw-vm-ylw"
+    replace: "[YELLOW] Voicemail is a carrier-provisioned service. If you enter an incorrect PIN multiple times or experience visual voicemail synchronization errors, a carrier-side voicemail password reset is required to restore access."
+
+  - trigger: ":atw-vm-grn"
+    replace: "[GREEN] I have successfully reset your voicemail password on the network to the default setting (the last 4 digits of your phone number). Please press and hold the '1' key on your phone's dialer to connect to voicemail, enter the temporary PIN, and follow the voice prompts to set up your new personalized PIN and greeting."
+
+  - trigger: ":atw-vm-combo"
+    replace: "[RED] I understand how crucial it is to receive and manage your voicemail messages without issues, and I am glad to help you resolve this. [YELLOW] Voicemail access is managed through carrier network settings. When a PIN is locked or greeting options fail to save, performing a system reset on the carrier side resolves the configuration error. [GREEN] I have just reset your voicemail PIN to the default last 4 digits of your phone number. Simply press and hold '1' on your keypad to call voicemail, enter the temporary PIN, and set up your new custom PIN and greeting."
+
+  # ============================================================================
+  # 14. ANTI-EVASION DEFENSE (SPAM AUDIT HOLD)
+  # ============================================================================
+  - trigger: ":atw-spam-evasion"
+    replace: "[RED] I understand you are requesting a change to your line. [YELLOW] However, because your account is currently under an active Spam Security Investigation, our system automatically restricts account modifications including new SIM orders, phone number changes, or line transfers until verification is completed. [GREEN] Please submit your clear photo ID holding next to your face so our Fraud Review Team can inspect your file within 24 to 48 business hours and restore full access to your account."
