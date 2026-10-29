@@ -1,74 +1,186 @@
-# CẨM NANG PHÒNG THỦ ĐIỂM QA "ANTI-GRAVITY"
-*(Bảo vệ 100 Điểm Chất Lượng - Triệt Tiêu 100% Lỗi Chí Mạng / Fatal Errors)*
-*CSR: Martin | Softel Solutions - AirTalk Wireless & TAG Mobile*
+# QUALITY ASSURANCE AUDIT MANUAL & COMPLIANCE SCORING RUBRIC
+**AirTalk Wireless & TAG Mobile - Multi-Platform Customer Engagement Standards**
+*Document ID: QA-AUD-MAN-2026-V3 | Classification: Quality Compliance Standard*
+*Authorized Role: Tier 1 Customer Support Representative (Agent: Martin)*
 
 ---
 
-## 1. TRIẾT LÝ VẬN HÀNH "ANTI-GRAVITY" (TRIỆT TIÊU TRỌNG LỰC VẬN HÀNH)
+## 1. Quality Assurance Governance Framework
 
-1. **Zero Fatal Errors:** Đóng gói 100% quy định FCC/USAC/SLA vào mẫu tin nhắn chuẩn; loại bỏ hoàn toàn rủi ro cam kết sai (False Promise).
-2. **Cognitive Relief:** Chuyển thao tác gõ thủ công và ghi nhớ hàng trăm con số chính sách sang hệ thống phím tắt 3-Zone Lego linh hoạt.
-3. **Instant Empathy:** Tự động hóa lời xoa dịu Vùng Đỏ `[RED Empathy]` trong 100% mọi tình huống trước khi đưa ra chính sách hay giải pháp.
-4. **Dynamic Variable:** Tự động hóa điền các biến số động `[[ticket_id]]`, `[[port_out_pin]]`, `[[reason]]` mà không để lại ký tự giữ chỗ thô cứng.
+The Quality Assurance (QA) program at Softel Solutions enforces strict operational compliance with Federal Communications Commission (FCC) statutory mandates, Universal Service Administrative Company (USAC) guidelines, and internal operational service-level agreements (SLAs). 
+
+In high-concurrency environments handling simultaneous LiveChat and internal CRM portal sessions, the primary objective is the total elimination of **Fatal Compliance Violations**. A single fatal error results in an immediate **0% Session Audit Score (Automatic Audit Failure)**, triggers mandatory retraining, and incurs internal compliance logging.
+
+### 1.1 The Anti-Gravity Operational Tenets
+1. **Zero Statutory Compromise:** Hardcode statutory guidelines and exact policy numbers into standardized modular expansion macros to eliminate human recall failure.
+2. **Cognitive Bandwidth Conservation:** Shift repetitive keystroke input and policy calculation from active representative recall to validated dynamic snippet assemblies.
+3. **Mandatory Emotional Validation:** Systematically neutralize customer distress via structured Red Zone empathy statements prior to introducing regulatory constraints or procedural resolutions.
+4. **Dynamic Context Sanitization:** Automate parameter injection (`ticket_id`, `port_out_pin`, `puk`) to eliminate bracketed placeholder omissions in production communications.
 
 ---
 
-## 2. BẢNG TIÊU CHÍ CHẤM ĐIỂM QA & BỌC LÓT BẰNG SNIPPET :ATW-
+## 2. Comprehensive 100-Point QA Audit Rubric
 
-Trong kiểm toán chất lượng tại Softel Solutions, hệ thống áp dụng 3 nhóm lỗi chí mạng. Vi phạm **1 lỗi duy nhất = 0 điểm (Auto-Fail / Fatal)**:
+```mermaid
+flowchart TD
+    AuditStart["Evaluated Chat Interaction"] --> CheckFatal1{"CPNI Breach?<br/>- Disclosed without 3-factor match<br/>- Coached/prompted customer<br/>- Unauthorized PIN/Hardware dispatch"}
+    CheckFatal1 -- "Violation Detected" --> AutoFail["FATAL FAILURE: 0% SCORE<br/>Mandatory Coaching & Compliance Review"]
+    
+    CheckFatal1 -- "Compliant" --> CheckFatal2{"False Promise / SLA Breach?<br/>- Misquoted warranty/refund window<br/>- Quoted PIN validity > 4 days<br/>- Quoted subsidy > 180 days"}
+    CheckFatal2 -- "Violation Detected" --> AutoFail
+    
+    CheckFatal2 -- "Compliant" --> CheckFatal3{"Unapproved Disconnection / Conduct?<br/>- Dropped active customer without warning<br/>- Sarcasm / hostile retaliation<br/>- Ignored explicit distress"}
+    CheckFatal3 -- "Violation Detected" --> AutoFail
+    
+    CheckFatal3 -- "Compliant" --> PointEval["Standard Weighted Evaluation<br/>Total Available: 100 Points"]
+    PointEval --> P1["CPNI Execution: 30 Pts"]
+    PointEval --> P2["Policy & SLA Accuracy: 25 Pts"]
+    PointEval --> P3["Tone & De-escalation: 20 Pts"]
+    PointEval --> P4["Response Cadence (ART/FRT): 15 Pts"]
+    PointEval --> P5["Wrap-up & CRM Logging: 10 Pts"]
+    
+    P1 & P2 & P3 & P4 & P5 --> AuditScore["Final QA Session Score (>= 90% Passing Target)"]
+```
 
-| Nhóm Tiêu Chí QA | Trọng Số | Các Lỗi Điểm Liệt (Fatal Errors) | Cách Bọc Lót Tuyệt Đối Bằng Snippet :atw- |
+---
+
+## 3. Detailed Audit Criteria & Violation Specifications
+
+### 3.1 Domain 1: CPNI Compliance & Identity Authentication (Weight: 30% | Critical / Fatal)
+- **Regulatory Foundation:** 47 U.S.C. § 222; 47 CFR Part 64, Subpart U.
+- **Audit Mandates:**
+  - Representative must request all 3 mandatory tokens (Full Legal Name, Date of Birth, SSN Last 4 Digits) prior to disclosing account-specific information.
+  - Representative must verify that the customer's input matches CRM data 100% prior to acknowledging account existence, balances, hardware orders, or tracking details.
+  - Representative must capture secondary contact data (callback MDN and email) upon successful authentication.
+- **Fatal Violation Triggers (Automatic 0%):**
+  - Disclosing any account-specific record (MDN, balance, order status, address) to an unauthenticated party.
+  - "Coaching" or feeding correct credentials when a customer provides mismatched information (e.g., *"Does your name start with J?"* or *"Did you mean 1985?"*).
+  - Generating or releasing a Port-Out Transfer PIN without passing Tier 1 authentication.
+  - Uploading identity card images directly to CRM Activity Notes instead of referencing secure ticket identifiers.
+- **Defensive Macro Protection:** `:atw-cpni-ask`, `:atw-cpni-pass`, `:atw-cpni-fail`.
+
+### 3.2 Domain 2: SLA Precision & Truth-in-Billing (Weight: 25% | Critical / Fatal)
+- **Regulatory Foundation:** FCC Truth-in-Billing Guidelines; Carrier Operating Contracts.
+- **Audit Mandates:**
+  - All procedural explanations, operational deadlines, and return windows must mirror published Standard Operating Procedures without alteration.
+- **Fatal Violation Triggers (Automatic 0% - False Promise):**
+  - Stating that paid or upgraded hardware has only a 15-day return window (standard is 30 calendar days).
+  - Promising refunds for recurring monthly plan fees, consumed data top-ups, or provisioned ILD bundles.
+  - Failing to enforce the strict 48-hour post-delivery window for reporting physical or cosmetic screen damage.
+  - Advising a customer that a Port-Out PIN remains valid for 30 days (standard is strictly 4 calendar days).
+  - Claiming the hardware subsidy commitment is 365 days (standard is exactly 180 consecutive active days).
+  - Promising same-day warehouse dispatch without authorization from the Logistics Fulfillment Lead.
+- **Defensive Macro Protection:** `:atw-refund-ylw`, `:atw-war-ylw`, `:atw-po-ylw`, `:atw-nonuse-ylw`.
+
+### 3.3 Domain 3: Professional Conduct & De-escalation (Weight: 20% | Critical / Fatal)
+- **Audit Mandates:**
+  - Representatives must acknowledge customer emotional tension within the first customer-facing response following an expression of grievance.
+  - Unprofessional language, combative remarks, or argumentative phrasing are strictly prohibited.
+- **Fatal Violation Triggers (Automatic 0%):**
+  - Disconnecting an active chat session while the customer is communicating without following the formal 2-strike warning protocol.
+  - Engaging in retaliatory, condescending, or sarcastic commentary.
+  - Completely ignoring reported service outages or severe fulfillment breakdowns.
+- **Defensive Macro Protection:** `:atw-deescalate`, `:atw-warn-profanity`, `:atw-disconnect`.
+
+### 3.4 Domain 4: Response Cadence & Queue Velocity (Weight: 15% | Non-Fatal Point Deduction)
+- **Performance Thresholds:**
+  - **First Response Time (FRT):** Target <= 20 seconds; Audit Failure Threshold > 60 seconds.
+  - **Average Response Time (ART):** Target <= 45 seconds; Audit Failure Threshold > 90 seconds.
+- **Audit Point Reductions:**
+  - Unexplained silence exceeding 90 seconds incurs a 10-point deduction.
+  - Failure to deploy periodic queue-refresh messages during prolonged database queries incurs a 5-point deduction.
+- **Defensive Macro Protection:** Deploy `:atw-hold-check` every 45 to 60 seconds during back-office investigations to maintain session heartbeat.
+
+### 3.5 Domain 5: Session Wrap-Up & CRM Documentation Hygiene (Weight: 10% | Non-Fatal Point Deduction)
+- **Audit Mandates:**
+  - Every closed interaction must feature a formalized closing inquiry: *"Is there anything else I may assist you with today?"*
+  - CRM Activity Log must be populated immediately upon disconnection with standardized disposition tags: Contact Reason, Root Cause, Action Taken, Ticket ID reference.
+- **Audit Point Reductions:**
+  - Missing standardized closing statement: 5-point deduction.
+  - Incomplete, missing, or inaccurate CRM Activity Note: 5-point deduction.
+- **Defensive Macro Protection:** `:atw-wrapup`, `:atw-bye`, `:atw-crm-note`.
+
+---
+
+## 4. Professional Boundary Enforcement & Controlled Disconnection Protocol
+
+Representatives are not required to tolerate abusive, threatening, or profane language. However, to defend against QA deductions for improper disconnection, representatives must adhere strictly to the sequential protocol outlined below.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor CX as Hostile / Abusive Customer
+    actor CSR as Support Agent (Martin)
+    participant CRM as CRM Session Audit Log
+
+    CX->>CSR: Transmits Profanity, Harassment, or Abuse
+    Note over CSR: DO NOT retaliate or match customer tone
+    CSR->>CX: Strike 1 Warning Issued (:atw-warn-profanity)<br/>"I understand your frustration; however, we maintain a respectful environment..."
+    CSR->>CRM: Log Strike 1 Timestamp
+    
+    alt Customer Moderates Language
+        CX->>CSR: Reverts to Civil Communication
+        CSR->>CX: Proceed with Problem Resolution via 3-Zone Architecture
+    else Customer Continues Abusive Language
+        CX->>CSR: Transmits Secondary Abusive / Threatening Message
+        CSR->>CX: Strike 2 Final Notice Issued (:atw-disconnect)<br/>"As professional standards have not been maintained, I am now ending this session..."
+        CSR->>CRM: Tag Session: Abusive Disconnect / Harassment
+        CSR->>CX: Terminate Session Connection
+        CSR->>CRM: Compile Activity Note with Exact Chat Log Transcripts
+    end
+```
+
+---
+
+## 5. High-Concurrency Queue Pacing: The 3-Stage Conveyor Belt
+
+To manage 3 to 5 concurrent sessions across LiveChat and internal CRM queues while holding ART below 45 seconds and preventing cross-account CPNI contamination, representative Martin must operate under the 3-Stage Conveyor Belt framework.
+
+```
++-----------------------------------------------------------------------------------------+
+|                                3-STAGE CONVEYOR BELT                                    |
++-----------------------------------------------------------------------------------------+
+| STAGE 1: INBOUND TRIAGE (Elapsed Time: 0 - 30 Seconds)                                  |
+| • Objective: Satisfy FRT target (< 20s) and execute regulatory authentication.          |
+| • Actions:                                                                              |
+|   1. Transmit standard greeting (:atw-hi).                                              |
+|   2. Transmit mandatory CPNI challenge (:atw-cpni-ask).                                 |
+|   3. Total keystroke duration: <= 3 seconds. Cycle focus to subsequent chat.            |
++-----------------------------------------------------------------------------------------+
+                                            |
+                                            v
++-----------------------------------------------------------------------------------------+
+| STAGE 2: BACK-OFFICE INVESTIGATION (Elapsed Time: 30 - 180 Seconds)                     |
+| • Objective: Investigate CRM/OCS databases while suppressing customer abandonment.      |
+| • Actions:                                                                              |
+|   1. Pin customer MDN / Enrollment ID in dedicated CRM tab.                             |
+|   2. Deploy session heartbeat (:atw-hold-check) every 45 seconds.                       |
+|   3. Verify retrieved records against customer credentials.                             |
++-----------------------------------------------------------------------------------------+
+                                            |
+                                            v
++-----------------------------------------------------------------------------------------+
+| STAGE 3: RESOLUTION & DISPOSITION (Elapsed Time: 180+ Seconds)                          |
+| • Objective: Deliver compliant 3-Zone resolution, verify closure, and record notes.     |
+| • Actions:                                                                              |
+|   1. Deploy modular response or pre-assembled combo (:atw-po-combo, :atw-rush-combo).   |
+|   2. Confirm resolution completeness (:atw-wrapup).                                     |
+|   3. Inject standardized CRM documentation template (:atw-crm-note).                    |
++-----------------------------------------------------------------------------------------+
+```
+
+---
+
+## 6. Defensive Snippet Mapping Matrix for QA Audits
+
+| Specific QA Audit Vulnerability | Underlying Operational Risk | Mandatory Espanso Defensive Macro | Enforced Compliance Output |
 | :--- | :--- | :--- | :--- |
-| **1. CPNI & Security Verification** | **30% (Chí Mạng)** | • Tiết lộ thông tin tài khoản khi chưa xác thực Full Name, DOB, SSN4.<br>• Mớm thông tin đúng khi khách đoán sai.<br>• Cấp Port-out PIN hoặc đổi địa chỉ khi chưa pass verification. | • Gõ ngay `:atw-cpni-ask` ở tin nhắn thứ 2.<br>• Nếu sai thông tin: Gõ ngay `:atw-cpni-fail` (tuyệt đối không mớm dữ liệu).<br>• Pass thành công: Gõ `:atw-cpni-pass`. |
-| **2. Cam Kết Sai Policy & SLA (False Promise)** | **25% (Chí Mạng)** | • Tự ý hứa hoàn tiền ngay không qua Accounting.<br>• Hứa gửi máy mới trong ngày không qua Logistics.<br>• Báo sai thời hạn mã Port-out PIN (nói 30 ngày thay vì 4 ngày).<br>• Báo sai hạn cam kết trợ giá (nói 365 ngày thay vì 180 ngày).<br>• Bỏ sót mốc báo hỏng màn hình/vật lý trong 48 giờ. | Sử dụng các mẫu Vùng Vàng chuẩn SOP đã audit:<br>• `:atw-refund-ylw` (15d pre-owned, 30d paid/brand-new, 7d non-defective).<br>• `:atw-war-ylw` (15d/30d/48h cosmetic defect).<br>• `:atw-po-ylw` (4d PIN, cam kết 180d trợ giá).<br>• `:atw-nonuse-ylw` (30+15=45d, NLAD 1d). |
-| **3. Thái Độ & Ngắt Chat Trái Quy Định** | **20% (Chí Mạng)** | • Ngắt chat khi khách đang nói mà chưa cảnh báo.<br>• Tranh cãi, mỉa mai, công kích khách.<br>• Phớt lờ cảm xúc tiêu cực của khách. | • Mở đầu bằng Vùng Đỏ: `:atw-deescalate`.<br>• Đưa ra cảnh báo lịch sự: `:atw-warn-profanity`.<br>• Chỉ ngắt kết nối sau cảnh báo bằng: `:atw-disconnect`. |
-| **4. Thời Gian Phản Hồi (FRT / ART)** | **15%** | • Để khách đợi quá 90 giây không có tin nhắn trấn an.<br>• Lần phản hồi đầu tiên (FRT) > 60 giây. | Gõ `:atw-hold-check` mỗi 45–60 giây để làm mới đồng hồ đếm ngược ART trên hệ thống. |
-| **5. Chốt Ca & Ghi Chú CRM** | **10%** | • Không hỏi *"Is there anything else I can assist you with?"* trước khi đóng.<br>• Không cập nhật Activity Log / Phân loại sai lý do Ticket. | • Gõ câu chốt chuẩn: `:atw-wrapup` và `:atw-bye`.<br>• Chèn sẵn mẫu ghi chú Activity Log trên CRM: `:atw-crm-note`. |
-
----
-
-## 3. CHIẾN THUẬT BĂNG CHUYỀN 3 GIAI ĐOẠN (CONCURRENCY 3–5 CHATS)
-
-Khi ca trực bước vào giờ cao điểm, để tránh nhầm lẫn thông tin giữa các khách hàng (lỗi rò rỉ CPNI nghiêm trọng) và duy trì ART < 90 giây, CSR Martin áp dụng nguyên tắc:
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ 1. NHÓM ĐẦU VÀO (INBOUND - 0 đến 30s đầu)                                   │
-│    • Mục tiêu: Đạt chuẩn FRT < 20s.                                         │
-│    • Thao tác: Gõ ngay :atw-hi + :atw-cpni-ask. Thao tác trong 3 giây.      │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ 2. NHÓM TRA CỨU & XỬ LÝ (PROCESSING - Đang kiểm tra CRM)                    │
-│    • Mục tiêu: Giữ chân khách không bị im lặng quá 60s.                     │
-│    • Thao tác: Cứ 45s gõ :atw-hold-check để làm mới đồng hồ ART.            │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ 3. NHÓM KẾT QUẢ & CHỐT CA (OUTPUT & RESOLUTION)                             │
-│    • Mục tiêu: Ghép Lego [Yellow Policy] + [Green Solution] giải quyết dứt điểm.│
-│    • Thao tác: Gõ combo theo case (ví dụ :atw-po-combo, :atw-rush-combo).   │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## 4. CHIẾN THUẬT PHÒNG THỦ CHỐNG NÉ ĐIỀU TRA SPAM (SPAM EVASION DEFENSE)
-
-Theo SOP Spam Handling V2.2, khi tài khoản bị gắn cờ Spam Investigation, khách hàng thường cố tình tạo các yêu cầu giả nhằm né tránh việc nộp ID/Video xác minh:
-1. Yêu cầu đổi số điện thoại (MDN Change).
-2. Đòi mua SIM mới với số mới.
-3. Báo mất máy / mất SIM (Lost/Stolen).
-4. Báo kiện hàng Delivered nhưng không nhận được (DCNR).
-
-> [!CAUTION]
-> **QUY TẮC PHÒNG THỦ:** Khi tài khoản đang trong trạng thái Spam Investigation, **TẤT CẢ các yêu cầu trên đều phải tạm dừng**. CSR tuyệt đối không được bypass hệ thống để đặt SIM hay đổi số.
-> Bắt buộc dùng trigger `:atw-spam-evasion`:
-> *"I understand you are requesting a change to your line. However, because your account is currently under an active Spam Security Investigation, our system automatically restricts account modifications including new SIM orders, phone number changes, or line transfers until verification is completed. Please submit your clear photo ID holding next to your face so our Fraud Review Team can inspect your file within 24 to 48 business hours and restore full access to your account."*
-
----
-
-## 5. LỘ TRÌNH TRIỂN KHAI "ANTI-GRAVITY" 4 GIAI ĐOẠN
-
-```
-Phase 1 (Ngày 1–3)   : Đóng gói & Thẩm định Mã nguồn YAML Cấu hình Espanso (:atw- Master).
-Phase 2 (Ngày 4–7)   : Đào tạo Mô phỏng Thực chiến (Sandbox Training) cho CSR theo Lego 3-Zone.
-Phase 3 (Ngày 8–10)  : Cài đặt Đồng bộ Espanso / Unikey trên toàn bộ máy tính trực.
-Phase 4 (Ngày 11–14) : Kiểm toán QA Hàng ngày & Tối ưu hóa Chỉ số AHT/CSAT (Về 0% Fatal Error).
-```
+| **Premature Account Disclosure** | Disclosing balance or line status prior to verifying PII. | `:atw-cpni-ask`<br>`;v_cpni` | Prompts for Full Name, DOB, and SSN4 under federal CPNI mandates. |
+| **Coaching Customer on PII** | Revealing partial records when customer authentication fails. | `:atw-cpni-fail`<br>`;v_fail` | Informs customer of mismatch without disclosing database values; directs to ID upload. |
+| **Warranty Window Misstatement** | Quoting 15 days on a paid upgrade or missing 48h physical defect rule. | `:atw-war-ylw`<br>`;p_war` | Distinguishes 15d pre-owned vs 30d paid; explicitly enforces the 48-hour cosmetic damage limit. |
+| **Refund Window Misstatement** | Promising refund on delivered goods past 7d or on telecom airtime. | `:atw-refund-ylw`<br>`;p_ref` | Enforces 15d/30d/7d hardware tiers; declares telecom charges non-refundable. |
+| **Port-Out PIN SLA Misstatement** | Claiming PIN is valid for 30 days; omitting subsidy commitment. | `:atw-po-ylw`<br>`;p_po` | Enforces 4-day PIN lifetime; delivers required 180-day hardware subsidy warning. |
+| **Lifeline Non-Usage Clock Error** | Misquoting de-enrollment timeline as 30 days without grace period. | `:atw-nonuse-ylw`<br>`;p_nonuse` | Cites 30-day notice + 15-day cure window (45 days total); notes 1-day NLAD de-registration. |
+| **Queue Latency Penalty (ART)** | Representative exceeds 90-second response threshold. | `:atw-hold-check`<br>`;h_check` | Transmits 45-second reassurance message to refresh queue timers. |
+| **Abusive Disconnection Penalty** | Disconnecting abusive session without regulatory warning. | `:atw-warn-profanity`<br>`;b_warn` | Issues formalized professional boundary warning prior to disconnection. |
+| **Missing CRM Activity Record** | Incomplete audit trail following session termination. | `:atw-crm-note`<br>`;crm_note` | Generates standardized audit entry: Reason, Root Cause, Action, Ticket ID. |

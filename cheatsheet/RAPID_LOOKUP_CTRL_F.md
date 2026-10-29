@@ -1,55 +1,109 @@
-# CẨM NANG TRA CỨU NHANH (RAPID LOOKUP & CTRL+F ENGINE)
-*(Dành cho Chat Agent tại Softel Solution - Tối ưu tốc độ tra cứu và xử lý tình huống)*
+# OPERATIONAL ROUTING & TECHNICAL KEYWORD INDEX
+**AirTalk Wireless & TAG Mobile - Rapid Diagnostic Triage & Cross-Reference Dictionary**
+*Document ID: OPS-REF-IDX-2026-V3 | Classification: Technical Reference Index*
+*Authorized Role: Tier 1 Customer Support Representative (Agent: Martin)*
 
 ---
 
-## 1. QUY TRÌNH 3 BƯỚC XỬ LÝ CASE LẠ GIỮA BIỂN POLICY
+## 1. Systematic 3-Step Triage Methodology for Complex Inquiries
 
-Khi gặp một câu hỏi hóc búa, sự cố hiếm gặp hoặc khách hàng yêu cầu một điều khoản bạn chưa từng gặp:
+When encountering edge-case inquiries, complex policy intersections, or escalated customer demands, representatives must not attempt unverified improvisations. Adhere to the standardized 3-step rapid triage workflow:
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ BƯỚC 1: CHỐT CHẶN CẢM XÚC & BUY-TIME (10 GIÂY ĐẦU)                          │
-│ Gõ ngay: ;h_check hoặc ;h_lead                                              │
-│ -> Giữ khách yên tâm, reset đồng hồ phản hồi của hệ thống chat,             │
-│    mua ngay 60 - 90 giây bình tĩnh tra cứu dữ liệu.                         │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ BƯỚC 2: TRA CỨU TỪ KHÓA CỐT LÕI (CTRL + F TRÊN MASTER MATRIX HOẶC CRM)      │
-│ Mở MASTER_POLICY_MATRIX.md hoặc tài liệu SOP, gõ từ khóa định vị nhanh.     │
-├─────────────────────────────────────────────────────────────────────────────┤
-│ BƯỚC 3: DỊCH POLICY THÀNH CÂU PHẢN HỒI THEO TƯ DUY 3 VÙNG (RED - YELLOW - GREEN)│
-│ Không đọc nguyên văn luật khô khan. Lắp ghép 3 mảnh Lego ngắn gọn.          │
-└─────────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    InboundTrig["Customer Presents Complex / Unfamiliar Inquiry"] --> Step1["Step 1: Deploy Latency Buffer (< 10s)<br/>Execute :atw-hold-check or ;h_check<br/>- Preserves Average Response Time (ART)<br/>- Provides 60-90s window for system lookup"]
+    
+    Step1 --> Step2["Step 2: Execute Parametric Search (10-30s)<br/>Use Ctrl+F across this Index or MASTER_POLICY_MATRIX.md<br/>Locate exact SOP parameters, assignees, and constraints"]
+    
+    Step2 --> Step3["Step 3: Synthesize 3-Zone Response (30-60s)<br/>Assemble [Red Empathy] + [Yellow Policy] + [Green Solution]<br/>Or deploy pre-assembled Lego macro"]
+    
+    Step3 --> Transmit["Transmit Audit-Compliant Resolution"]
 ```
 
 ---
 
-## 2. BẢNG TỪ KHÓA ĐỊNH VỊ NHANH (CTRL + F KEYWORD INDEX)
+## 2. High-Density Operational Keyword & Routing Index
 
-| Bạn Cần Tìm Gì? | Từ Khóa Gõ Ctrl + F | Phân Hệ Liên Quan | Thông Số Cốt Lõi Cần Nhớ |
+Use `Ctrl + F` to jump directly to any operational term, symptom, or system code below:
+
+| Inbound Search Term / Customer Symptom | Underlying Regulatory Domain | Governing SOP Reference | Core Parameter / Governing Rule | Primary Espanso Trigger | Shorthand Trigger |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Account Verification / PII** | CPNI Security | Account Verification V1.2 | Full Name, DOB, SSN4 must match CRM 100%. | `:atw-cpni-ask` | `;v_cpni` |
+| **Verification Failed / Guessing** | CPNI Security | Account Verification V1.2 | Discontinue account specifics; direct to ID portal. | `:atw-cpni-fail` | `;v_fail` |
+| **Port-Out / Transfer PIN** | Number Portability | Port-Out SOP V2.1 | PIN valid **4 calendar days**; warn on **180d subsidy**. | `:atw-po-combo` | `;c_po` |
+| **Cancel Port-Out / Stay** | Winback / Retention | Cancel Port-Out SOP | Invalidate 4-day PIN; preserve Lifeline subsidy. | `:atw-po-cancel` | `;g_po_cancel` |
+| **Delivered But Missing (DCNR)** | Logistics Claim | DCNR V3.1 | Audit GPS/photo; file NUC ticket; SLA **24-48h**. | `:atw-dcnr-combo` | `;c_dcnr` |
+| **Tracking Stalled (LIT)** | Logistics Claim | Lost In Transit V2.1 | Under \$100 vs Over \$100 claim; SLA **24-48h**. | `:atw-lit-combo` | `;c_lit` |
+| **Package Returned (RTS)** | Logistics Claim | Return To Sender V1.1 | Require Proof of Address within **10 calendar days**. | `:atw-rts-combo` | `;c_rts` |
+| **Hot Rush / Urgent Order** | Priority Fulfillment | Hot Rush SOP | Dispatch in **24-48h** (Cuong Nguyen); no PAT stores. | `:atw-rush-combo` | `;g_hotrush` |
+| **Out of Stock Handset** | Inventory Operations | Out of Stock SOP | Offer equivalent replacement or re-selection link. | `:atw-oos-combo` | `;c_oos` |
+| **Free Phone Warranty** | Hardware RMA | Warranty V1.2 | Warranty period is **15 calendar days** from delivery. | `:atw-war-ylw` | `;p_war` |
+| **Paid Phone Warranty** | Hardware RMA | Warranty V1.2 | Warranty period is **30 calendar days** from delivery. | `:atw-war-ylw` | `;p_war` |
+| **Cosmetic / Screen Cracks** | Hardware RMA | Warranty V1.2 | Must be reported within **48 hours** of delivery. | `:atw-war-ylw` | `;p_war` |
+| **Return Shipping Label** | Reverse Logistics | Warranty V1.2 | Must be postmarked within **7 business days**. | `:atw-rma-label` | `;g_rma` |
+| **180-Day Commitment** | Device Subsidy | Subsidy Agreement | Customer must maintain **180 active days** for subsidy. | `:atw-po-ylw` | `;p_po` |
+| **365-Day Free Phone Rule** | Federal Lifeline | BYOD Guideline | One free phone per household every **365 days**. | `:atw-byod-ylw` | `;p_byod` |
+| **Non-Usage De-enrollment** | USAC Compliance | Non-Usage Guideline V1.1 | 30d usage + 15d cure = **45d**; NLAD update in **1bd**. | `:atw-nonuse-ylw` | `;p_nonuse` |
+| **Refund (Delivered Device)** | Financial Accounting | Refund SOP V3.1 | Pre-owned **15d**, Paid **30d**, Non-defective **7d**. | `:atw-refund-combo` | `;c_refund` |
+| **Refund (Data / ILD / Plan)** | Financial Accounting | Refund SOP V3.1 | Telecom fees and activated usage are **non-refundable**. | `:atw-ref-non` | `;p_ref_non` |
+| **Stripe Authorization Hold** | Merchant Processing | Refund SOP V3.1 | Pending charge drops in **7-10 business days**; no credit. | `:atw-stripe-hold` | `;p_stripe` |
+| **Cancel Service (Tier 1)** | Retention Operations | Cancellation SOP V1.1 | Probe reasons, disclose risks; escalate to Tier 2. | `:atw-cancel-t1` | `;c_cancel` |
+| **MDM Buy-Out / Unlock** | Hardware Operations | Cancellation SOP V1.1 | Pay remaining subsidy balance to remove MDM lock. | `:atw-mdm-buyout` | `;p_mdm` |
+| **Spam Investigation Flag** | Fraud & Security | Spam Handling V2.2 | Block new SIM/MDN change; demand ID/Video proof. | `:atw-spam-evasion` | `;c_spam` |
+| **Stolen Handset / Blacklist** | Fraud & Security | Lost/Stolen SOP | Immediate line suspension and IMEI national blacklist. | `:atw-stolen-combo` | `;c_stolen` |
+| **Slamming / Stolen Benefit** | Regulatory Compliance | Fraud Guideline | Direct to USAC Hotline (**1-800-234-9473**); Reverse Form. | `:atw-slam-combo` | `;c_slam` |
+| **PUK Code / SIM Blocked** | Network Engineering | PUK Code SOP | PUK1 on OCS; **10 incorrect entries destroy SIM**. | `:atw-puk-combo` | `;c_puk` |
+| **eSIM / QR Code Setup** | Network Engineering | eSIM Guideline | Active Wi-Fi required; re-scan fresh QR profile. | `:atw-esim-combo` | `;c_esim` |
+| **MDN Change / New Number** | Network Engineering | MDN Change SOP V1.2 | Standard fee is **$25.00**; warn on recycled spam. | `:atw-mdn-combo` | `;c_mdn` |
+| **International Long Distance** | Network Operations | ILD Guideline | 80 countries unlimited; \$10 monthly credit on rest. | `:atw-ild-info` | `;g_ild` |
+| **International Roaming** | Network Operations | Network Policy | Domestic US towers only; Roaming strictly prohibited. | `:atw-roam-no` | `;p_roam` |
+| **Voicemail Setup / Reset** | Network Operations | Voicemail SOP | Default PIN is last 4 MDN digits; press & hold 1. | `:atw-vm-combo` | `;g_voicemail` |
+| **Recertification De-enroll** | USAC Lifeline | Recertify SOP | Generate personalized CRM re-apply link. | `:atw-recert-combo` | `;c_recert` |
+| **NLAD TRIV Identity Fail** | Enrollment Support | Application SOP | Route to Review Team for manual ID/SSN adjudication. | `:atw-triv-fail` | `;g_triv` |
+
+---
+
+## 3. Parametric Constraint Reference Matrix
+
+| Metric / Parameter Code | Operational Threshold | Legal / Regulatory Basis | Non-Compliance Severity |
 | :--- | :--- | :--- | :--- |
-| **Xác thực CPNI** | `CPNI`, `Full Name`, `SSN4`, `DOB` | Xác minh tài khoản | Bắt buộc Họ Tên + Ngày sinh + 4 số cuối SSN |
-| **Chuyển mạng / Lấy PIN** | `Port-Out`, `Transfer PIN`, `OCS Status` | Port-Out SOP V2.1 | PIN hạn **4 ngày**; MDN phải: Active/Hotlined/Barred/Expired |
-| **Giao hàng không thấy máy** | `DCNR`, `Claimed Not Received`, `FedEx` | Logistics V3.1 | Gửi Ticket Khang Tran, thẩm định **24-48h** |
-| **Bưu kiện thất lạc** | `Lost In Transit`, `LIT`, `Tracking` | Logistics V2.1 | Trên $100 tạo Accounting Ticket, SLA **24-48h** |
-| **Hàng bị trả về kho** | `Return To Sender`, `RTS`, `Undeliverable` | Logistics | Kiểm tra địa chỉ hợp lệ, tạo vé Reship sau nhập kho |
-| **Đổi trả / Bảo hành máy** | `Warranty`, `15 Day`, `Limited Warranty` | Bảo hành V1.2 | Free Phone: **15 ngày**; Return label có hạn **7 ngày** |
-| **Bị ngắt sóng vì không dùng**| `Non-usage`, `NUC`, `45 consecutive` | Tuân thủ Lifeline | 30 ngày cảnh báo + 15 ngày ân hạn = **46 ngày de-enroll** |
-| **Hoàn lại tiền đã trả** | `Refund`, `Stripe`, `7 calendar days` | Hoàn tiền V3.1 | Đơn đã nhận: Báo trong **7 ngày**; Tiền về **3-5 ngày** |
-| **Muốn hủy hợp đồng/dịch vụ** | `Cancellation`, `Retention`, `Tier 2` | Hủy dịch vụ V1.1 | Thuyết phục rủi ro mất số/trợ cấp -> Chuyển Ticket Tier 2 |
-| **Bị khóa do nghi ngờ Spam** | `Spam`, `Usage Detail`, `ID Proof` | Spam SOP V2.2 | Xem cước 30 ngày, bắt buộc ảnh ID sát mặt / video 5-10s |
-| **SIM bị khóa mã số** | `PUK`, `PUK1`, `10 attempts` | Thiết bị & SIM | Sai quá 10 lần hỏng SIM; tra PUK trên OCS CRM |
-| **Cài đặt SIM điện tử** | `eSIM`, `QR Code`, `Wi-Fi` | Thiết bị & SIM | Gửi QR qua email; máy phải kết nối Wi-Fi khi quét |
-| **Đổi số điện thoại khác** | `MDN Change`, `New Number` | Thuê bao & Dịch vụ | Số cũ mất vĩnh viễn; khởi động lại máy sau khi đổi |
+| **Free Pre-Owned Warranty** | **15 Calendar Days** from delivery | Handset Replacement Policy | Critical (Loss of warranty rights) |
+| **Paid Upgrade Warranty** | **30 Calendar Days** from delivery | Handset Replacement Policy | Critical (False promise audit fail) |
+| **Cosmetic Damage Window** | **Strictly 48 Hours** from delivery | Handset Replacement Policy | High (Carrier financial absorption) |
+| **RMA Label Expiration** | **7 Business Days** to postmark | Reverse Logistics Standard | Medium (Warehouse RMA rejection) |
+| **Device Subsidy Commitment** | **180 Consecutive Active Days** | Hardware Subsidy Agreement | Critical (Contractual misrepresentation) |
+| **Free Device Interval** | **365 Calendar Days** per household | USAC / Lifeline Program Rules | High (Duplicate benefit denial) |
+| **Port-Out PIN Validity** | **4 Calendar Days (96 Hours)** | Port-Out Handling V2.1 | Critical (Failed inter-carrier porting) |
+| **Lifeline Inactive Notice** | **30 Consecutive Days** zero usage | FCC 47 CFR § 54.405(e)(3) | Statutory Compliance Mandate |
+| **Lifeline Grace / Cure Period** | **15 Calendar Days** (Days 31-45) | FCC 47 CFR § 54.405(e)(3) | Statutory Compliance Mandate |
+| **NLAD De-enrollment SLA** | **Within 1 Business Day** of Day 46 | FCC 47 CFR § 54.407(c)(2) | Federal Regulatory Violation |
+| **Logistics Investigation SLA** | **24 to 48 Business Hours** | DCNR V3.1 / LIT V2.1 | Operational SLA Standard |
+| **Stripe Authorization Release** | **7 to 10 Business Days** | Merchant Banking Standard | Low (Customer inquiry escalation) |
+| **Merchant Refund Processing** | **3 to 5 Business Days** | Accounting Operations | Medium (Payment dispute escalation) |
 
 ---
 
-## 3. CÔNG THỨC CHUYỂN DỊCH POLICY SANG NGÔN NGỮ NGƯỜI DÙNG (USER-CENTRIC ENGLISH)
+## 4. Policy-to-Customer Translation Lexicon
 
-Khách hàng Mỹ nhận trợ cấp Lifeline thường thuộc nhóm người cao tuổi, người có thu nhập thấp hoặc đang gặp khó khăn. Khi họ chat lúc bực tức, **tuyệt đối không dùng văn phong quan liêu hoặc trích dẫn điều khoản luật cứng nhắc**.
+When communicating statutory and procedural rules to distressed or non-technical subscribers, avoid rigid legal citations. Translate technical parameters into compliant, empathetic English using the 3-Zone architecture:
 
-| Policy Gốc (Khô Khan / Kỹ Thuật) | Cách Dịch Thô (Dễ Gây Chửi Bới) ❌ | Cách Dịch Chuẩn 3 Vùng (Chuyên Nghiệp & Xoa Dịu) ✅ |
-| :--- | :--- | :--- |
-| *Rule 1 SOP Refund: "Khách hàng có tối đa 07 ngày thường kể từ Delivery Date để thực hiện trả hàng."* | *"You are over 7 days so you cannot get any refund."* | **[Red]:** *"I completely understand you would like a refund for this order."*<br>**[Yellow]:** *"Under our standard return policy, requests must be submitted within 7 calendar days of delivery."*<br>**[Green]:** *"While the refund window has closed, I can gladly help you troubleshoot the device or explore our discounted upgrade replacement options."* |
-| *Rule 08 SOP Port-Out: "Chỉ gửi PIN qua SMS hoặc Email, không gửi đồng thời cả hai."* | *"I cannot send to both because the system will produce different codes."* | **[Red]:** *"I will be more than happy to help you get your transfer PIN right away."*<br>**[Yellow]:** *"To guarantee security and ensure the transfer code remains accurate, our system generates the PIN through one designated channel at a time."*<br>**[Green]:** *"Would you prefer to receive your PIN via SMS to your active phone, or sent directly to your registered email address?"* |
-| *Non-usage: "Tài khoản bị hủy do quá 45 ngày không phát sinh cước."* | *"Your account is deactivated because you did not use it for 45 days."* | **[Red]:** *"I am truly sorry to hear that your phone service is currently disconnected."*<br>**[Yellow]:** *"Under federal Lifeline guidelines, service must be used at least once every 30 days, followed by a 15-day grace period, before the system automatically releases the number."*<br>**[Green]:** *"I can immediately guide you through re-enrolling on our website so you can restore your free government benefit with minimal delay."* |
+### 4.1 Equipment Return Past Standard Window
+- **Non-Compliant Phrasing:** *"You are past 7 days so you are not eligible for any refund under our rules."*
+- **Compliant 3-Zone Synthesis:**
+  - `[RED Empathy]:` *"I completely understand you would like to return the device and receive a refund."*
+  - `[YELLOW Policy]:` *"Under our standard equipment policy, return requests for pre-owned equipment must be submitted within 15 calendar days of delivery, and the evaluation window for this purchase has concluded."*
+  - `[GREEN Solution]:` *"While a direct refund cannot be processed, I can gladly assist you with technical troubleshooting to ensure the handset functions properly, or review our current discounted upgrade options."*
+
+### 4.2 Port-Out Delivery Channel Restrictions
+- **Non-Compliant Phrasing:** *"I cannot give you the PIN over chat or send to both SMS and email because the system will break."*
+- **Compliant 3-Zone Synthesis:**
+  - `[RED Empathy]:` *"I will be more than happy to help you securely retrieve your transfer credentials right away."*
+  - `[YELLOW Policy]:` *"To protect your private account security and prevent duplicate code generation, our provisioning engine delivers the Transfer PIN through one verified channel at a time."*
+  - `[GREEN Solution]:` *"Would you prefer to receive your 4-day Transfer PIN via text message to your active handset upon ICCID verification, or sent directly to your registered email address on file?"*
+
+### 4.3 Lifeline Non-Usage De-enrollment Notice
+- **Non-Compliant Phrasing:** *"Your phone was cut off because you didn't use it for 45 days."*
+- **Compliant 3-Zone Synthesis:**
+  - `[RED Empathy]:` *"I sincerely apologize for the unexpected interruption to your wireless service."*
+  - `[YELLOW Policy]:` *"Under federal Lifeline guidelines, free government-supported lines require active usage at least once every 30 days, followed by a 15-day grace period, before the national registry automatically de-enrolls the account."*
+  - `[GREEN Solution]:` *"I can immediately provide you with a personalized re-enrollment link so you can re-establish your free monthly benefit and reconnect your service as quickly as possible."*

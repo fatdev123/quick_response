@@ -1,317 +1,406 @@
-# PHÂN TÍCH CHUYÊN SÂU TOÀN BỘ NGHIỆP VỤ & SOP NỘI BỘ SOFTEL SOLUTION
-*(AirTalk Wireless & TAG Mobile - Lifeline / ACP / MVNO Ecosystem)*
-*Tài liệu phân tích đối chiếu 100% dựa trên 57 tài liệu SOP, Policy, Case Studies & Training nội bộ*
+# INTERNAL OPERATIONS & SOP TECHNICAL SPECIFICATION
+**AirTalk Wireless & TAG Mobile - Lifeline / ACP / MVNO Infrastructure**
+*Document ID: SOP-INT-DIVE-2026-V3 | Classification: Technical Operations Manual*
+*Authorized Role: Tier 1 Customer Support Representative (Agent: Martin)*
+*Source Material: Reconciliation of 57 Audited Standard Operating Procedures, Regulatory Policies, and Internal Training Matrices*
 
 ---
 
-## MỤC LỤC CHI TIẾT
-1. [Phân Hệ 1: CPNI Account Verification, SIM Port Protection & An Ninh Tài Khoản](#phân-hệ-1)
-2. [Phân Hệ 2: SOP Spam Investigation & Đối Phó Các Hành Vi Né Tránh (V2.2 - 26/10/2026)](#phân-hệ-2)
-3. [Phân Hệ 3: SOP Port-Out & Chuyển Mạng Giữ Số Chi Tiết (V2.1 - 19/10/2026)](#phân-hệ-3)
-4. [Phân Hệ 4: SOP Refund Toàn Diện Cho 7 Dòng Sản Phẩm & Case Study (V3.1 - 20/10/2026)](#phân-hệ-4)
-5. [Phân Hệ 5: SOP Cancellation & Retention Tier 1 / Tier 2 & MDM Buy-Out (V1.1 - 28/08/2026)](#phân-hệ-5)
-6. [Phân Hệ 6: Logistics & Vận Chuyển: DCNR 3.1, Lost In Transit 2.1, RTS 1.1 & Hot Rush](#phân-hệ-6)
-7. [Phân Hệ 7: Thiết Bị, Bảo Hành (15 Ngày), BYOD (Quy Tắc 365 Ngày) & PUK](#phân-hệ-7)
-8. [Phân Hệ 8: Tuân Thủ Pháp Lý Lifeline: Non-Usage (30+15=45d), NUC & Recertification](#phân-hệ-8)
-9. [Phân Hệ 9: Application Assistance, NLAD TRIV Fail & Quản Lý Đơn Hàng](#phân-hệ-9)
-10. [Phân Hệ 10: Dịch Vụ Mạng, MDN Change ($25), eSIM & Roaming / ILD](#phân-hệ-10)
+## Document Overview & Regulatory Scope
+
+This technical specification provides an exhaustive, granular breakdown of all operational systems, regulatory compliance frameworks, and back-office procedures governing customer service operations at Softel Solutions. All processes described are audited against Federal Communications Commission (FCC) statutory mandates, Universal Service Administrative Company (USAC) Universal Service Fund rules, National Lifeline Accountability Database (NLAD) synchronization protocols, and merchant payment security standards.
 
 ---
 
-<a name="phân-hệ-1"></a>
-## 1. PHÂN HỆ 1: CPNI ACCOUNT VERIFICATION, SIM PORT-PROTECTION & AN NINH TÀI KHOẢN
+## Table of Contents
+1. [Subsystem 1: CPNI Authentication, SIM Port-Protection & Identity Theft Security](#subsystem-1)
+2. [Subsystem 2: Anti-Spam Investigation & Evasion Mitigation Architecture](#subsystem-2)
+3. [Subsystem 3: Port-Out Management & Inter-Carrier Provisioning Lifecycle](#subsystem-3)
+4. [Subsystem 4: Product Refund Architecture & Stripe Merchant Settlement](#subsystem-4)
+5. [Subsystem 5: Subscription Cancellation, Tier 1 Retention & MDM Buy-Out Protocols](#subsystem-5)
+6. [Subsystem 6: Logistics Disruption, Freight Carrier Claims & Priority Fulfillment](#subsystem-6)
+7. [Subsystem 7: Hardware RMA Protocols, Warranty Governance & BYOD Rules](#subsystem-7)
+8. [Subsystem 8: Statutory Lifeline Compliance, 45-Day Non-Usage & Recertification](#subsystem-8)
+9. [Subsystem 9: Application Adjudication, NLAD TRIV Resolution & Order Modifications](#subsystem-9)
+10. [Subsystem 10: Cellular Provisioning, MDN Migration, Voicemail & ILD/Roaming Routing](#subsystem-10)
 
-### 1.1. Căn Cứ Tài Liệu:
-- `Policy_Account Verification_ AirTalk & TAG_V1.1.pdf` (Effective Oct 3, 2026)
+---
+
+<a name="subsystem-1"></a>
+## 1. Subsystem 1: CPNI Authentication, SIM Port-Protection & Identity Theft Security
+
+### 1.1 Regulatory & Statutory Basis
+- `Policy_Account Verification_AirTalk & TAG_V1.1.pdf` (Effective Oct 3, 2026)
 - `SOP_Account Verification Handling_AirTalk & TAG_V1.2.pdf`
 - `Identity Theft.pdf` (Version 1 - Change log May 2025)
 - `SIM Port Protection - CSR only.pdf`
+- Statutory Authority: 47 U.S.C. § 222; FCC 47 CFR §§ 64.2001–64.2011 (Customer Proprietary Network Information).
 
-### 1.2. Phân Tích Chuyên Sâu Quy Định Xác Minh CPNI:
-- **3 Thông Tin Bắt Buộc (Mandatory PII):**
-  1. **Full Name:** First Name và Last Name bắt buộc khớp đúng hồ sơ CRM. Middle Name có thể có hoặc không. Bỏ qua hậu tố *Jr., Sr., II, III, IV* nếu First + Last khớp. Chấp nhận khác biệt dấu gạch nối (*Smith-Jones* vs *Smith Jones*) và dấu nháy (*O'Brien* vs *OBrien*).
-  2. **Date of Birth (DOB):** Bắt buộc khớp chính xác 100% định dạng `MM/DD/YYYY`.
-  3. **Last 4 Digits of SSN (SSN4):** Bắt buộc khớp chính xác 100%.
-- **Thông Tin Liên Hệ Bắt Buộc Thu Thập (Contact Info):**
-  - Email Address & Callback Phone Number (MDN hoặc số thay thế).
-- **Quy Tắc Xử Lý Khi Sai Thông Tin:**
-  - Sai 1-2 lần: Cho khách kiểm tra lại, **tuyệt đối không mớm/tiết lộ dữ liệu đúng trên CRM**.
-  - Sai quá số lần: **Dừng hỗ trợ thông tin cụ thể (Account-Specific)**, chỉ hỗ trợ thông tin chung (General Policy).
-  - Không được dùng phán đoán cá nhân để approve verification khi tên không khớp.
-
-### 1.3. Tính Năng SIM Port-Protection (Khóa Bảo Vệ SIM):
-- **Cơ chế kích hoạt tự động:**
-  - Khách hàng nhập sai mã xác thực đặt SIM thay thế / thiết bị quá **3 lần**.
-  - Hoặc CSR nhập sai mã xác thực yêu cầu Transfer PIN quá **3 lần**.
-  - Hệ thống tự động bật tính năng `SIM Port-Protection` (Khóa tài khoản trên OCS/CRM).
-- **Nhận diện trên CRM:**
-  - Tab Activity ghi: `"SIM - Port Protection turned on / Locks Account"`.
-- **Cách mở khóa (Unlock):**
-  - Khách tự mở: Đăng nhập User Portal > `Account` > `My SIM` > Bấm nút **SIM - Port Unlock**.
-  - CSR kiểm tra và hướng dẫn khách tự thao tác nếu tài khoản chính chủ.
-
-### 1.4. Quy Định Phòng Chống Đánh Cắp Danh Tính (Identity Theft):
-- **Cập nhật thay đổi ngày 09/05/2025:**
-  > [!CAUTION]
-  > **TUYỆT ĐỐI KHÔNG ĐƯỢC ĐÍNH KÈM GIẤY TỜ TÙY THÂN CỦA KHÁCH VÀO ACTIVITY NOTE TRÊN CRM!**
-  > CSR chỉ được ghi nhận mã **Ticket ID** hoặc **Chat ID** có chứa ID Proof của khách hàng vào Activity Note để bảo mật dữ liệu theo chuẩn liên bang.
-
----
-
-<a name="phân-hệ-2"></a>
-## 2. PHÂN HỆ 2: SOP SPAM INVESTIGATION & ĐỐI PHÓ HÀNH VI NÉ TRÁNH (V2.2 - 26/10/2026)
-
-### 2.1. Căn Cứ Tài Liệu:
-- `SOP_Spam Handling_AirTalk & TAG_V2.2_Active_2026-10-26.docx` (Active Oct 26, 2026 - 1,130 Paragraphs)
-- `SMS Spamming.pdf`, `SOP Spamming.drawio`
-
-### 2.2. Phân Tích Kỹ Thuật & Quy Tắc Vận Hành:
-- **Nguyên tắc cốt lõi (Rule 01 - 04):**
-  - Tài khoản bị flag Spam do OCS Live Status hoặc Hotline ID sẽ chuyển vào luồng **Spam Investigation**.
-  - CSR phải kiểm tra **Usage Detail 30 ngày tính ngược** từ ngày nhận cảnh báo (đối chiếu tần suất, đích đến, thời điểm, mẫu tin nhắn hàng loạt).
-  - Khách hàng bắt buộc cung cấp:
-    1. **Ảnh chụp cầm ID sát mặt (Selfie with ID):** Rõ mặt và rõ chữ trên giấy tờ tùy thân do chính phủ cấp.
-    2. Nếu ảnh mờ/nghi ngờ: Bắt buộc yêu cầu **Video 5–10 giây** cầm ID sát mặt, đọc rõ Họ tên và Ngày sinh.
-- **Quy tắc về SIM & Gọi 911 (Rule 06, 09, FAQ 1):**
-  - Chức năng **New SIM Order (kèm MDN mới hoặc không)** bị vô hiệu hóa hoàn toàn trên CRM và App trong thời gian điều tra. CSR không được tự ý đặt SIM mới!
-  - Cuộc gọi khẩn cấp **911** vẫn phải được đảm bảo hoạt động. Nếu hệ thống cho phép gỡ Hotline tạm để gọi ra khẩn cấp thì gỡ, nếu không thì giải thích.
-- **Quy tắc Block Caller (Rule 06):**
-  - CSR **không được tự bật Block Caller**. Chỉ tạo ticket High/Open escalate qua FAQ channel đến SPT/TL. Block Caller chỉ giới hạn cuộc gọi (Call), Chat và Ticket vẫn mở bình thường.
-
-### 2.3. Bẫy Nghiệp Vụ: Nhận Diện Các Chiêu Thức Né Tránh Điều Tra (Evasion Attempts):
-Tài liệu SOP V2.2 chỉ rõ khách hàng thường giả vờ gặp sự cố khác để "né" cuộc điều tra Spam:
-1. Đòi chuyển mạng vào (Port-In số khác).
-2. Yêu cầu đổi số điện thoại (MDN Change).
-3. Đòi mua SIM mới với số mới.
-4. Báo mất máy / mất SIM (Lost/Stolen).
-5. Báo kiện hàng Delivered nhưng không nhận được (DCNR).
-6. Báo hàng bị thất lạc (LIT).
-> [!IMPORTANT]
-> **HÀNH ĐỘNG CỦA CSR:** Khi tài khoản đang gắn cờ Spam Investigation, **TẤT CẢ CÁC YÊU CẦU TRÊN ĐỀU PHẢI TẠM DỪNG**. Bắt buộc thực hiện Spam Investigation trước! Không được bypass restriction!
-
-- **Mẫu Ticket Chuẩn CRM:**
-  - Nếu khách từ chối hợp tác điều tra nhưng đòi hủy/port-out: Tạo ticket `Spamming CSR Investigation – CX's Request`.
-
----
-
-<a name="phân-hệ-3"></a>
-## 3. PHÂN HỆ 3: SOP PORT-OUT & CHUYỂN MẠNG GIỮ SỐ (V2.1 - 19/10/2026)
-
-### 3.1. Căn Cứ Tài Liệu:
-- `SOP_Port-Out_AirTalk & TAG_V2.1_Active_2026-10-19.docx` (506 Paragraphs)
-- `Porting Guideline.pdf`, `Cancel Port-Out - MVNO-C.png`, `PO-GEN-P001` đến `P005.png`
-
-### 3.2. Điều Kiện Đủ & Quy Trình Tạo Mã PIN (Rules 01 – 10):
-- **4 Trạng Thái OCS Hợp Lệ (Rule 03):** MDN phải đang ở 1 trong 4 trạng thái:
-  $$\text{OCS Live Status} \in \{\text{Active}, \text{Hotlined}, \text{Barred}, \text{Expired}\}$$
-- **Quy Tắc Cung Cấp PIN (Rule 08, 09 & Step 3.3):**
-  - Nhận qua **Email:** Khách phải đọc đúng địa chỉ Email trên hồ sơ.
-  - Nhận qua **MDN (SMS):** Khách phải cung cấp đúng **ICCID** của thẻ SIM (trừ khi cuộc gọi/chat xuất phát từ chính MDN đó).
-  - Khách nhập sai quá 2 lần -> Chuyển sang phương thức còn lại. Nếu cả 2 đều sai -> **Từ chối cấp PIN**.
-  - **Chỉ gửi PIN qua SMS HOẶC Email**, tuyệt đối không gửi đồng thời cả hai.
-  - Mã PIN có hiệu lực đúng **4 ngày calendar days**. Số tài khoản = MDN hoặc Enrollment ID.
-
-### 3.3. Tác Động Hủy Dịch Vụ Theo Từng Carrier (Rule 07):
-- **Nhà mạng AT&T:** Tài khoản sẽ bị hủy tự động sau **48 giờ** kể từ khi Cancellation CRM Ticket được tạo.
-- **Nhà mạng MVNO-C:**
-  - Khách hàng có **15 ngày** để hoàn tất Port-In sang nhà mạng mới.
-  - Retention Team sẽ gom các ticket và thực hiện hủy tài khoản vào **cuối tháng**.
-  - Nếu khách yêu cầu hủy khẩn: CSR đặt tiêu đề Ticket: `[URGENT] CANCELLATION REQUEST` (Hủy trong 48h).
-
----
-
-<a name="phân-hệ-4"></a>
-## 4. PHÂN HỆ 4: SOP REFUND TOÀN DIỆN CHO 7 DÒNG SẢN PHẨM & CASE STUDY (V3.1 - 20/10/2026)
-
-### 4.1. Căn Cứ Tài Liệu:
-- `SOP_Refund_AirTalk&TAG_V3.1_Active_2026-10-20.pdf` (84 trang)
-- `Refund-case-studies.pdf` (19 slide)
-
-### 4.2. Điều Kiện Kích Hoạt Hoàn Tiền (Core Rules):
-- **Trạng thái thanh toán:** CRM phải là `Completed` và Stripe Status phải là `Success / Succeeded`.
-- **Nếu Stripe là Pending / Authorized:** Khoản tiền chỉ đang bị tạm giữ (hold) bởi ngân hàng. Giải thích cho khách: Khoản ủy quyền sẽ tự động giải tỏa (drop off) sau **7 – 10 ngày làm việc**, không có giao dịch thực tế nên không có khoản hoàn tiền ghi có (credit).
-- **Quy tắc 7 ngày (Rule 1):** Đơn hàng Delivered chỉ có tối đa **07 ngày thường** kể từ ngày giao hàng để yêu cầu hoàn trả.
-
-### 4.3. Ma Trận Thẩm Định Hoàn Tiền Theo 7 Nhóm Sản Phẩm (Step 2.1 – 2.5):
+### 1.2 Multi-Factor Authentication Architecture
+Prior to acknowledging account existence, balances, order numbers, shipping tracking, or executing line modifications, representatives must authenticate the subscriber using three mandatory identity tokens:
 
 ```mermaid
 flowchart TD
-    R["Yêu Cầu Hoàn Tiền"] --> P{"Loại Sản Phẩm?"}
+    InboundSession["Inbound Customer Interaction"] --> PromptTokens["Prompt Mandatory Verification Tokens<br/>1. Full Legal Name<br/>2. Date of Birth (MM/DD/YYYY)<br/>3. Last 4 Digits of SSN"]
     
-    P --> P1["1. Plan Upgrade & Renewals"]
-    P1 --> P1_C{"Trong 48 giờ & Chưa kích hoạt?"}
-    P1_C -- "Yes" --> E["Đủ Điều Kiện (Eligible)"]
-    P1_C -- "Đã kích hoạt" --> NE["Từ Chối (Not Eligible)"]
+    PromptTokens --> EvalTokens{"Token Match Against CRM"}
     
-    P --> P2["2. Data Top-up & Roaming"]
-    P2 --> P2_U{"Đã sử dụng data?"}
-    P2_U -- "Đã dùng" --> NE
-    P2_U -- "Chưa dùng & Mua nhầm" --> P2_G["TL/SPT gỡ data thành công -> Eligible"]
+    EvalTokens -- "3 of 3 Match Exactly" --> AuthPassed["Authentication Successful<br/>Capture Secondary Contact Info:<br/>- Callback Number (MDN)<br/>- Verified Email Address"]
+    AuthPassed --> OpenService["Permit Full Account Servicing"]
     
-    P --> P3["3. Device (Điện Thoại)"]
-    P3 --> P3_D{"Đã giao hàng (Delivered)?"}
-    P3_D -- "Chưa giao" --> E
-    P3_D -- "Đã giao" --> P3_R{"Liên hệ trong 7 ngày + IMEI khớp + Máy Tốt?"}
-    P3_R -- "Thỏa tất cả" --> E
-    P3_R -- "Quá 7 ngày / Rơi vỡ" --> NE
+    EvalTokens -- "Discrepancy (Attempt 1 or 2)" --> Reprompt["Inform of Data Discrepancy<br/>Strict Prohibition:<br/>- Never confirm partial guesses<br/>- Never reveal stored CRM data"]
+    Reprompt --> PromptTokens
     
-    P --> P4["4. Express Shipping"]
-    P4 --> P4_F{"Đơn hàng đi kèm đã Fulfilled?"}
-    P4_F -- "Chưa đóng gói/xuất kho" --> E
-    P4_F -- "Đã Fulfilled" --> NE
-    
-    P --> P5["5. Accessories (Phụ kiện)"]
-    P5 --> P5_C{"Trong 7 ngày + Nguyên hộp/tình trạng tốt?"}
-    P5_C -- "Yes" --> E
-    P5_C -- "No" --> NE
+    EvalTokens -- "Discrepancy (Attempt 3+)" --> Lockout["Terminal Failure: Deploy :atw-cpni-fail<br/>Restrict Session to General Policies Only<br/>Direct Subscriber to Secure Government ID Upload"]
 ```
 
-### 4.4. Hình Thức Hoàn Tiền:
-- **Original Payment Method (Mặc định):** Tiền hoàn về thẻ trong **3–5 ngày làm việc** (tùy ngân hàng 5–7 ngày).
-- **Refund by Voucher (Chỉ AirTalk):** Áp dụng khi lỗi thuộc về công ty và khách đồng ý nhận Voucher. Đã nhận Voucher thì không hoàn tiền mặt.
+#### Detailed Field Matching Specifications:
+- **Full Legal Name:** First Name and Last Name must match the CRM subscriber record identically. Middle names are non-blocking. Suffixes (*Jr., Sr., II, III, IV*) are disregarded if First and Last names match. Name punctuation discrepancies (hyphens, apostrophes) are treated as matches.
+- **Date of Birth (DOB):** Must match the recorded date in `MM/DD/YYYY` format with zero character variance.
+- **SSN Last 4 Digits:** Must match the recorded 4-digit token synchronized with USAC/NLAD records.
+
+### 1.3 SIM Port-Protection Security Daemon
+- **Automated Lockout Trigger:** If a customer or representative enters incorrect authentication tokens **3 consecutive times** during replacement SIM provisioning or Transfer PIN generation, the OCS provisioning daemon automatically trips the `SIM Port-Protection` lock.
+- **CRM Indicator:** The Activity Log generates the system entry: `SIM - Port Protection turned on / Locks Account`.
+- **Remediation Protocol:** Representatives are barred from manual override. The subscriber must log into their authenticated web portal (`Account > My SIM > SIM - Port Unlock`) to perform self-service cryptographic unlocking.
+
+### 1.4 Identity Theft & Federal Privacy Data Hygiene
+- **Mandatory CRM Note Hygiene:** Pursuant to federal data protection standards (May 2025 change log), representatives are **strictly barred from attaching or pasting subscriber identity documents (passports, driver's licenses, SSN cards) into CRM Activity Notes**.
+- **Audit-Compliant Note Standard:** Representatives must record only the encrypted **Ticket ID** or **Chat Session ID** containing the uploaded document asset.
 
 ---
 
-<a name="phân-hệ-5"></a>
-## 5. PHÂN HỆ 5: SOP CANCELLATION & RETENTION TIER 1 / TIER 2 & MDM BUY-OUT
+<a name="subsystem-2"></a>
+## 2. Subsystem 2: Anti-Spam Investigation & Evasion Mitigation Architecture
 
-### 5.1. Căn Cứ Tài Liệu:
+### 2.1 Regulatory & Statutory Basis
+- `SOP_Spam Handling_AirTalk & TAG_V2.2_Active_2026-10-26.docx` (Active Oct 26, 2026 - 1,130 Paragraphs)
+- `SMS Spamming.pdf`, `SOP Spamming.drawio`
+
+### 2.2 Forensic Investigation Workflow
+
+```mermaid
+flowchart TD
+    SpamAlert["Account Flagged: Automated Spam / Bulk SMS Pattern"] --> ApplyHotline["OCS Applies Mandatory Hotline ID<br/>Block New SIM Order Engine on CRM & App<br/>Maintain Unrestricted 911 Emergency Access"]
+    
+    ApplyHotline --> ForensicReview["Representative Performs Forensic Usage Audit<br/>Review 30 Days of Outbound Call/SMS Records:<br/>- High-frequency burst patterns<br/>- Identical SMS payload across unique destinations<br/>- Sequential non-random dialing"]
+    
+    ForensicReview --> CXInquiry{"Subscriber Contacts Support"}
+    
+    CXInquiry --> DetectEvasion{"Is Subscriber Attempting Evasion?<br/>- Requesting MDN Change<br/>- Demanding New SIM Order<br/>- Requesting Port-In / Port-Out<br/>- Filing False Lost/Stolen or DCNR Claim"}
+    
+    DetectEvasion -- "Yes (Evasion Flag)" --> HaltEvasion["Deploy :atw-spam-evasion<br/>Halt All Ancillary Provisioning Immediately<br/>Demand Immediate Identity Re-verification"]
+    
+    DetectEvasion -- "No" --> RequestID["Explain Security Verification Mandate<br/>Require Proof Submission:<br/>1. High-resolution photo holding ID adjacent to face<br/>2. If ambiguous: 5-10s video reciting Name & DOB"]
+    
+    HaltEvasion --> RequestID
+    RequestID --> SubmitFraud["Attach Assets to CRM Fraud Ticket<br/>Escalate to Fraud & Compliance Review Team<br/>SLA: 24 to 48 Business Hours"]
+```
+
+### 2.3 Regulatory Evasion Countermeasures
+Subscribers operating bulk commercial messaging or phishing rings frequently deploy evasion tactics upon hotline activation. Under SOP V2.2, the following rules are mandatory:
+1. **Total Freeze on Line Alterations:** While flagged for spam investigation, no representative may process an MDN change, issue a replacement SIM, approve an equipment claim, or process a port-in.
+2. **Block Caller Governance:** Representatives may not toggle the Block Caller switch autonomously. Any request to block callers must be escalated as a High Priority ticket via the internal FAQ channel to the Supervisor / Tech Lead team.
+3. **Emergency Access (911):** 911 dialing capabilities must remain active across all hotline states. If technical system constraints impede 911 routing, the representative must immediately engage IT network operations to ensure dial-out compliance.
+
+---
+
+<a name="subsystem-3"></a>
+## 3. Subsystem 3: Port-Out Management & Inter-Carrier Provisioning Lifecycle
+
+### 3.1 Regulatory & Statutory Basis
+- `SOP_Port-Out_AirTalk & TAG_V2.1_Active_2026-10-19.docx` (506 Paragraphs)
+- `Porting Guideline.pdf`, `Cancel Port-Out - MVNO-C.png`, `PO-GEN-P001` through `P005.png`
+- Statutory Authority: FCC Wireless Local Number Portability (LNP) Rules (47 CFR § 52.35).
+
+### 3.2 OCS Line Qualification & Delivery Architecture
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor CX as Subscriber
+    actor CSR as Support Agent (Martin)
+    participant OCS as OCS / CRM Provisioning Engine
+    participant Carrier as Gaining Carrier Network
+
+    CX->>CSR: Requests Account Number & Port-Out Transfer PIN
+    CSR->>OCS: Perform 3-Factor CPNI Verification
+    OCS-->>CSR: Verification Confirmed
+    CSR->>OCS: Query OCS Line Status
+    
+    alt Status NOT in (Active, Hotlined, Barred, Expired)
+        CSR->>CX: Port-Out Rejected: Status ineligible. Account must be in serviceable state.
+    else Status Qualified
+        CSR->>CX: Advise on 180-Day Hardware Subsidy Lock & Loss of Federal Benefit
+        CSR->>CX: Designate Single Transmission Route (SMS with ICCID OR Verified Email)
+        Note over CSR,OCS: Transmission strictly restricted to ONE channel to avoid dual-code generation
+        CSR->>OCS: Execute Transfer PIN Generation (Expires in exactly 4 Calendar Days)
+        OCS-->>CX: Transfer PIN Dispatched via Designated Route
+        CSR->>OCS: Create Cancellation CRM Ticket
+        
+        alt Underlying Network is AT&T
+            Note over OCS: Account automatically cancelled 48 hours post-ticket creation
+        else Underlying Network is MVNO-C
+            Note over OCS: 15-day transfer window granted; Retention sweeps cancel at month-end
+        end
+        
+        Carrier->>OCS: Inter-Carrier Port Request Transmitted
+        OCS-->>Carrier: Line Released & Number Ported
+    end
+```
+
+### 3.3 Critical Operational Rules
+- **4-Day PIN Lifespan:** The Transfer PIN generated by the OCS engine has an immutable lifespan of **4 calendar days (96 hours)**. Stating 30 days is a fatal QA compliance error.
+- **180-Day Subsidy Disclosure:** Representatives must explicitly warn subscribers that transferring their line prior to completing **180 consecutive active days** of service triggers hardware non-commitment penalties and prevents device unlocking.
+- **Account Number Designation:** The account number is the subscriber's 10-digit MDN or internal Enrollment ID.
+
+---
+
+<a name="subsystem-4"></a>
+## 4. Subsystem 4: Product Refund Architecture & Stripe Merchant Settlement
+
+### 4.1 Regulatory & Statutory Basis
+- `SOP_Refund_AirTalk&TAG_V3.1_Active_2026-10-20.pdf` (84 pages)
+- `Refund-case-studies.pdf` (19 slides)
+
+### 4.2 Comprehensive 7-Product Evaluation Engine
+
+```mermaid
+flowchart TD
+    RefundReq["Customer Demands Refund"] --> CheckStripe{"Stripe Merchant Status"}
+
+    CheckStripe -- "Authorized / Pending" --> HoldProtocol["Stripe Authorization Hold Protocol:<br/>- Transaction is an uncaptured temporary hold<br/>- Funds automatically drop within 7-10 business days<br/>- No financial credit or refund ticket generated"]
+
+    CheckStripe -- "Completed / Succeeded" --> EvaluateCategory{"Product Line Evaluation"}
+
+    EvaluateCategory -- "1. Plan Upgrade / Renewal" --> CheckPlan{"Requested <= 48 Hours AND Unprovisioned?"}
+    CheckPlan -- "Yes" --> ApproveRefund["Submit Accounting Refund Ticket"]
+    CheckPlan -- "No" --> DenyRefund["Strictly Non-Refundable"]
+
+    EvaluateCategory -- "2. Data Top-Up / Roaming" --> CheckData{"Any MB Data Consumed?"}
+    CheckData -- "Yes" --> DenyRefund
+    CheckData -- "No (Purchased in Error)" --> TL_Data["Supervisor de-provisions package -> Approved"]
+
+    EvaluateCategory -- "3. Hardware Device" --> HandsetTier{"Handset Classification"}
+    HandsetTier -- "Free Lifeline Phone" --> FreeTime{"Delivered <= 15 Calendar Days?"}
+    FreeTime -- "Yes" --> ApproveRefund
+    FreeTime -- "No" --> DenyRefund
+    HandsetTier -- "Brand-New / Paid Upgrade" --> PaidTime{"Delivered <= 30 Calendar Days?"}
+    PaidTime -- "Yes" --> ApproveRefund
+    PaidTime -- "No" --> DenyRefund
+    HandsetTier -- "Non-Defective Return" --> NonDefTime{"Delivered <= 7 Calendar Days?"}
+    NonDefTime -- "Yes" --> CustomerFreight["Approved: Customer pays return shipping"]
+    NonDefTime -- "No" --> DenyRefund
+
+    EvaluateCategory -- "4. Express Shipping" --> CheckShip{"Warehouse Fulfillment Scanned?"}
+    CheckShip -- "Not Scanned" --> ApproveRefund
+    CheckShip -- "Scanned / Shipped" --> DenyRefund
+
+    EvaluateCategory -- "5. Accessories" --> AccCheck{"Returned <= 7 Days in Original Box?"}
+    AccCheck -- "Yes" --> ApproveRefund
+    AccCheck -- "No" --> DenyRefund
+
+    ApproveRefund --> SettleProcessing["Accounting Processes Settlement:<br/>- Original Payment Method: 3 to 5 business days<br/>- Service Voucher: Instant credit (AirTalk Only)"]
+```
+
+---
+
+<a name="subsystem-5"></a>
+## 5. Subsystem 5: Subscription Cancellation, Tier 1 Retention & MDM Buy-Out Protocols
+
+### 5.1 Regulatory & Statutory Basis
 - `Policy_Cancellation_AirTalk & TAG_V1.1.pdf` (Effective Aug 28, 2026)
 - `SOP_Cancellation Handling - Tier 1_AirTalk & TAG_V1.1.pdf`
 - `SOP_Cancellation Handling - Tier 2_AirTalk & TAG_V1.0.pdf`
 - `Retention.pdf`
 
-### 5.2. Quy Trình Tier 1 Tuyệt Đối Tuân Thủ:
-1. **Xác minh CPNI.**
-2. **Confirm Intent & Probe Reason:** Khách muốn hủy vì lý do gì (sóng yếu, máy hỏng, đổi mạng, chuyển nhà).
-3. **Thực hiện Basic Retention:**
-   - Đưa ra giải pháp kỹ thuật, đổi SIM, đổi máy hoặc gói cước hỗ trợ.
-   - **Cảnh báo mất quyền lợi (Risk Disclosure):** Mất số điện thoại vĩnh viễn và mất trợ cấp Lifeline miễn phí hàng tháng của Chính phủ.
-4. **Nếu khách vẫn kiên quyết hủy:**
-   - **CSR Tier 1 KHÔNG ĐƯỢC TỰ Ý HỦY TRÊN OCS.**
-   - Tạo **Cancellation CRM Ticket**, ghi chi tiết lý do vào **Activity Log**, sau đó chuyển tiếp cho **Tier 2 (Cancellation Review)** xử lý.
+### 5.2 Tier 1 Cancellation & Escalation Protocol
 
-### 5.3. Khái Niệm Thiết Bị MDM & Quy Trình Mua Lại (MDM Buy-Out):
-- **MDM-Enabled Device:** Thiết bị do AirTalk cung cấp có cài đặt phần mềm quản lý thiết bị (MDM) gắn với cam kết thời gian sử dụng.
-- **Buy-Out:** Nếu khách muốn mở khóa thiết bị hoặc hủy dịch vụ trước thời hạn cam kết, khách phải thanh toán khoản tiền trợ cấp còn lại (**Remaining Device Subsidy**) để gỡ bỏ hạn chế MDM.
-
----
-
-<a name="phân-hệ-6"></a>
-## 6. PHÂN HỆ 6: LOGISTICS & VẬN CHUYỂN: DCNR 3.1, LOST IN TRANSIT 2.1, RTS 1.1 & HOT RUSH
-
-### 6.1. DCNR (Delivered Claimed Not Received - Version 3.1 - 52 Trang):
-- **Đầu mối tiếp nhận (Assignee Update):**
-  - Cập nhật ngày 13/10/2026: Chuyển toàn bộ CRM Ticket liên quan đến Shipping từ Allen Yuan sang **Khang Tran (`khangtran@hthcomm.com`)**.
-- **Phân loại kịch bản DCNR:**
-  1. *Khách điền sai địa chỉ khi apply (Khách chịu trách nhiệm):* Không đền máy miễn phí; hướng dẫn khách mua máy mới hoặc tặng SIM miễn phí để dùng BYOD.
-  2. *FedEx giao sai địa chỉ (Lỗi đơn vị vận chuyển):* Đối chiếu ảnh chụp Proof of Delivery và GPS scan; làm thủ tục xuất máy mới.
-  3. *FedEx giao đúng địa chỉ nhưng bị trộm (Theft / Porch Pirate):* Đề xuất Voucher hoặc xử lý đổi máy theo chính sách.
-  4. *NUC Ticket:* Phải tạo vé NUC để khách không bị hệ thống tự động hủy số do Non-usage trong thời gian chờ bưu kiện.
-
-### 6.2. Lost In Transit (LIT - Version 2.1 - 11 Trang):
-- **Định mức giá trị thiết bị & Quy trình Accounting:**
-  - **Đơn hàng =< $100 (FedEx/USPS):** Suspend line, blacklist máy, tạo Accounting Ticket:
-    - Tiêu đề: `[Shipping carrier’s name] Claim under $100`
-    - Assignee: Khang Tran (`khangtran@hthcomm.com`). Type: Accounting. Đính kèm Travel history.
-  - **Đơn hàng > $100 (FedEx/USPS):** Hệ thống không tự reship. CSR phải:
-    - Suspend line, blacklist máy.
-    - Điền vào file Courtesy sheet *"LIT - free replacement request"*.
-    - Escalate lên kênh **FAQ Channel**.
-    - Tạo Ticket: `LIT [Shipping carrier’s name] Claim (over) $100` (Assignee: Khang Tran).
-
-### 6.3. Return To Sender (RTS - Version 1.1) & Hot Rush Ticket:
-- **RTS:** Hệ thống tự động gắn nhãn *"Address Issues: Insufficient Address / Bad Address"*. Điều kiện để tự động reship: Lifeline Active + Payment Succeeded + Cập nhật địa chỉ đúng.
-- **Hot Rush Ticket (Xuất Kho Hỏa Tốc Trong 24 Giờ):**
-  - Tiêu đề đơn thanh toán: `HOT RUSH – [PAID Device Model] [Order ID] [Express/Standard Shipping]`
-  - Tiêu đề đơn khiếu nại pháp lý: `HOT RUSH – [FCC Complaint] [Order ID] [Express/Standard Shipping]`
-  - Type: `Hot Rush - EO / CO - High Priority Fulfillment` (Assignee: Cuong Nguyen).
-  - *Lưu ý: Không áp dụng Hot Rush cho Store Orders (EID bắt đầu bằng `PAT`).*
+```mermaid
+flowchart TD
+    CancelIntent["Subscriber Demands Service Cancellation"] --> VerifyAuth["Execute Mandatory CPNI Authentication"]
+    VerifyAuth --> ProbeRoot["Diagnostic Discovery & Root Cause Probing:<br/>- Inadequate cellular coverage<br/>- Defective hardware<br/>- Competitor migration<br/>- Relocation / Address change"]
+    
+    ProbeRoot --> RetentionPitch["Deploy Tailored Retention Mitigation:<br/>- Network reprovisioning / APN update<br/>- Technical troubleshooting / SIM swap<br/>- Emphasize loss of federal Lifeline subsidy<br/>- Warn of permanent forfeiture of MDN"]
+    
+    RetentionPitch --> CXOutcome{"Subscriber Decision"}
+    
+    CXOutcome -- "Accepts Retention Offer" --> ApplyRemedy["Apply Agreed Remedy (Troubleshoot / Upgrade SIM)<br/>Document Outcome in CRM & Close Interaction"]
+    
+    CXOutcome -- "Insists on Cancellation" --> Tier1Barrier["Strict Prohibition:<br/>Tier 1 Representatives CANNOT cancel lines on OCS"]
+    
+    Tier1Barrier --> CheckMDM{"Is Handset Governed by Active MDM Subsidy?"}
+    
+    CheckMDM -- "Yes (< 180 Days Active)" --> MDMStatement["Issue MDM Buy-Out Statement:<br/>Inform customer device remains locked until<br/>remaining hardware subsidy balance is remitted"]
+    CheckMDM -- "No (>= 180 Days or BYOD)" --> EscalateTier2["Generate CRM Ticket: 'Cancellation Request - Tier 1 Escalated'<br/>Transfer File to Tier 2 Cancellation Review Team"]
+    MDMStatement --> EscalateTier2
+```
 
 ---
 
-<a name="phân-hệ-7"></a>
-## 7. PHÂN HỆ 7: THIẾT BỊ, BẢO HÀNH (15 NGÀY), BYOD (QUY TẮC 365 NGÀY) & PUK
+<a name="subsystem-6"></a>
+## 6. Subsystem 6: Logistics Disruption, Freight Carrier Claims & Priority Fulfillment
 
-### 7.1. Căn Cứ Tài Liệu:
+### 6.1 Regulatory & Statutory Basis
+- `Delivered Not Received (DCNR) V3.1.pdf` (52 pages)
+- `Lost In Transit (LIT) V2.1.pdf` (11 pages)
+- `Return to Sender (RTS) V1.1.pdf`
+- `Hot Rush Ticket.pdf`
+
+### 6.2 Logistics Claim Matrix & Routing Architecture
+
+```mermaid
+flowchart TD
+    FreightDispute["Freight Disruption Reported"] --> CarrierTrace{"Tracking Scan State"}
+
+    CarrierTrace -- "Marked Delivered (Customer claims not received)" --> DCNR_Path["DCNR V3.1 Investigation"]
+    DCNR_Path --> CheckAddr{"Address Matches Approved Application?"}
+    CheckAddr -- "Customer Error" --> CX_Liable["Customer Liability: No free hardware replacement.<br/>Provide free replacement BYOD SIM."]
+    CheckAddr -- "Address Confirmed" --> DCNR_Process["Carrier GPS Scan & Proof of Delivery Audit<br/>Assignee: Khang Tran (khangtran@hthcomm.com)<br/>Mandatory: Create NUC Ticket to protect account<br/>Resolution SLA: 24 to 48 business hours"]
+
+    CarrierTrace -- "Stalled > 7 Business Days Past SLA" --> LIT_Path["Lost In Transit V2.1 Protocol"]
+    LIT_Path --> CheckVal{"Declared Hardware Value"}
+    CheckVal -- "<= $100.00" --> LIT_Low["Suspend Line + Blacklist IMEI<br/>Create Accounting Ticket: '[Carrier] Claim under $100'<br/>Assignee: Khang Tran<br/>File NUC Ticket"]
+    CheckVal -- "> $100.00" --> LIT_High["Suspend Line + Blacklist IMEI<br/>Record Entry in Courtesy Sheet: 'LIT - free replacement request'<br/>Escalate via FAQ Channel<br/>Create Accounting Ticket: 'LIT [Carrier] Claim (over) $100'"]
+
+    CarrierTrace -- "Returned by Carrier" --> RTS_Path["Return To Sender V1.1 Protocol"]
+    RTS_Path --> RTS_Hold["Request Proof of Address (POA)<br/>10 Calendar Days Submission Window<br/>If POA Verified: Warehouse Re-ships via FedEx<br/>If POA Missing at Day 10: Automatic Cancellation & Refund"]
+
+    CarrierTrace -- "FCC/BBB Complaint or Paid Priority" --> Rush_Path["Hot Rush Fulfillment Protocol"]
+    Rush_Path --> Rush_Exec["Create Ticket: 'Hot Rush - EO / CO - High Priority Fulfillment'<br/>Assignee: Cuong Nguyen<br/>Target Warehouse Dispatch: 24 to 48 Hours<br/>Exclusion: Partner Store Orders (PAT Prefix) Ineligible"]
+```
+
+---
+
+<a name="subsystem-7"></a>
+## 7. Subsystem 7: Hardware RMA Protocols, Warranty Governance & BYOD Rules
+
+### 7.1 Regulatory & Statutory Basis
 - `ETC Handset_ Accessory Replacement Policy_During EBB_ACP_Final.pdf`
-- `Warranty replacement V1.2.pdf` (33 trang)
-- `REPLACEMENTS V1.1.pdf` (22 trang)
+- `Warranty replacement V1.2.pdf` (33 pages)
+- `REPLACEMENTS V1.1.pdf` (22 pages)
 - `Bring Your Own Device.pdf` (Change log 27/03/2026)
-- `PUK Code.pdf` (10 trang)
-- `Devices information - Ver 2.1.pdf`
+- `PUK Code.pdf` (10 pages)
 
-### 7.2. Chính Sách Bảo Hành & Đổi Máy:
-- **Thời hạn bảo hành Free Lifeline Phone:** Đúng **15 ngày** kể từ ngày giao hàng (`Delivery Date`).
-- **Phạm vi bảo hành:** Lỗi tay nghề, phần mềm, camera, phím cứng không bấm được, màn hình điểm chết. **Loại trừ nứt vỡ, cấn móp, ngấm nước.**
-- **Bắt buộc Troubleshooting:** CSR phải hướng dẫn khách khắc phục sự cố và ghi chép lại kết quả vào case note trước khi quyết định đổi máy.
-- **Nhãn Return Label:** Có hiệu lực trong **07 ngày** để khách gửi máy lỗi về kho.
-- **Thứ tự tư vấn đổi máy (Replacement Ladder):**
-  $$\text{Ưu tiên 1: Upgrade Replacement} \longrightarrow \text{Ưu tiên 2: Standard Replacement} \longrightarrow \text{Ưu tiên 3: SIM Replacement (BYOD)}$$
+### 7.2 Hardware RMA & Troubleshooting Ladder
 
-### 7.3. Quy Tắc BYOD & Giới Hạn 365 Ngày (Change Log 27/03/2026):
-- Khách hàng đã có tài khoản hoặc đã nhận máy miễn phí trong vòng **365 ngày gần nhất** sẽ **KHÔNG đủ điều kiện nhận thêm máy miễn phí**.
-- Đơn hàng sẽ tự động được Review Team chuyển sang chế độ **BYOD (SIM-only)** hoặc yêu cầu khách chọn gói mua máy trả phí.
+```mermaid
+flowchart TD
+    HandsetFault["Hardware Defect Reported"] --> FailureClass{"Nature of Defect"}
 
-### 7.4. Mã PUK:
-- Nhập sai mã PIN SIM 3 lần -> Bị khóa PUK.
-- CSR tra cứu mã **PUK1 / PUK2** trên CRM OCS để cấp cho khách.
-- Cảnh báo: **Nhập sai PUK 10 lần -> Thẻ SIM hỏng vĩnh viễn**, phải mua SIM mới.
+    FailureClass -- "Physical, Cosmetic, Water or Screen Damage" --> CosmeticCheck{"Reported <= 48 Hours of Delivery?"}
+    CosmeticCheck -- "Yes" --> RMA_Cosmetic["Approve Transit Damage RMA<br/>Issue Prepaid Return Label (7 Business Days Validity)"]
+    CosmeticCheck -- "No" --> Deny_Cosmetic["Claim Rejected: Post-delivery physical damage.<br/>Direct customer to paid upgrade replacement."]
 
----
+    FailureClass -- "Internal Electronic / Operating System Defect" --> WarrantyTier{"Device Warranty Category"}
+    WarrantyTier -- "Free Lifeline Handset" --> CheckFree["Evaluate Against 15 Calendar Days Window"]
+    WarrantyTier -- "Brand-New / Paid Upgrade" --> CheckPaid["Evaluate Against 30 Calendar Days Window"]
 
-<a name="phân-hệ-8"></a>
-## 8. PHÂN HỆ 8: TUÂN THỦ PHÁP LÝ LIFELINE: NON-USAGE (30+15=45D), NUC & RECERTIFICATION
+    CheckFree & CheckPaid -- "Within Window" --> MandatoryTroubleshoot["Execute Required Troubleshooting:<br/>1. Hard power cycle & battery pull<br/>2. SIM card re-seat & gold contact clean<br/>3. Network APN profile reset<br/>4. Factory data reset (if OS responsive)"]
 
-### 8.1. Quy Định Non-Usage 30 + 15 = 45 Ngày:
-- `Non-usage Guideline - ver 1.1.pdf` (Cập nhật dự án SNU & IVR Consent):
-  - **Ngày 1 đến 30:** Không có cước -> Hệ thống gửi cảnh báo qua App, SMS, Email.
-  - **Ngày 31 đến 45:** Thời gian ân hạn **15 ngày**. Khách có thể giải tỏa bằng cách:
-    1. Thực hiện/trả lời cuộc gọi.
-    2. Gửi tin nhắn SMS.
-    3. Dùng data di động ngoài Wi-Fi.
-    4. Nạp tiền/mua gói cước.
-    5. Ký đồng ý duy trì **NUC (Non-Usage Consent)** trên App AirTalk hoặc qua hệ thống **IVR** (IVR áp dụng riêng cho TAG Mobile).
-  - **Ngày 46:** Nếu không có hoạt động, hệ thống **tự động de-enroll vĩnh viễn**.
+    MandatoryTroubleshoot --> TroubleshootResult{"Defect Cleared?"}
+    TroubleshootResult -- "Yes" --> DocumentSuccess["Document Diagnostic Steps in CRM & Close Ticket"]
+    TroubleshootResult -- "No" --> ReplacementLadder["Deploy Replacement Ladder:<br/>1. Offer Paid Upgrade Replacement<br/>2. Issue Standard Warranty RMA Replacement<br/>3. Offer Free BYOD SIM Replacement"]
 
-### 8.2. Xử Lý Khách Hàng Bị De-enroll Do Trượt Recertify:
-- `[AirTalk] Assistance Guideline for De-enroll CXs Due to Fail Recertify.pdf` (Cập nhật ngày 16/07):
-  - Khi USAC / Maximus / Solix báo de-enroll do trượt recertify, AirTalk **không ngắt số ngay lập tức**, mà giữ trạng thái hoạt động tạm thời và gửi link thông báo kết nối lại.
-  - CSR có thể bấm nút trên CRM để tự động sinh **Re-apply Link cá nhân hóa** gửi cho khách.
-  - Nếu khách muốn giữ lại số điện thoại cũ: Báo cáo TL / SV / Coach để xử lý ngoại lệ (kiểm tra OCS, tạo ticket IT chuyển MDN).
+    CheckFree & CheckPaid -- "Outside Window" --> ExpiredWarranty["Warranty Expired: Offer discounted replacement handset"]
+```
+
+### 7.3 Critical Hardware Governance Mandates
+1. **The 365-Day Free Handset Rule:** Subscribers who have received a government-subsidized device within the preceding **365 calendar days** are ineligible for additional free devices. Applications are automatically converted to **BYOD (SIM-only)**.
+2. **PUK Lockout Protocol:** 3 incorrect PIN entries lock the SIM card; 10 incorrect PUK entries permanently destroy the SIM microchip, requiring an order for replacement hardware.
 
 ---
 
-<a name="phân-hệ-9"></a>
-## 9. PHÂN HỆ 9: APPLICATION ASSISTANCE, NLAD TRIV FAIL & QUẢN LÝ ĐƠN HÀNG
+<a name="subsystem-8"></a>
+## 8. Subsystem 8: Statutory Lifeline Compliance, 45-Day Non-Usage & Recertification
 
-### 9.1. Căn Cứ Tài Liệu:
+### 8.1 Regulatory & Statutory Basis
+- `Non-usage Guideline - ver 1.1.pdf` (SNU project & IVR Consent updates)
+- `[AirTalk] Assistance Guideline for De-enroll CXs Due to Fail Recertify.pdf` (July 16 update)
+- Statutory Authority: FCC 47 CFR § 54.405(e)(3); 47 CFR § 54.407(c)(2).
+
+### 8.2 The 45-Day Non-Usage Statutory State Machine
+
+```mermaid
+stateDiagram-v2
+    [*] --> ActiveState: Subscriber Enrolled in National Lifeline Registry
+    
+    ActiveState --> ActiveState: Billable Usage Recorded (Outbound Call / SMS / Mobile Data / NUC)
+    ActiveState --> WarningState: 30 Consecutive Days with Zero Recorded Billable Events
+    
+    state WarningState {
+        [*] --> IssueNotice: Automated Cure Notice Issued (Day 30)
+        IssueNotice --> AwaitingCure: 15-Day Cure Window Commences (Days 31 to 45)
+    }
+    
+    WarningState --> ActiveState: Subscriber Cures Non-Usage:<br/>- Places Outbound Call<br/>- Sends Outbound SMS<br/>- Consumes Mobile Data off Wi-Fi<br/>- Executes NUC Consent via App or IVR
+    
+    WarningState --> DeEnrolledState: Day 45 Concludes with Zero Curing Events
+    
+    state DeEnrolledState {
+        [*] --> ServiceTermination: Day 46 - Immediate Network Disconnection
+        ServiceTermination --> NLAD_Sync: Transmit De-enrollment to NLAD within 1 Business Day
+        NLAD_Sync --> NumberQuarantine: MDN Assigned to Quarantine Pool
+    }
+```
+
+### 8.3 Recertification Failure Remediation
+When a subscriber is flagged for de-enrollment due to failure to complete annual USAC recertification:
+1. AirTalk does not perform immediate abrupt disconnection; the line remains provisionally active.
+2. The representative generates an authenticated **Re-apply Link** directly through the CRM console.
+3. If MDN retention is required, the representative must submit a priority IT provisioning ticket to prevent recycling before re-enrollment approval.
+
+---
+
+<a name="subsystem-9"></a>
+## 9. Subsystem 9: Application Adjudication, NLAD TRIV Resolution & Order Modifications
+
+### 9.1 Regulatory & Statutory Basis
 - `Application Assistance Guideline.pdf`
 - `Application-Assistance-Guideline-Case-Studies.pdf`
 - `Customer Orders Change.pdf`
 
-### 9.2. Các Tình Huống Nghiệp Vụ Cốt Lõi:
-1. **Đơn hàng quá 30 ngày (Application > 30 days):**
-   - Đơn pending quá 30 ngày không thể duyệt tiếp. CSR hướng dẫn khách để đơn tự hết hạn và apply lại, hoặc hướng dẫn upload thêm giấy tờ để gia hạn xét duyệt (theo update 17/06/2025).
-2. **Xử lý lỗi NLAD TRIV Fail (Third-Party Identity Verification Fail):**
-   - Lỗi do cơ sở dữ liệu quốc gia không khớp thông tin danh tính.
-   - CSR chuyển hồ sơ sang **Review Team** -> Nhận hướng dẫn -> Hướng dẫn khách hàng cung cấp giấy tờ tùy thân hợp lệ trên Website hoặc upload lên CRM.
-3. **Refund Incomplete (Lỗi trừ tiền tạm giữ Stripe):**
-   - Khi thanh toán thất bại, đơn hàng đổi sang BYOD. Khách thắc mắc sao ngân hàng trừ tiền: Giải thích chuẩn mực rằng đây là khoản giữ tạm (authorization) sẽ tự nhả trong 7–10 ngày làm việc mà không có credit refund.
-4. **Thay đổi đơn hàng (Customer Orders Change):**
-   - Khách không đủ điều kiện Tribal -> Chuyển về Basic Plan, Standard Shipping, đổi máy sang backup model hoặc dòng máy **A56**.
+### 9.2 Adjudication & Identity Resolution Workflows
+1. **Applications Exceeding 30 Days:** Application files pending identity proof or address validation for more than 30 days are automatically expired by the national registry. Representatives must guide subscribers through initiating a fresh application.
+2. **NLAD TRIV (Third-Party Identity Verification) Failures:**
+   - Occurs when subscriber PII cannot be validated against credit bureaus or government identity registries.
+   - Representatives must escalate the application to the **Review Team** and instruct the subscriber to upload a clear government photo ID and proof of Social Security Number via the secure portal.
+3. **Tribal Eligibility Reclassification:** If an applicant is rejected for Tribal enhanced subsidies due to geographic boundary verification failures, representatives must reclassify the application to standard Lifeline, assign standard shipping, and swap device allocation to approved baseline models (e.g., model **A56**).
 
 ---
 
-<a name="phân-hệ-10"></a>
-## 10. PHÂN HỆ 10: DỊCH VỤ MẠNG, MDN CHANGE ($25), eSIM & ROAMING / ILD
+<a name="subsystem-10"></a>
+## 10. Subsystem 10: Cellular Provisioning, MDN Migration, Voicemail & ILD/Roaming Routing
 
-### 10.1. Đổi Số Điện Thoại (MDN Change Guideline V1.2):
-- Cập nhật ngày 25/09/2026: **Ưu tiên gói đổi số phí $25** trên hệ thống; hoặc tư vấn mua SIM mới kèm số mới.
-- Khách bị quấy rối spam: Giải thích rằng số điện thoại là tài nguyên tái sử dụng (recycled numbers) nên số mới vẫn có xác suất nhận tin nhắn spam.
+### 10.1 Network Operations & Provisioning Flowchart
 
-### 10.2. eSIM & Quản Lý Dịch Vụ Quốc Tế (ILD & Roaming):
-- **eSIM:** Khách phải kết nối Wi-Fi khi quét QR code. Nếu báo lỗi *"Unable to Continue Cellular Configuration"* hoặc *"No Service"*, kiểm tra iOS/Android version và profile APN.
-- **ILD (International Long Distance):**
-  - AirTalk hỗ trợ gọi đến hơn 200 quốc gia, trong đó có **80 quốc gia là không giới hạn (Unlimited)**, các quốc gia còn lại có hạn mức miễn phí là **$10/tháng**.
-  - Tính năng ILD tự động tắt với các tài khoản không có usage từ 6–12 tháng để tiết kiệm chi phí dịch vụ NETIP. CSR có quyền bật lại trên CRM theo yêu cầu.
+```mermaid
+flowchart TD
+    NetReq["Network Provisioning / Service Request"] --> ServiceType{"Service Category"}
+
+    ServiceType -- "Mobile Number Change (MDN)" --> MDN_Flow["MDN Change SOP V1.2:<br/>- Disclose number recycling and persistent spam risks<br/>- Assess standard $25.00 MDN change fee<br/>- Waive fee only upon verified police harassment report<br/>- Instruct customer: Power off phone for 3 minutes"]
+
+    ServiceType -- "eSIM Profile Setup" --> eSIM_Flow["eSIM Provisioning Protocol:<br/>- Verify device connected to Wi-Fi<br/>- Transmit authenticated QR profile voucher<br/>- Troubleshoot 'Unable to Continue': Wipe corrupt profile and reset APN"]
+
+    ServiceType -- "International Calling (ILD)" --> ILD_Flow["ILD Operating Standard:<br/>- 80 countries unlimited dialing<br/>- $10/month cap on non-unlimited destinations<br/>- Auto-suspended after 6-12 months inactivity to prevent toll fraud<br/>- Representative may re-enable via CRM upon subscriber request"]
+
+    ServiceType -- "International Roaming" --> Roam_Flow["Roaming Governance Policy:<br/>- AirTalk / TAG strictly limited to domestic US towers<br/>- International roaming barred technically and contractually"]
+
+    ServiceType -- "Voicemail Provisioning" --> VM_Flow["Voicemail Standard Protocol:<br/>- Reset mailbox PIN to last 4 digits of MDN on CRM<br/>- Customer presses and holds key '1' on dialer to initialize"]
+```
+
+---
+
+## 11. Operational SLA & Responsibility Assignment Directory
+
+| Operational Domain | Governing SOP | SLA Commitment | Assignee / Department | Escalation Route |
+| :--- | :--- | :--- | :--- | :--- |
+| **Logistics Freight Claims (DCNR/LIT)** | DCNR V3.1 / LIT V2.1 | 24 to 48 Business Hours | Khang Tran (`khangtran@hthcomm.com`) | Logistics Supervisor / FAQ Channel |
+| **Hot Rush Priority Fulfillment** | Hot Rush SOP | 24 to 48 Hours to Dispatch | Cuong Nguyen (Fulfillment Lead) | Executive Office Escalations |
+| **Hardware Cosmetic Defect Notice** | Handset Policy V1.2 | Strictly <= 48 Hours | Tier 1 CSR (Martin) | Reverse Logistics Lead |
+| **Hardware RMA Label Validity** | Handset Policy V1.2 | 7 Business Days Postmark | Warehouse Receiving Team | Accounting Inventory Desk |
+| **Port-Out PIN Validity** | Port-Out SOP V2.1 | 4 Calendar Days (96h) | Automated OCS Provisioning | Tech Support / OCS Engineering |
+| **Stripe Authorization Release** | Refund SOP V3.1 | 7 to 10 Business Days | Customer Issuing Bank | Merchant Services Accounting |
+| **Approved Refund Settlement** | Refund SOP V3.1 | 3 to 5 Business Days | Accounting / Treasury Desk | Finance Lead |
+| **Lifeline Non-Usage De-enrollment** | Non-Usage SOP V1.1 | Day 46 Disconnect / 1bd NLAD | Compliance / USAC Daemon | Legal & Regulatory Desk |
+| **Cancellation Ticket Review** | Cancellation V1.1 | 24 to 48 Business Hours | Tier 2 Cancellation Review Team | Retention Management |
