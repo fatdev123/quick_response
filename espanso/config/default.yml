@@ -1,0 +1,8 @@
+# Espanso Global Configuration for Softel Chat Agent
+# AirTalk Wireless & TAG Mobile CSR System
+
+matches: []
+backend: Clipboard
+search_shortcut: "ALT+SPACE"
+toggle_key: OFF
+preserve_clipboard: true

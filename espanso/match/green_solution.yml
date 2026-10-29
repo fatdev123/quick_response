@@ -1,0 +1,80 @@
+# ==============================================================================
+# GREEN ZONE LEGO SNIPPETS: ACTIONABLE SOLUTIONS & COMMITMENTS
+# Bản chất: Hành động cụ thể + Mốc thời gian cam kết (Luôn kết thúc chủ động)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. PORT-OUT RESOLUTION (Cung cấp thông tin chuyển mạng)
+  # ----------------------------------------------------------------------------
+  - trigger: ";g_po_give"
+    replace: "I have generated your transfer credentials. Your **Account Number** is your Enrollment ID / Phone Number, and your **Port-Out PIN** has been sent to your verified channel. Please provide these exact details to your new service provider within **4 days**. I will also document this transfer authorization on your account notes."
+
+  - trigger: ";g_po_sms"
+    replace: "Your 4-day Port-Out PIN has just been dispatched via SMS directly to your phone. Please check your text messages and provide this code to your new carrier to complete your transfer."
+
+  - trigger: ";g_po_email"
+    replace: "Your 4-day Port-Out PIN has been sent to your verified email address on file. Please check your inbox (and spam folder) and share this code with your new carrier."
+
+  # ----------------------------------------------------------------------------
+  # 2. LOGISTICS & FULFILLMENT RESOLUTIONS (DCNR, LIT, Reship)
+  # ----------------------------------------------------------------------------
+  - trigger: ";g_dcnr_ticket"
+    replace: "I have officially escalated a **Shipment Investigation Ticket** to our Logistics team. We are pulling carrier GPS delivery logs and driver drop-off records. We will follow up with an update or resolution within **24 to 48 business hours**."
+
+  - trigger: ";g_lit_reship"
+    replace: "Since carrier tracking confirms that your package is lost in transit, I have initiated a replacement dispatch request for your order. You will receive an updated tracking number via email as soon as the warehouse packs your new shipment."
+
+  - trigger: ";g_rts_reship"
+    replace: "Now that we have verified and updated your correct delivery address, I have submitted a re-shipment request to our warehouse. Once the returned parcel is checked in, your replacement package will be re-routed to your updated address."
+
+  # ----------------------------------------------------------------------------
+  # 3. BILLING & REFUND RESOLUTIONS (Hoàn tiền & Voucher)
+  # ----------------------------------------------------------------------------
+  - trigger: ";g_refund_ticket"
+    replace: "I have submitted your formal Refund Request ticket to our Accounting Department along with all payment transaction details. Once reviewed, your refund will be returned to your original payment card within **3 to 5 business days**."
+
+  - trigger: ";g_refund_voucher"
+    replace: "I have successfully issued a **Service Credit Voucher** in the full amount directly to your AirTalk account! You can view and apply this credit immediately on your dashboard for any future plan upgrades or services."
+
+  # ----------------------------------------------------------------------------
+  # 4. DEVICE TROUBLESHOOTING & NETWORK FIXES (Khắc phục sự cố kỹ thuật)
+  # ----------------------------------------------------------------------------
+  - trigger: ";g_fix_network"
+    replace: "Let's perform a quick network refresh together: Please power off your phone completely, wait 30 seconds, and turn it back on. Once powered on, please dial `611` or make a test call. I will keep this chat session active and wait right here for your update."
+
+  - trigger: ";g_fix_apn"
+    replace: "Let's check your Access Point Name (APN) settings. Please go to **Settings > Cellular / Mobile Networks > Access Point Names** and ensure your APN is configured properly. I can walk you through each field step-by-step."
+
+  - trigger: ";g_puk_give"
+    replace: "I have retrieved your SIM unlock code from our network provisioning system. Your **PUK 1 Code** is: `[PUK_CODE]`. Please enter this carefully on your screen. Remember that entering an incorrect PUK 10 times will permanently disable the SIM card."
+
+  - trigger: ";g_esim_setup"
+    replace: "I have triggered an eSIM activation profile to your verified email address. Please connect your phone to a stable **Wi-Fi network**, open your camera or go to **Settings > Cellular > Add eSIM**, and scan the QR code provided in the email."
+
+  # ----------------------------------------------------------------------------
+  # 5. WARRANTY & REPLACEMENT OPTIONS (Đổi trả máy & Nhãn vận chuyển)
+  # ----------------------------------------------------------------------------
+  - trigger: ";g_war_label"
+    replace: "I have generated a prepaid USPS Return Shipping Label and emailed it to your registered email address. Please print the label, securely pack the phone with its original box/accessories, and drop it off at any USPS post office within **7 days**."
+
+  - trigger: ";g_rep_options"
+    replace: "To get you reconnected quickly, we have three great options available today: 1) A discounted **Upgrade Phone** with modern specs; 2) A **Standard Replacement Phone**; or 3) A free **Replacement SIM card** if you have an unlocked compatible device ready at home. Which option works best for you?"
+
+  # ----------------------------------------------------------------------------
+  # 6. RETENTION & CANCELLATION HANDLING (Giữ chân khách & Chuyển Tier 2)
+  # ----------------------------------------------------------------------------
+  - trigger: ";g_retention_offer"
+    replace: "Because we deeply value your loyalty, I would love to help resolve this issue so you don't lose your free monthly Lifeline benefit. If the phone itself is the problem, I can help arrange a replacement or review our latest phone options right now."
+
+  - trigger: ";g_cancel_tier2"
+    replace: "I respect your final decision to discontinue service. I have logged your cancellation request and created an official review ticket with all your documented feedback. Our Senior Account Services team (Tier 2) will finalize the account review within **24 to 48 hours**."
+
+  # ----------------------------------------------------------------------------
+  # 7. SPAM & NON-USAGE SOLUTIONS (Mở chặn spam & Duy trì Lifeline)
+  # ----------------------------------------------------------------------------
+  - trigger: ";g_spam_submit"
+    replace: "I have securely attached your ID documentation to your Security Review ticket and forwarded it to our Fraud & Compliance department. They will inspect the usage patterns and update your ticket status within **24 to 48 business hours**."
+
+  - trigger: ";g_nonuse_fix"
+    replace: "To immediately remove the non-usage warning from your account, please make a test phone call or send an outbound text message right now while our chat is active. You can also tap the **Keep My Service** banner directly on your AirTalk mobile app."

@@ -1,0 +1,65 @@
+# ==============================================================================
+# RED ZONE LEGO SNIPPETS: EMPATHY & EMOTION ACKNOWLEDGMENT
+# Bản chất: Ghi nhận cảm xúc + Gọi tên vấn đề (Tuyệt đối chưa giải thích Policy)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. NETWORK & SERVICE DISRUPTION (Sự cố mất sóng, gián đoạn liên lạc)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_service"
+    replace: "I completely understand how critical your phone service is for staying connected with your loved ones and daily work. Experiencing an unexpected service disruption is very frustrating, and I want to help get this sorted out for you right away."
+
+  - trigger: ";r_slow_data"
+    replace: "I hear you, and having slow or unresponsive data when you need it most can be incredibly frustrating. I am here to help troubleshoot and optimize your connection immediately."
+
+  - trigger: ";r_no_calls"
+    replace: "I'm genuinely sorry that you're unable to make or receive important calls. A reliable phone connection is essential, and I am prioritizing checking your network line provisioning right now."
+
+  # ----------------------------------------------------------------------------
+  # 2. LOGISTICS & DELIVERY ISSUES (Sự cố giao hàng, thất lạc, DCNR)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_dcnr"
+    replace: "I understand how alarming and upsetting it is to see a tracking status marked as delivered when you haven't received your package. That is certainly not the experience we want you to have, and I will investigate this shipment right away."
+
+  - trigger: ";r_delay"
+    replace: "I truly apologize for the delay in receiving your order. I know you have been eagerly waiting for your package, and I appreciate your patience while we track down the latest fulfillment status."
+
+  - trigger: ";r_lost"
+    replace: "I am so sorry to hear that your shipment appears to be stuck or delayed in transit. Not knowing when your package will arrive is very stressful, and I am going to look into this with our logistics team for you."
+
+  # ----------------------------------------------------------------------------
+  # 3. DEVICE DEFECTS & HARDWARE (Hỏng máy, lỗi kỹ thuật, màn hình)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_device"
+    replace: "I am very sorry that your phone is giving you trouble and not functioning properly. Dealing with a malfunctioning device is a major inconvenience, and I want to help you find a prompt solution."
+
+  - trigger: ";r_dead_phone"
+    replace: "Having a phone that won't turn on or hold a charge leaves you disconnected, and I completely understand your concern. Let's work together to see what is causing this and how we can get it resolved."
+
+  # ----------------------------------------------------------------------------
+  # 4. PORT-OUT & CANCELLATION INTENT (Khách bức xúc đòi hủy, đòi chuyển mạng)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_po"
+    replace: "I can certainly help you with your account transfer information today. At the same time, I am truly sorry to hear that you are considering leaving us, and I appreciate the opportunity to assist you."
+
+  - trigger: ";r_cancel"
+    replace: "I hear your frustration loud and clear, and I am genuinely sorry that your recent experience has made you want to cancel your service. We truly value you as our customer, and I am here to address any underlying issues you've been facing."
+
+  # ----------------------------------------------------------------------------
+  # 5. FINANCIAL & REFUND DISPUTES (Khiếu nại tiền bạc, đòi bồi thường)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_refund"
+    replace: "I completely understand that you are requesting a refund for your payment, and I know that any unexpected charge or financial concern is stressful. I am here to review your billing history thoroughly."
+
+  # ----------------------------------------------------------------------------
+  # 6. SPAM / ACCOUNT SUSPENSION CONFUSION (Hoang mang vì tài khoản bị khóa)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_spam"
+    replace: "I understand how confusing and concerning it is to find your service unexpectedly placed on hold. I want to assure you that our goal is to protect your line and account security, and I will guide you through the review process."
+
+  # ----------------------------------------------------------------------------
+  # 7. LONG WAIT TIMES / EXTENDED DELAYS (Xin lỗi vì để khách đợi lâu)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_wait"
+    replace: "Thank you so much for your patience while waiting for our support. I know your time is valuable, and I truly appreciate you bearing with us. I am ready to give your issue my full attention right now."

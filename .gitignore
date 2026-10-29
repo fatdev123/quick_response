@@ -1,0 +1,36 @@
+# ==============================================================================
+# SOFTEL CHAT AGENT - GIT IGNORE CONFIGURATION
+# Giữ bảo mật: Chỉ track code, config YAML, script và tài liệu hướng dẫn Markdown.
+# Bỏ qua các file tài liệu nội bộ dung lượng lớn (PDF, DOCX, PNG, PPTX).
+# ==============================================================================
+
+# Binary & Office documents
+*.pdf
+*.docx
+*.doc
+*.png
+*.jpg
+*.jpeg
+*.drawio
+*.pptx
+*.ppt
+*.xlsx
+*.xls
+
+# Python & Environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Editor & OS files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+*.log

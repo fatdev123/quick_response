@@ -1,0 +1,83 @@
+# ==============================================================================
+# YELLOW ZONE LEGO SNIPPETS: POLICY, LIMITS & SYSTEM CONSTRAINTS
+# Bản chất: Đưa ra nguyên nhân + Giới hạn quy định ngắn gọn (Hệ thống LÀM ĐƯỢC & KHÔNG ĐƯỢC)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. PORT-OUT & NUMBER TRANSFER (SOP_Port-Out V2.1)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_po_pin"
+    replace: "Per company policy, your Transfer PIN is strictly valid for **4 calendar days** from generation. Only one carrier transfer request can be active at a time. The new carrier requires this PIN along with your Account Number to claim the line."
+
+  - trigger: ";y_po_channel"
+    replace: "To maintain security standards and prevent duplicate code errors, our system can only send the Transfer PIN through one verified method at a time—either via SMS directly to your phone, or via your verified email address."
+
+  - trigger: ";y_po_time"
+    replace: "Once your new service provider submits the porting request, our automated systems review the transfer within **24 hours**. Keep in mind that final line release and activation timing depend on your new carrier's schedule."
+
+  - trigger: ";y_po_impact"
+    replace: "Please note that porting your number out will permanently terminate your service and release any associated Lifeline government subsidy benefits tied to this line."
+
+  # ----------------------------------------------------------------------------
+  # 2. REFUND & BILLING (SOP_Refund V3.1)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_refund_7d"
+    replace: "According to our company refund policy, return and refund requests for delivered orders must be initiated within **7 calendar days** of the delivery date recorded by the shipping carrier."
+
+  - trigger: ";y_refund_proc"
+    replace: "Refunds can only be processed once payment capture is verified as completed. Approved refunds are credited directly back to the original payment method and typically reflect within **3 to 5 business days**, depending on your bank's processing cycle."
+
+  - trigger: ";y_refund_voucher"
+    replace: "For eligible AirTalk accounts experiencing verified company or system delays, we can issue an instant **Service Voucher** credit to your account in lieu of the standard bank processing wait time, provided you agree."
+
+  - trigger: ";y_refund_used"
+    replace: "In accordance with telecommunications standards, activated data top-ups and international roaming bundles that have already been provisioned and utilized are non-refundable."
+
+  # ----------------------------------------------------------------------------
+  # 3. WARRANTY & DEVICE REPLACEMENT (Warranty Replacement V1.2 & ETC Policy)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_war_15d"
+    replace: "Standard free government Lifeline phones include a **15-day limited warranty** from the delivery date. This covers manufacturer defects such as hardware or screen component failures."
+
+  - trigger: ";y_war_exclude"
+    replace: "Our warranty policy strictly covers inherent manufacturer defects. It does not cover accidental physical damage (such as cracked screens or casing), liquid exposure, or unauthorized device tampering."
+
+  - trigger: ";y_war_label"
+    replace: "When a return label is issued for warranty replacement, the device must be scanned and mailed through the postal service within **7 calendar days** to remain valid for warehouse processing."
+
+  # ----------------------------------------------------------------------------
+  # 4. LIFELINE COMPLIANCE & NON-USAGE (Non-usage Guideline V1.1)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_nonuse_rule"
+    replace: "Under federal Lifeline regulations (FCC/USAC), subscribers must record at least one active usage event every 30 days. After 30 days of inactivity, a 15-day grace period notice is triggered. If no activity occurs by day 45, the service is automatically de-enrolled on the 46th day."
+
+  - trigger: ";y_nonuse_events"
+    replace: "To maintain active Lifeline status, eligible usage includes making or answering an outbound/inbound call, sending a text message, using mobile data off Wi-Fi, purchasing an add-on, or completing an in-app Non-Usage Consent (NUC)."
+
+  - trigger: ";y_recert"
+    replace: "Lifeline regulations require all enrolled customers to recertify their program eligibility annually through the National Verifier within a designated 60-day window to avoid automated de-enrollment."
+
+  # ----------------------------------------------------------------------------
+  # 5. LOGISTICS & SHIPPING (DCNR & LIT Guidelines)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_dcnr_claim"
+    replace: "When a carrier confirms delivery but the package is reported missing, our Logistics procedure requires an official carrier trace and delivery GPS review. Carrier investigation typically requires **24 to 48 business hours** to determine package eligibility."
+
+  - trigger: ";y_lit_time"
+    replace: "A shipment is considered Lost in Transit when carrier tracking shows no movement or status scans for more than 7 consecutive business days past the estimated delivery timeframe."
+
+  - trigger: ";y_address_po"
+    replace: "Federal Lifeline guidelines require a valid, verified physical residential address within our licensed service territory. Under program rules, P.O. Boxes cannot be accepted as primary service addresses."
+
+  # ----------------------------------------------------------------------------
+  # 6. SPAM INVESTIGATION (SOP_Spam Handling V2.2)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_spam_rule"
+    replace: "To comply with national anti-spam and telecom security standards, lines exhibiting high-volume automated messaging patterns are placed on administrative hold pending verification of legitimate usage and account ownership."
+
+  # ----------------------------------------------------------------------------
+  # 7. MDN / PHONE NUMBER CHANGE (MDN Change Guideline V1.2)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_mdn_rule"
+    replace: "Please be aware that changing your phone number is permanent and irreversible. Once a new MDN is generated, your previous phone number is immediately released back to the national pool and cannot be restored."

@@ -1,0 +1,60 @@
+# ==============================================================================
+# COMBOS SPEED SNIPPETS: PRE-ASSEMBLED 3-ZONE LEGO MODULES (1-HIT SOLUTIONS)
+# Cấu trúc: [RED Empathy] + [YELLOW Policy] + [GREEN Solution & Action]
+# Dành riêng cho ca trực cao điểm (Peak Concurrency 3-5 Chats): 1 phím bấm giải quyết toàn diện
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. COMBO DCNR: Khách khiếu nại kiện hàng báo Delivered nhưng không thấy máy
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_dcnr"
+    replace: "I understand how alarming and frustrating it is to see your package marked as delivered when you haven't received it yet. Under our logistics procedure, we must perform an official carrier trace and verify the delivery GPS coordinates with the courier. I have submitted an official Shipment Investigation Ticket to our Logistics team right now, and we will update you with our carrier findings within **24 to 48 business hours**."
+
+  # ----------------------------------------------------------------------------
+  # 2. COMBO LIT: Bưu kiện thất lạc / kẹt tracking quá lâu không di chuyển
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_lit"
+    replace: "I am truly sorry for the long delay in receiving your package; I know how frustrating it is when a shipment stalls in transit. Our shipping policy classifies any package without movement scans for over 7 business days past the delivery window as lost in transit. Because your tracking confirms no recent progress, I have initiated an official warehouse ticket to expedite a replacement shipment for you."
+
+  # ----------------------------------------------------------------------------
+  # 3. COMBO PORT-OUT: Khách yêu cầu cung cấp mã chuyển mạng
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_po"
+    replace: "I can certainly assist you with your transfer request today, though we are truly sorry to see you go! Per federal porting policy, your Transfer PIN is valid for strictly **4 calendar days** from generation, and only one carrier port request can be active at a time. I have generated your Port-Out PIN and sent it to your registered channel. Please provide this PIN along with your Account Number to your new service provider within 4 days."
+
+  # ----------------------------------------------------------------------------
+  # 4. COMBO REFUND HẾT HẠN: Khách đòi hoàn tiền sau mốc 7 ngày nhận hàng
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_refund_late"
+    replace: "I completely understand that you are requesting a refund for your order. Under our company return policy, return and refund requests must be initiated within **7 calendar days** of the carrier's verified delivery date. While your order is now outside this standard refund window, I would be more than happy to help you troubleshoot your phone or explore our discounted upgrade replacement options to make sure you have a working phone."
+
+  # ----------------------------------------------------------------------------
+  # 5. COMBO BẢO HÀNH FREE PHONE: Máy miễn phí bị lỗi trong 15 ngày
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_war_free"
+    replace: "I am very sorry to hear that your device is experiencing hardware issues. All standard free Lifeline phones include a **15-day limited warranty** from the delivery date covering manufacturer defects. Since your device is within this window, I have generated a prepaid USPS Return Label and emailed it to you. Please mail the phone back within **7 days** so our warehouse can inspect it and dispatch your replacement."
+
+  # ----------------------------------------------------------------------------
+  # 6. COMBO CANCELLATION / RETENTION: Khách đòi hủy hợp đồng (Tier 1)
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_cancel"
+    replace: "I hear your frustration clearly, and I am genuinely sorry that your recent experience has made you consider canceling your service. Please remember that canceling will permanently release your phone number and forfeit your free monthly government Lifeline benefit. If you are experiencing service or device issues, I can arrange an immediate SIM/phone replacement or technical fix. Would you like to explore that before we finalize a cancellation?"
+
+  # ----------------------------------------------------------------------------
+  # 7. COMBO NETWORK TROUBLESHOOTING: Khách mất sóng, không gọi được
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_network"
+    replace: "I understand how crucial a dependable cell connection is for you, and I apologize for this service disruption. Let's do a quick network refresh: Please turn off your phone, remove the SIM card for 20 seconds, reinsert it securely, and turn the power back on. I will keep this chat session open right here to wait for your test call result."
+
+  # ----------------------------------------------------------------------------
+  # 8. COMBO NON-USAGE: Khách hốt hoảng vì tin nhắn dọa cắt dịch vụ 45 ngày
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_nonuse"
+    replace: "I completely understand your concern regarding the de-enrollment notice you received! Federal Lifeline rules require subscribers to record at least one usage event every 30 days to keep the benefit active. To immediately protect your line and cancel this warning, please place a quick phone call, send an outbound text, or tap the **Keep My Service** notice in your mobile app right now. I will verify that your active status updates on our system."
+
+  # ----------------------------------------------------------------------------
+  # 9. COMBO SPAM INVESTIGATION: Tài khoản bị khóa nghi ngờ spam
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_spam"
+    replace: "I understand how concerning it is to have your line placed on administrative hold. To comply with national telecom anti-spam regulations, our automated system temporarily suspends numbers that trigger high-volume messaging alerts. To request a review, please reply with a clear photo of yourself holding your government-issued photo ID next to your face. Once received, our Fraud Review Team will inspect your file within **24 to 48 business hours**."

@@ -1,0 +1,47 @@
+# ==============================================================================
+# CPNI & ACCOUNT VERIFICATION SNIPPETS (Xác minh tài khoản & An ninh bảo mật)
+# Dựa trên: Policy_Account Verification V1.1 & SOP_Account Verification V1.2
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. CPNI VERIFICATION REQUESTS (Thu thập thông tin xác thực)
+  # ----------------------------------------------------------------------------
+  - trigger: ";v_cpni"
+    replace: "To best protect your personal account security and comply with federal privacy regulations, could you please verify your **Full Name**, **Date of Birth (MM/DD/YYYY)**, and the **Last 4 digits of your SSN**?"
+
+  - trigger: ";v_contact"
+    replace: "Could you also please confirm your current **email address** and the best **callback phone number** in case our connection gets interrupted?"
+
+  - trigger: ";v_address"
+    replace: "For shipping and physical record verification, could you please confirm your complete **residential address** (Street, Apartment/Unit, City, State, and ZIP Code)?"
+
+  - trigger: ";v_imei"
+    replace: "Could you please provide your device's 15-digit **IMEI number**? You can easily find it by dialing `*#06#` on your phone dialer, or under **Settings > About Phone**."
+
+  - trigger: ";v_iccid"
+    replace: "Could you please provide the 20-digit **SIM Card Number (ICCID)**? This is printed directly on the back of your physical SIM card starting with `89...`."
+
+  # ----------------------------------------------------------------------------
+  # 2. VERIFICATION OUTCOMES (Kết quả xác thực)
+  # ----------------------------------------------------------------------------
+  - trigger: ";v_pass"
+    replace: "Thank you very much for verifying your details! Your account has been authenticated successfully. How can I help you with your service today?"
+
+  - trigger: ";v_retry"
+    replace: "Thank you for providing that. However, some of the information provided does not completely match our records on file. Could you please double-check and re-confirm your **Full Name**, **Date of Birth**, and **Last 4 digits of SSN**?"
+
+  - trigger: ";v_fail"
+    replace: "I appreciate your cooperation; however, the information provided does not match our system records. Due to strict federal CPNI regulations, I am unable to disclose specific account details or make changes. I can answer general policy questions, or you may provide official proof of identity to proceed."
+
+  - trigger: ";v_third_party"
+    replace: "To protect account holder privacy under federal law, we can only discuss account details and make changes with the primary account holder on file. If you are authorized to act on behalf of the account holder, valid legal documentation or verification from the primary holder is required."
+
+  # ----------------------------------------------------------------------------
+  # 3. ID PROOF & SPAM INVESTIGATION (Thu thập hồ sơ chứng thực danh tính)
+  # ----------------------------------------------------------------------------
+  - trigger: ";v_id_photo"
+    replace: "To verify your identity and protect your account from unauthorized activity, please provide a clear photo of yourself holding your valid government-issued photo ID (Driver's License, State ID, or Passport) close to your face. Both your face and all details on the ID must be clearly readable."
+
+  - trigger: ";v_id_video"
+    replace: "To finalize your security review, our Verification team requires a short 5 to 10-second video. In the video, please hold your government-issued photo ID next to your face and clearly state your **Full Name** and **Date of Birth**. Ensure all text on the ID is clear and readable."
