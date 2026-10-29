@@ -1,9 +1,9 @@
 # UNIKEY / EVKEY MACRO TABLE FOR SOFTEL CHAT AGENT
 # To use: Open Unikey -> Expand (Mở rộng) -> Check 'Enable Macro' (Bật tính năng gõ tắt)
 # -> Click 'Macro Table' (Bảng gõ tắt) -> Select or paste content from this file.
-;hi:Hello! Thank you for reaching out to Customer Care today. My name is your representative. How may I assist you with your service?
-;hi_airtalk:Thank you for contacting AirTalk Wireless Support! My name is your representative. It's a pleasure to assist you today. How may I help you?
-;hi_tag:Thank you for contacting TAG Mobile Customer Service! My name is your representative. How can I help you with your account today?
+;hi:Hello! Thank you for reaching out to Customer Care today. My name is Martin. How may I assist you with your service?
+;hi_airtalk:Thank you for contacting AirTalk Wireless Support! My name is Martin. It's a pleasure to assist you today. How may I help you?
+;hi_tag:Thank you for contacting TAG Mobile Customer Service! My name is Martin. How can I help you with your account today?
 ;h_check:I am actively checking your account details in our system right now. Please allow me 1 to 2 minutes, and I will be right back with full details. Thank you for your patience!
 ;h_still:Thank you so much for your patience! I am still reviewing the records on our backend to ensure everything is accurate. I will have an update for you in just a moment.
 ;h_lead:To make sure I provide the most accurate resolution for your specific case, I am currently consulting with our Senior Support Specialist. Please bear with me for 2 minutes.

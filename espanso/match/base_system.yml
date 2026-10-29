@@ -8,13 +8,13 @@ matches:
   # 1. GREETINGS (Chào hỏi ban đầu)
   # ----------------------------------------------------------------------------
   - trigger: ";hi"
-    replace: "Hello! Thank you for reaching out to Customer Care today. My name is your representative. How may I assist you with your service?"
+    replace: "Hello! Thank you for reaching out to Customer Care today. My name is Martin. How may I assist you with your service?"
 
   - trigger: ";hi_airtalk"
-    replace: "Thank you for contacting AirTalk Wireless Support! My name is your representative. It's a pleasure to assist you today. How may I help you?"
+    replace: "Thank you for contacting AirTalk Wireless Support! My name is Martin. It's a pleasure to assist you today. How may I help you?"
 
   - trigger: ";hi_tag"
-    replace: "Thank you for contacting TAG Mobile Customer Service! My name is your representative. How can I help you with your account today?"
+    replace: "Thank you for contacting TAG Mobile Customer Service! My name is Martin. How can I help you with your account today?"
 
   # ----------------------------------------------------------------------------
   # 2. HOLD & BUY-TIME (Giữ chân khách - Mua 1-2 phút tra cứu - Reset ART)
