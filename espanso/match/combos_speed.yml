@@ -76,3 +76,12 @@ matches:
 
   - trigger: ";c_sim_locked"
     replace: "I understand your account is showing as locked and you cannot place orders. When an incorrect security code is entered 3 times, our system automatically enables SIM Port-Protection to shield your account from unauthorized SIM swaps. You can easily unlock it right now by logging into your dashboard, going to **Account > My SIM**, and clicking **SIM - Port Unlock**."
+
+  # ----------------------------------------------------------------------------
+  # 11. MISSING HIGH-FREQUENCY COMBOS (Out of Stock & Active Lost/Stolen)
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_oos"
+    replace: "I sincerely apologize for the delay with your order. The specific phone model you originally selected is currently out of stock due to high demand. Under our fulfillment policy, we can immediately switch your order to an equivalent in-stock model or allow you to select an alternative device so our warehouse can pack and ship your package right away. Would you like me to share the available in-stock models with you now?"
+
+  - trigger: ";c_stolen"
+    replace: "I am truly sorry to hear that your phone was lost or stolen; securing your line and personal information is our top priority. I have placed an immediate security suspend on your SIM card and submitted your device IMEI to the national blacklist to prevent any unauthorized usage. To get you reconnected quickly, I can help you order a replacement SIM card and explore our replacement device options right now."

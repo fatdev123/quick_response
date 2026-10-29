@@ -99,3 +99,18 @@ matches:
 
   - trigger: ";g_spam_evasion"
     replace: "Because your account is currently under an active Spam Security Investigation, our system restricts changes such as new SIM orders, phone number modifications, or line transfers until the review is complete. Let's complete the security verification first so we can restore full access to your account."
+
+  # ----------------------------------------------------------------------------
+  # 9. MISSING HIGH-FREQUENCY SOP ACTIONS (Hot Rush, Cancel PO, Voicemail, ILD)
+  # ----------------------------------------------------------------------------
+  - trigger: ";g_hotrush"
+    replace: "I completely understand that your inquiry has exceeded our standard resolution timeframe. I have submitted an official **Hot Rush Escalation Ticket** to prioritize your file at the top of the queue for immediate review and resolution within **24 business hours**."
+
+  - trigger: ";g_po_cancel"
+    replace: "I have successfully cancelled your active Port-Out request and revoked your Transfer PIN. Your account and free monthly Lifeline benefits will remain uninterrupted with AirTalk Wireless. I have also submitted an official Winback form to protect your continuous 180-day device subsidy commitment."
+
+  - trigger: ";g_voicemail"
+    replace: "I have successfully reset your voicemail password on our network system to the default setting: the **last 4 digits of your phone number**. Please press and hold the **'1'** key on your phone's dial pad to connect, enter the temporary PIN, and follow the automated prompts to customize your new PIN and greeting."
+
+  - trigger: ";g_ild_toggle"
+    replace: "I have updated your account settings on our provisioning system to adjust your International Long Distance (ILD) calling service as requested. Please power cycle your device in 10 to 15 minutes to allow network settings to synchronize."
