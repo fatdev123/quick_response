@@ -78,3 +78,24 @@ matches:
 
   - trigger: ";g_nonuse_fix"
     replace: "To immediately remove the non-usage warning from your account, please make a test phone call or send an outbound text message right now while our chat is active. You can also tap the **Keep My Service** banner directly on your AirTalk mobile app."
+
+  # ----------------------------------------------------------------------------
+  # 8. EXACT DEEP SOP RESOLUTIONS (Trích xuất trực tiếp từ SOP nội bộ)
+  # ----------------------------------------------------------------------------
+  - trigger: ";g_nuc_protect"
+    replace: "To ensure your government benefits remain completely safe while we investigate your shipment/device issue, I have created a Non-Usage Consent (NUC) protection record on your account. This prevents the system from triggering any automatic de-enrollment during our resolution process."
+
+  - trigger: ";g_sim_unlock_step"
+    replace: "To unlock your line right now: Please log in to your account dashboard on our website or mobile app, go to **Account > My SIM**, and click the button labeled **SIM - Port Unlock**. This will immediately clear the security hold."
+
+  - trigger: ";g_stripe_explain"
+    replace: "I reviewed your transaction records with Stripe. The payment was not successfully captured, which means no funds were ever transferred to AirTalk. The pending charge you see on your statement is an authorization hold that your bank will automatically remove in 7 to 10 business days. You can verify this directly with your bank."
+
+  - trigger: ";g_reapply_link"
+    replace: "I have generated a personalized fast-track re-enrollment link specifically for your account. Please click this link: `[REAPPLY_LINK]` to quickly restore your Lifeline service with your updated documentation."
+
+  - trigger: ";g_nlad_proof_step"
+    replace: "Your application requires a quick identity verification update (NLAD TRIV). Please log in to your application portal on our website and upload a clear copy of your unexpired government ID and Social Security card or SNAP/Medicaid documentation. Our Review Team will process it within 24 to 48 hours."
+
+  - trigger: ";g_spam_evasion"
+    replace: "Because your account is currently under an active Spam Security Investigation, our system restricts changes such as new SIM orders, phone number modifications, or line transfers until the review is complete. Let's complete the security verification first so we can restore full access to your account."

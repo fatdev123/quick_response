@@ -81,3 +81,33 @@ matches:
   # ----------------------------------------------------------------------------
   - trigger: ";y_mdn_rule"
     replace: "Please be aware that changing your phone number is permanent and irreversible. Once a new MDN is generated, your previous phone number is immediately released back to the national pool and cannot be restored."
+
+  - trigger: ";y_mdn_recycled"
+    replace: "Per telecom industry standards, phone numbers are recycled from national carrier inventory. Changing your number carries a $25 fee and cannot guarantee that the new number will not receive random spam."
+
+  # ----------------------------------------------------------------------------
+  # 8. DEEP SOP & FINANCIAL POLICIES (Trích xuất từ SOP Refund, BYOD, SIM, MDM)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_stripe_hold"
+    replace: "Because the payment was not captured, you will not see a refund credit on your bank statement. Instead, the original authorization hold will automatically drop off entirely within 7 to 10 business days as if the transaction never occurred. Your bank can confirm this hold release."
+
+  - trigger: ";y_byod_365"
+    replace: "Under company guidelines, customers who have received a free standard Lifeline device within the past 365 days are not eligible for another free phone. However, you can use our free Bring Your Own Device (BYOD) SIM card with your own unlocked phone, or purchase an upgrade device."
+
+  - trigger: ";y_mdm_buyout"
+    replace: "Devices provided under our promotional subsidy are enrolled in Mobile Device Management (MDM). To release the restriction or unlock the device prior to completing your term, the Remaining Device Subsidy must be settled via buyout."
+
+  - trigger: ";y_ild_rules"
+    replace: "AirTalk's free international long-distance service includes unlimited calling to 80 designated countries, and a complimentary $10 monthly credit limit for calls to over 120 additional destinations."
+
+  - trigger: ";y_sim_protect"
+    replace: "For your security, entering an incorrect verification code 3 times automatically triggers our SIM Port-Protection lock to safeguard your line against unauthorized SIM swaps or port-out attempts."
+
+  - trigger: ";y_puk_lock"
+    replace: "If your SIM PIN is entered incorrectly 3 times, your device requires an 8-digit PUK code. Please note that entering an incorrect PUK code 10 times will permanently and irreversibly burn the SIM card chip."
+
+  - trigger: ";y_app_30d"
+    replace: "Lifeline applications pending review for more than 30 days without required documentation cannot be approved directly. You may upload current proof of eligibility to extend review, or allow the application to expire and submit a fresh application."
+
+  - trigger: ";y_dcnr_addr_err"
+    replace: "Carrier investigation indicates that the package was delivered to the exact address entered on your application. Because post-delivery loss at an incorrect submitted address is customer responsibility, we can provide a free replacement SIM for your own phone or assist you in ordering a replacement device."

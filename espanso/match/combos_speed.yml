@@ -58,3 +58,21 @@ matches:
   # ----------------------------------------------------------------------------
   - trigger: ";c_spam"
     replace: "I understand how concerning it is to have your line placed on administrative hold. To comply with national telecom anti-spam regulations, our automated system temporarily suspends numbers that trigger high-volume messaging alerts. To request a review, please reply with a clear photo of yourself holding your government-issued photo ID next to your face. Once received, our Fraud Review Team will inspect your file within **24 to 48 business hours**."
+
+  # ----------------------------------------------------------------------------
+  # 10. EXACT CASE STUDY COMBOS (Dựa trên tài liệu đào tạo & Case studies nội bộ)
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_stripe_auth"
+    replace: "I understand you see a pending charge and are concerned about a refund. Because your order's payment could not be captured, no money was ever received by AirTalk. What you see is simply an authorization hold placed by your bank, which will automatically drop off your statement in 7 to 10 business days without any charge. Your account has been updated to our free Bring Your Own Device plan so you can continue using service."
+
+  - trigger: ";c_byod_365"
+    replace: "I understand you were expecting a free smartphone with your application. Under federal program and company guidelines, free devices are limited to one per customer every 365 days. Because our records show an existing account within the past year, your order was automatically adjusted to a free BYOD SIM card so you can still enjoy free monthly unlimited talk, text, and data on your own phone."
+
+  - trigger: ";c_dcnr_wrong_addr"
+    replace: "I know how disappointing it is not to find your phone package. Our delivery investigation shows the carrier delivered the parcel exactly to the mailing address submitted on your application. Because we cannot recover packages delivered to an incorrectly provided address, I would love to send you a free replacement SIM card right away to use with your own device so you don't stay disconnected."
+
+  - trigger: ";c_deenroll_recert"
+    replace: "I am truly sorry to hear that your service was disconnected! The government (USAC) periodically requires annual recertification to confirm continued Lifeline eligibility. While your previous line was de-enrolled by USAC, I can generate a fast-track link right now: `[REAPPLY_LINK]` so you can instantly re-apply and restore your free government cell phone service."
+
+  - trigger: ";c_sim_locked"
+    replace: "I understand your account is showing as locked and you cannot place orders. When an incorrect security code is entered 3 times, our system automatically enables SIM Port-Protection to shield your account from unauthorized SIM swaps. You can easily unlock it right now by logging into your dashboard, going to **Account > My SIM**, and clicking **SIM - Port Unlock**."
