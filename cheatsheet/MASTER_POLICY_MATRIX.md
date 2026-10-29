@@ -38,7 +38,7 @@ flowchart TD
     CheckCRM -- "Token Mismatch (Attempt 1 or 2)" --> Reprompt["Security Reprompt<br/>- Inform customer data does not match records<br/>- Do NOT disclose stored CRM values<br/>- Do NOT confirm partial guesses"]
     Reprompt --> CollectPII
 
-    CheckCRM -- "Token Mismatch (Attempt 3+)" --> Lockout["Authentication Lockout<br/>Trigger System Macro :atw-cpni-fail / ;v_fail<br/>Restrict Session to General Policy Only<br/>Direct Customer to Government ID Upload Portal"]
+    CheckCRM -- "Token Mismatch (Attempt 3+)" --> Lockout["Authentication Lockout<br/>Trigger System Macro :atw-cpni-fail /  v_fail<br/>Restrict Session to General Policy Only<br/>Direct Customer to Government ID Upload Portal"]
 ```
 
 ### 2.2 Operational Rules for CPNI Compliance
@@ -234,7 +234,7 @@ sequenceDiagram
         alt Gaining Carrier is AT&T
             Note over CRM: Account terminates automatically 48 hours post-ticket creation
         else Gaining Carrier is MVNO-C
-            Note over CRM: 15-day transfer window granted; month-end batch termination
+            Note over CRM: 15-day transfer window granted - month-end batch termination
         end
         GC->>CRM: Submit Inter-Carrier Port Request
         CRM-->>GC: Line Released
@@ -251,7 +251,7 @@ sequenceDiagram
 flowchart TD
     RefundInquiry["Refund Request Received"] --> CaptureCheck{"Stripe Transaction Status"}
 
-    CaptureCheck -- "Authorized / Pending" --> DropHold["Explain Stripe Authorization Hold:<br/>- Temporary hold placed by issuing bank<br/>- Drops automatically within 7-10 business days<br/>- No captured transaction; no cash credit issued"]
+    CaptureCheck -- "Authorized / Pending" --> DropHold["Explain Stripe Authorization Hold:<br/>- Temporary hold placed by issuing bank<br/>- Drops automatically within 7-10 business days<br/>- No captured transaction - no cash credit issued"]
 
     CaptureCheck -- "Succeeded / Captured" --> ProductLine{"Product Category"}
 

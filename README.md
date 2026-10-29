@@ -98,7 +98,7 @@ flowchart TD
     Verify -- "Mismatch: Attempt 1 or 2" --> Retry["Gentle Reprompt<br/>Do NOT disclose system data<br/>Do NOT confirm partial guesses"]
     Retry --> Step1
     
-    Verify -- "Mismatch: Attempt 3+" --> AuthFail["Authentication Failed<br/>Trigger :atw-cpni-fail / ;v_fail"]
+    Verify -- "Mismatch: Attempt 3+" --> AuthFail["Authentication Failed<br/>Trigger :atw-cpni-fail /  v_fail"]
     AuthFail --> LimitService["Restrict to General Policy Inquiries Only<br/>OR Direct to Official ID Proof Upload"]
 ```
 
@@ -130,7 +130,7 @@ sequenceDiagram
         alt Gaining Carrier is AT&T
             Note over CRM: Line automatically cancelled 48 hours after ticket creation
         else Gaining Carrier is MVNO-C
-            Note over CRM: 15-day transfer window; Retention cancels at month-end
+            Note over CRM: 15-day transfer window - Retention cancels at month-end
         end
         Carrier->>CRM: Port-In Request Transmitted (Review SLA: 24h)
         CRM-->>Carrier: Line Released

@@ -11,7 +11,7 @@ When encountering edge-case inquiries, complex policy intersections, or escalate
 
 ```mermaid
 flowchart TD
-    InboundTrig["Customer Presents Complex / Unfamiliar Inquiry"] --> Step1["Step 1: Deploy Latency Buffer (< 10s)<br/>Execute :atw-hold-check or ;h_check<br/>- Preserves Average Response Time (ART)<br/>- Provides 60-90s window for system lookup"]
+    InboundTrig["Customer Presents Complex / Unfamiliar Inquiry"] --> Step1["Step 1: Deploy Latency Buffer (< 10s)<br/>Execute :atw-hold-check or  h_check<br/>- Preserves Average Response Time (ART)<br/>- Provides 60-90s window for system lookup"]
     
     Step1 --> Step2["Step 2: Execute Parametric Search (10-30s)<br/>Use Ctrl+F across this Index or MASTER_POLICY_MATRIX.md<br/>Locate exact SOP parameters, assignees, and constraints"]
     

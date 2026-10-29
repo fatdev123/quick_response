@@ -141,7 +141,7 @@ sequenceDiagram
         alt Underlying Network is AT&T
             Note over OCS: Account automatically cancelled 48 hours post-ticket creation
         else Underlying Network is MVNO-C
-            Note over OCS: 15-day transfer window granted; Retention sweeps cancel at month-end
+            Note over OCS: 15-day transfer window granted - Retention sweeps cancel at month-end
         end
         
         Carrier->>OCS: Inter-Carrier Port Request Transmitted

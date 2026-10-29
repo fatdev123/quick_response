@@ -115,7 +115,7 @@ sequenceDiagram
 
     CX->>CSR: Transmits Profanity, Harassment, or Abuse
     Note over CSR: DO NOT retaliate or match customer tone
-    CSR->>CX: Strike 1 Warning Issued (:atw-warn-profanity)<br/>"I understand your frustration; however, we maintain a respectful environment..."
+    CSR->>CX: Strike 1 Warning Issued (:atw-warn-profanity)<br/>"I understand your frustration - however, we maintain a respectful environment..."
     CSR->>CRM: Log Strike 1 Timestamp
     
     alt Customer Moderates Language
