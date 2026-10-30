@@ -1,0 +1,84 @@
+# ==============================================================================
+# 09_SPEED_COMBOS.YML - 3-ZONE LEGO COMBOS (RED + YELLOW + GREEN HIGH-SPEED TURNS)
+# Architecture: High-Concurrency Speed Layer | Softel Zero Fatal QA Standard
+# Representative: Martin (Softel Solutions)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. REFUND COMBOS
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_refund_free"
+    replace: "I completely understand that you are requesting a refund for your order. Under our official policy, Free Pre-Owned phones are eligible for return and refund within 15 calendar days of carrier delivery. Non-defective returns must be reported within 7 days, and monthly recurring charges, data top-ups, and ILD packages are non-refundable. I have submitted an official Refund Request ticket (Ticket ID: [[ticket_id]]) to our Accounting team. Once verified, refunds return to your original payment method within 3 to 5 business days."
+
+  - trigger: ";c_refund_paid"
+    replace: "I completely understand that you are requesting a refund for your paid upgrade order. Under our official policy, Brand-New and Paid Upgrade devices carry a 30 calendar day return window from carrier delivery date. Non-defective returns must be initiated within 7 days (customer pays return postage). Monthly plan fees and express shipping charges are non-refundable. I have submitted a Refund Request ticket (Ticket ID: [[ticket_id]]) to Accounting. Approved credits reflect on your card within 3 to 5 business days."
+
+  - trigger: ";c_refund_non"
+    replace: "I understand you are seeking a refund for your purchased telecom plan or add-on. Under our terms of service, all monthly recurring service charges, data top-up bundles, and International Long Distance credits are strictly non-refundable once provisioned on the cellular network. I have reviewed your account balance and confirmed that all provisioned high-speed data and calling features remain fully active for your use throughout your billing cycle."
+
+  # ----------------------------------------------------------------------------
+  # 2. WARRANTY COMBOS
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_war_free"
+    replace: "I am very sorry to hear that your device is malfunctioning. Per our warranty policy, Free Pre-Owned Lifeline phones and included accessories carry a 15 calendar day limited warranty from carrier delivery date. Any cosmetic defects or physical damage must be reported within 48 hours of receipt. I have submitted a warranty claim (Ticket ID: [[ticket_id]]) and emailed you a prepaid USPS Return Label. Please postmark the package within 7 business days so our exchange facility can promptly dispatch your replacement."
+
+  - trigger: ";c_war_paid"
+    replace: "I am very sorry for the technical troubles with your device. Brand-New and Paid Upgrade phones include a comprehensive 30 calendar day limited warranty from delivery covering hardware and component defects. Cosmetic damage must be reported within 48 hours. I have created an expedited warranty claim (Ticket ID: [[ticket_id]]) and dispatched a prepaid USPS Return Label to your email. Please mail the handset within 7 business days to initiate your replacement."
+
+  - trigger: ";c_war_foxx"
+    replace: "I understand your FoxxD handset is experiencing overheating or unexpected power shutdowns. For FoxxD devices, our company provides an extended 60-day warranty evaluation window. Please ensure background apps are closed and the phone is not operated while fast-charging. I have submitted an expedited technical evaluation ticket (Ticket ID: [[ticket_id]]) and issued a prepaid return label to inspect and replace your unit."
+
+  # ----------------------------------------------------------------------------
+  # 3. NUMBER PORTABILITY COMBOS
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_po"
+    replace: "I can certainly provide your porting credentials today, though we are truly sorry to see you consider leaving AirTalk Wireless. Per federal porting policy, your Transfer PIN is strictly valid for exactly 4 calendar days (96 hours). Porting out will permanently release your government Lifeline subsidy with us, and if you received a subsidized device and transfer prior to fulfilling the 180-day active service agreement, non-fulfillment fees may apply. Your Account Number is [[account_number]] and your Transfer PIN is [[transfer_pin]]."
+
+  - trigger: ";c_po_cancel"
+    replace: "We are absolutely thrilled that you have decided to stay with AirTalk Wireless! I have successfully cancelled your pending port-out request and invalidated the active Transfer PIN in our network database. Your telephone number and monthly Lifeline benefits remain fully active and secured with our service."
+
+  # ----------------------------------------------------------------------------
+  # 4. LOGISTICS COMBOS (DCNR, LIT, RTS, HOT RUSH)
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_dcnr_auto"
+    replace: "I am so sorry to hear that you cannot find your package despite the carrier reporting delivery. To resolve this without delaying your service, our first-time missing package policy provides an immediate hardware voucher directly to your account. I have credited a replacement voucher to your profile and placed a non-usage protection hold on your line. You can use this credit immediately at https://airtalkwireless.com to select your replacement handset!"
+
+  - trigger: ";c_lit"
+    replace: "I understand how frustrating it is when tracking shows no movement. Because carrier scans have remained frozen for over 7 business days, your package is officially classified as Lost In Transit. To protect your identity, I have suspended the original line credentials, blacklisted the lost device, and submitted a priority re-shipment request (Ticket ID: [[ticket_id]]) to our warehouse."
+
+  - trigger: ";c_rts"
+    replace: "I see that the postal carrier returned your package to our fulfillment center due to an incomplete or unverified delivery address. Per logistics policy, returned packages require address re-verification within 10 calendar days. Please confirm your complete street address (including apartment/unit number) right here so our warehouse can generate a fresh shipping label."
+
+  - trigger: ";c_hotrush"
+    replace: "I sincerely apologize for the unexpected delay in fulfilling your order. Waiting over 14 business days without tracking is completely unacceptable, and I am stepping in to expedite this immediately. I have generated a High-Priority Hot Rush Ticket (Ticket ID: [[ticket_id]]) directly to our Warehouse Operations Lead to ensure your equipment is packaged and dispatched within 24 to 48 business hours."
+
+  # ----------------------------------------------------------------------------
+  # 5. ORDER & POLICY EDGE CASE COMBOS (BYOD CHEAT, NON-USAGE, MDM)
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_byod_cheat"
+    replace: "I understand your question regarding why a BYOD SIM-only package was dispatched instead of a new promotional phone. While federal Lifeline covers your free monthly talk, text, and data, physical phones are promotional gifts sponsored directly by AirTalk Wireless. Under company policy, each household is eligible for exactly one free phone every 365 calendar days. Because our database records indicate a device was issued to your household within the past year, your service was approved under our BYOD plan so you can enjoy uninterrupted free monthly service with any compatible unlocked phone."
+
+  - trigger: ";c_nonuse_cuu"
+    replace: "I understand your concern regarding the non-usage alert on your phone. FCC regulations require at least one cellular usage event every 30 days, followed by a 15-day cure window. Because your account is still within this cure window, I have recorded your verbal 'Keep Service' consent and filed an urgent NUC ticket (Ticket ID: [[ticket_id]]). To complete compliance, please place an outbound phone call or send a text message right now while connected to our network!"
+
+  - trigger: ";c_nonuse_het"
+    replace: "I have reviewed your account in our database, and your line reached Day 46 of zero cellular usage and was de-enrolled in accordance with federal USAC Lifeline regulations. Once a line is de-enrolled under federal rules, the telephone number is automatically released and cannot be restored. To re-establish your free government service, please visit https://airtalkwireless.com to submit a new enrollment application."
+
+  - trigger: ";c_mdm_buyout"
+    replace: "I understand you are seeking to remove the MDM management lock on your device. Promotional iPhones carry a 180-day continuous active service agreement. If you wish to unlock the phone before completing 180 days, you can buy out the remaining subsidy balance. I have calculated your remaining commitment period and submitted an MDM Buyout payment link ticket (Ticket ID: [[ticket_id]]). Once payment is settled, the MDM profile is removed over-the-air within 24 to 48 hours."
+
+  # ----------------------------------------------------------------------------
+  # 6. TELECOM OPERATIONS COMBOS (PUK, MDN, VOICEMAIL, SERVICE)
+  # ----------------------------------------------------------------------------
+  - trigger: ";c_puk"
+    replace: "I can certainly assist you with unblocking your SIM card. Please note that after 3 incorrect PIN entries, the SIM locks into PUK mode. CRITICAL WARNING: You have 10 total attempts to enter the PUK; 10 incorrect entries will permanently burn and destroy the SIM card. Having validated your ICCID, your official codes are: **PUK1:** [[puk1_code]] | **PUK2:** [[puk2_code]]. Please enter PUK1 carefully on your screen."
+
+  - trigger: ";c_mdn"
+    replace: "I understand you need to change your telephone number. Per company policy, subscribers receive up to two (2) free telephone number changes per 3 billing cycles, while subsequent changes require a $25 fee. I have processed your number change in our provisioning system. Your new phone number is: [[new_mdn]]. Please turn your phone off, wait 2 minutes, and power back on to connect."
+
+  - trigger: ";c_vm"
+    replace: "I have successfully reset your voicemail passcode in our carrier portal. Your temporary passcode has been reset to the last 4 digits of your telephone number. Please power off your handset, turn it back on, dial and hold key [1] on your dialer, and enter your temporary PIN to configure your personalized voicemail greeting."
+
+  - trigger: ";c_service"
+    replace: "I am very sorry for the connectivity issues you are experiencing. Let's get your service back online: First, ensure Cellular Data is enabled and Airplane Mode is OFF. Next, please reset your APN settings by entering APN: 'wholesale' under your Mobile Network settings. Finally, restart your handset to register on our cellular towers. I have also refreshed your line provisioning on our backend."

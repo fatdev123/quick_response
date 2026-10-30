@@ -1,0 +1,54 @@
+# ==============================================================================
+# 02_APPLICATION_ORDER.YML - ENROLLMENT, PROOFS, BYOD CHEAT & ORDER CHANGES
+# Architecture: Order Domain | ST Slides 1-37 & 76-99
+# Representative: Martin (Softel Solutions)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. APPLICATION & PROOF REQUIREMENTS (Slides 1-37)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_app_proofs"
+    replace: "To complete your application, three categories of documentation are required: Identity Proof (Government ID/Passport), Eligibility Proof (SNAP, Medicaid, SSI award letter), and Address Proof (Utility bill or residential lease). Please note that CSRs are strictly prohibited from submitting applications on behalf of customers."
+
+  - trigger: ";g_app_upload_cx"
+    replace: "You can securely upload your pending verification documents directly through our self-service portal: https://airtalkwireless.com/upload-proof. Once uploaded, our automated verification system will review your documents promptly."
+
+  - trigger: ";g_app_upload_rv"
+    replace: "I have gathered your submitted verification documents and forwarded them directly to our Review (RV) Team for expedited evaluation. For your privacy and security, all uploaded document files are immediately purged from our active support queue."
+
+  - trigger: ";g_app_status_925"
+    replace: "I have checked your 925 State application status in our National Lifeline Accountability Database (NLAD/NV) portal. Your application is currently under review by the national verifier. You will receive an automated email confirmation as soon as it is approved."
+
+  - trigger: ";g_app_status_ca"
+    replace: "For California Lifeline applications, eligibility is evaluated by the California LifeLine Administrator (Maximus). If pre-approved, your application remains pending for up to 7 business days while Maximus validates state records before final dispatch."
+
+  - trigger: ";g_app_expire"
+    replace: "As requested, I have submitted a formal cancellation request to expire your pending enrollment application in our system. You are welcome to submit a fresh application whenever you are ready."
+
+  # ----------------------------------------------------------------------------
+  # 2. ORDER CHANGES & BYOD CHEAT POLICY (Slides 76-99)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_order_change"
+    replace: "I understand your surprise regarding the device or plan received with your shipment, and I appreciate the opportunity to explain our enrollment and fulfillment records clearly for you."
+
+  - trigger: ";y_byod_365d"
+    replace: "Under our company equipment policy, each qualifying subscriber and household is eligible for exactly one free promotional device every 365 calendar days. Free devices are sponsored directly by AirTalk Wireless rather than the federal government. If an application is submitted within 365 days of a previously issued device, the order automatically transitions to a BYOD (Bring Your Own Device) SIM-Only plan."
+
+  - trigger: ";g_byod_explain"
+    replace: "While federal Lifeline provides your monthly free talk, text, and data service subsidy, the physical mobile device is a complimentary benefit provided directly by our company. Because our records reflect a subsidized device was previously issued to your household within the past 365 days, this enrollment was processed as a BYOD SIM-Only service so that your monthly service could be activated without delay."
+
+  - trigger: ";y_tribal_fail"
+    replace: "Enhanced Tribal Lifeline equipment promotions apply exclusively to federally recognized Tribal lands in designated states (such as Oklahoma, Arizona, and Alaska). If Tribal land residency cannot be verified by the federal verifier, the application defaults to standard non-tribal equipment (such as the standard tier handset) rather than premium promotional models."
+
+  - trigger: ";y_pay_fail"
+    replace: "When an upgraded phone model or express shipping order is selected during enrollment, our billing system makes up to four automated charge attempts. If the payment method cannot be processed after four invoice attempts, the system automatically downgrades the order to a complimentary BYOD Basic Plan with free standard shipping to ensure you do not lose your monthly benefit."
+
+  - trigger: ";g_pay_portal"
+    replace: "Although customer support representatives cannot process phone purchases directly over chat or phone, you can purchase an upgraded phone model at discounted subscriber pricing by logging directly into your account portal at https://airtalkwireless.com under 'Shop Devices'."
+
+  - trigger: ";y_oos"
+    replace: "Due to high demand, selected handset models may occasionally experience temporary inventory shortages (Out of Stock). In such events, our fulfillment center either offers an equivalent or upgraded model with identical technical specifications, or holds dispatch until restocked."
+
+  - trigger: ";g_oos_sub"
+    replace: "I have reviewed your order status, and the model you initially selected is currently out of stock. I can arrange for an equivalent replacement device with matching specifications to be dispatched immediately, or we can keep your order queued for the next warehouse shipment batch."

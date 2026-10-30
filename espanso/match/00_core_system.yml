@@ -1,0 +1,66 @@
+# ==============================================================================
+# 00_CORE_SYSTEM.YML - SYSTEM CONTROLS, GREETINGS, HOLD & BOUNDARIES
+# Architecture: Core System Layer | Brand: AirTalk Wireless & TAG Mobile
+# Representative: Martin (Softel Solutions)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. GREETINGS (Chào hỏi ban đầu)
+  # ----------------------------------------------------------------------------
+  - trigger: ";hi"
+    replace: "Hello! Thank you for reaching out to Customer Care today. My name is Martin. How may I assist you with your service?"
+
+  - trigger: ";hi_airtalk"
+    replace: "Thank you for contacting AirTalk Wireless Support! My name is Martin. It's a pleasure to assist you today. How may I help you?"
+
+  - trigger: ";hi_tag"
+    replace: "Thank you for contacting TAG Mobile Customer Service! My name is Martin. How can I help you with your account today?"
+
+  # ----------------------------------------------------------------------------
+  # 2. HOLD & BUY-TIME (Giữ chân khách - ART Reset & Tra cứu hệ thống)
+  # ----------------------------------------------------------------------------
+  - trigger: ";h_check"
+    replace: "I am actively checking your account details in our system right now. Please allow me 1 to 2 minutes, and I will be right back with full details. Thank you for your patience!"
+
+  - trigger: ";h_still"
+    replace: "Thank you so much for your patience! I am still reviewing the records on our backend to ensure everything is accurate. I will have an update for you in just a moment."
+
+  - trigger: ";h_lead"
+    replace: "To make sure I provide the most accurate resolution for your specific case, I am currently consulting with our Senior Support Specialist. Please bear with me for 2 minutes."
+
+  - trigger: ";h_tool"
+    replace: "Our diagnostic tools are currently pulling up your network and line provisioning status. This will take about 60 to 90 seconds. I appreciate your patience!"
+
+  # ----------------------------------------------------------------------------
+  # 3. INACTIVITY & KEEP-ALIVE (Khách hàng im lặng trên chat)
+  # ----------------------------------------------------------------------------
+  - trigger: ";h_there"
+    replace: "I haven't heard from you in a moment. Are you still with me on the chat? I want to make sure you are getting the assistance you need!"
+
+  - trigger: ";h_warn_idle"
+    replace: "It looks like our chat session has been quiet for a while. If you still need assistance, please feel free to send a reply. Otherwise, the system may automatically close this session shortly."
+
+  - trigger: ";h_close_idle"
+    replace: "Since I haven't received a response, I will be closing this chat session for now. If you still need help, please don't hesitate to reach back out to us at your convenience. Have a wonderful day!"
+
+  # ----------------------------------------------------------------------------
+  # 4. CONVERSATION BOUNDARIES & PROFANITY (Bảo vệ ranh giới & Xử lý khiêu khích)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_deescalate"
+    replace: "I hear your frustration completely, and I am genuinely sorry for the trouble this has caused you. I am here to take personal ownership of this issue and work with you step-by-step toward a resolution."
+
+  - trigger: ";warn_profane"
+    replace: "I truly want to help you resolve this issue today; however, I kindly ask that we keep our conversation respectful. Please avoid using profanity so that we can focus together on getting this solved for you."
+
+  - trigger: ";disconnect_profane"
+    replace: "Since the abusive language has continued after our warning, I will be disconnecting this chat session now. You are welcome to reach back out to us when you are ready to communicate in a professional manner. Thank you."
+
+  # ----------------------------------------------------------------------------
+  # 5. SESSION WRAP-UP & CLOSING (Chốt ca chuyên nghiệp)
+  # ----------------------------------------------------------------------------
+  - trigger: ";wrapup"
+    replace: "I'm glad I could assist you with this today! Is there anything else about your phone, service, or account that I can help you with before we part ways?"
+
+  - trigger: ";bye"
+    replace: "Thank you for choosing us as your service provider! If you need anything else in the future, our support team is always here to help. Have a wonderful rest of your day!"

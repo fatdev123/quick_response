@@ -1,0 +1,48 @@
+# ==============================================================================
+# 01_CPNI_FRAUD.YML - CPNI VERIFICATION, ACCOUNT SECURITY & FRAUD DEFENSE
+# Architecture: Security Layer | FCC 47 CFR § 64.2001-2011 & ST Slides 142-157
+# Representative: Martin (Softel Solutions)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. CPNI MULTI-FACTOR AUTHENTICATION (Xác thực danh tính 3 yếu tố)
+  # ----------------------------------------------------------------------------
+  - trigger: ";v_cpni"
+    replace: "To best protect your personal account security and comply with federal privacy regulations, could you please verify your **Full Name**, **Date of Birth (MM/DD/YYYY)**, and the **Last 4 digits of your SSN**?"
+
+  - trigger: ";v_pass"
+    replace: "Thank you very much for verifying your details! Your account has been authenticated successfully. How can I help you with your service today?"
+
+  - trigger: ";v_fail"
+    replace: "I appreciate your cooperation; however, the information provided does not match our system records. Due to strict federal CPNI regulations, I am unable to disclose specific account details or make changes. I can answer general policy questions, or you may double-check and re-provide your verification details."
+
+  - trigger: ";v_lockout"
+    replace: "For your account protection, we have reached the maximum number of verification attempts for this session. To access your account or make changes, please upload a clear photo of your government-issued ID to our secure verification portal. Once submitted, our review team will validate your credentials."
+
+  - trigger: ";v_contact"
+    replace: "Thank you for confirming your identity! Could you also please provide your preferred **Contact Phone Number (MDN)** and **Email Address** so we can ensure your contact profile is up to date?"
+
+  - trigger: ";v_id_proof"
+    replace: "To verify your identity and protect against unauthorized account changes, please securely upload a valid government-issued photo ID (Driver's License, State ID, or Passport) via our portal: https://airtalkwireless.com/upload-proof. Please let me know once completed!"
+
+  # ----------------------------------------------------------------------------
+  # 2. FRAUD, IDENTITY THEFT & SPECIAL CASES (Slides 142-155)
+  # ----------------------------------------------------------------------------
+  - trigger: ";v_behalf"
+    replace: "Under federal CPNI privacy rules, we can only discuss account details with the registered account holder. If someone is assisting you, the account holder must be present on the chat or call to complete identity verification and grant verbal/written consent for you to speak on their behalf."
+
+  - trigger: ";v_deceased"
+    replace: "Please accept our sincere condolences for your loss. To properly close or manage the account of a deceased subscriber, we kindly request a copy of the death certificate along with documentation verifying executor authority. You can submit these documents to our dedicated compliance team."
+
+  - trigger: ";v_unauth_acc"
+    replace: "Thank you for alerting us. If you did not authorize this account or believe someone used your identity fraudulently, we take this very seriously. We will immediately restrict the account to prevent unauthorized activity and guide you through submitting a formal Identity Theft Dispute."
+
+  - trigger: ";v_weird_activity"
+    replace: "I understand your concern regarding unexpected activity on your account. To ensure your account is completely secure, I am reviewing the recent order logs right now. In the meantime, please ensure you do not share your login credentials or one-time passcodes with anyone."
+
+  - trigger: ";v_vishing"
+    replace: "To safeguard our subscribers against unauthorized eSIM provisioning and SIM swap fraud, eSIM activations require enhanced verification. Please provide your device IMEI and submit a valid government photo ID matching the account holder before an eSIM QR profile can be generated."
+
+  - trigger: ";v_sim_protect"
+    replace: "Your line currently has SIM Port Protection active to prevent unauthorized SIM swaps. To unlock this protection for legitimate changes, please log in directly to your AirTalk subscriber account portal and navigate to 'Account > My SIM > SIM - Port Unlock'."

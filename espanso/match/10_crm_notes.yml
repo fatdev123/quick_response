@@ -1,0 +1,105 @@
+# ==============================================================================
+# 10_CRM_NOTES.YML - CRM ACTIVITY NOTES & AUDIT TRAIL LOGGING TEMPLATES
+# Architecture: Internal Audit Layer | FCC / QA Fatal Error Compliance
+# Representative: Martin (Softel Solutions)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. GENERAL INQUIRY & CPNI AUDIT NOTES
+  # ----------------------------------------------------------------------------
+  - trigger: ";n_general"
+    form: |
+      [CSR: Martin] [Chat ID: [[chat_id]]]
+      - Reason / Inquiry: [[reason]]
+      - CPNI Verification: Passed (Name, DOB, SSN4 matched CRM)
+      - Action Taken: [[action]]
+      - Outcome / SLA: [[outcome]]
+
+  - trigger: ";n_cpni_fail"
+    form: |
+      [CSR: Martin] [Chat ID: [[chat_id]]]
+      - Reason / Inquiry: [[reason]]
+      - CPNI Verification: FAILED (Mismatched identity tokens)
+      - Action Taken: No account-specific data disclosed; general policy provided; directed to ID upload portal
+      - Outcome: Session restricted per FCC 47 CFR § 64.2001-2011
+
+  # ----------------------------------------------------------------------------
+  # 2. TICKETING & ESCALATION AUDIT NOTES
+  # ----------------------------------------------------------------------------
+  - trigger: ";n_refund"
+    form: |
+      [CSR: Martin] [Ticket ID: [[ticket_id]]]
+      - Order ID / Model: [[order_id]] / [[model]]
+      - Reason for Refund: [[reason]]
+      - Policy Window Evaluated: [[policy_window]] (15d Free / 30d Paid / 7d Non-defective)
+      - Payment Method: Original Credit/Debit Card
+      - Escalated To: Accounting Queue (SLA 3-5 business days)
+
+  - trigger: ";n_warranty"
+    form: |
+      [CSR: Martin] [Ticket ID: [[ticket_id]]]
+      - Device IMEI: [[imei]] | ICCID: [[iccid]]
+      - Symptom Reported: [[symptom]]
+      - Damage Evaluation: Physical/Liquid Damage checked (Negative) | 48h Cosmetic Window (Satisfied)
+      - Action Taken: Issued RMA & USPS Prepaid Return Label (valid 7 business days to postmark)
+      - Non-Usage Warning: Disclosed to subscriber
+
+  - trigger: ";n_portout"
+    form: |
+      [CSR: Martin] [Chat ID: [[chat_id]]]
+      - Inbound Request: Number Port-Out
+      - CPNI Status: Fully Authenticated
+      - Retention Pitch: Presented and declined by subscriber
+      - Disclosures Provided: 4-Day NTP Expiration | Loss of Federal Lifeline Subsidy | 180-Day Subsidy Obligation
+      - Action Taken: Generated NTP PIN [[transfer_pin]] for Account [[account_number]]
+
+  - trigger: ";n_dcnr"
+    form: |
+      [CSR: Martin] [Ticket ID: [[ticket_id]]]
+      - Inbound Report: Delivered Claimed Not Received (DCNR)
+      - Tracking Number: [[tracking_number]] | Delivery Timestamp: [[delivery_time]]
+      - Flow Type: [[flow_type]] (Auto Flow Voucher / Manual Supervisor Review)
+      - Address Verification: Matches residential CRM record
+      - Action Taken: NUC Hold placed on line; forwarded to Logistics/Accounting audit
+
+  - trigger: ";n_lit"
+    form: |
+      [CSR: Martin] [Ticket ID: [[ticket_id]]]
+      - Inbound Report: Lost In Transit (LIT)
+      - Carrier / Tracking: [[tracking_number]]
+      - Scan Status: Zero scans for >7 consecutive business days
+      - Action Taken: Suspended line credentials; submitted IMEI [[imei]] to National Blacklist; queued warehouse replacement
+
+  - trigger: ";n_hotrush"
+    form: |
+      [CSR: Martin] [Ticket ID: [[ticket_id]]]
+      - Inbound Request: Expedited Order Dispatch
+      - Qualification Criteria: [[criteria]] (>14d No Tracking / Stuck >7d / Escalated State CA-KY-Tribal)
+      - Action Taken: Created Hot Rush Ticket assigned to Warehouse Lead (Cuong Nguyen)
+      - Target SLA: Warehouse fulfillment dispatch within 24 to 48 business hours
+
+  - trigger: ";n_nonuse"
+    form: |
+      [CSR: Martin] [Ticket ID: [[ticket_id]]]
+      - Contact Reason: Lifeline Non-Usage Warning Notice
+      - Compliance Status: Within 15-day cure window (Day 31-45)
+      - Affirmative Consent: Subscriber granted verbal 'Keep Service' consent
+      - Action Taken: Logged Keep Service consent in CRM; created NUC ticket; instructed on immediate billable usage call/SMS
+
+  - trigger: ";n_mdm"
+    form: |
+      [CSR: Martin] [Ticket ID: [[ticket_id]]]
+      - Inbound Inquiry: MDM Device Lock Removal
+      - IMEI: [[imei]] | Model: [[model]]
+      - Subsidy Audit: [[remaining_days]] days remaining in 180-day agreement
+      - Action Taken: Generated Commitment Fee Buyout quote; issued secure payment link to subscriber
+      - SLA: Over-the-air profile removal within 24 to 48 hours post-payment
+
+  - trigger: ";n_mdn"
+    form: |
+      [CSR: Martin] [Chat ID: [[chat_id]]]
+      - Action: MDN Telephone Number Change
+      - Old MDN: [[old_mdn]] | New MDN: [[new_mdn]]
+      - Policy Validation: Free change count checked ([[count]] of 2 used in current 3-billing-cycle window)
+      - Action Taken: Updated OCS/HLR routing; instructed subscriber to perform 2-minute power cycle

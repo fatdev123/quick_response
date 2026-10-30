@@ -1,0 +1,33 @@
+# ==============================================================================
+# 08_ACCOUNT_MAINTENANCE.YML - ADDRESS UPDATES, PII & CREDENTIAL MANAGEMENT
+# Architecture: Account Maintenance Domain | ST Slides 156-157 & 253-256
+# Representative: Martin (Softel Solutions)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. ACCOUNT INFORMATION UPDATES (Slides 253-256)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_addr_mailing"
+    replace: "Your Mailing Address (where correspondence and replacement SIMs are dispatched), Alternative Phone Number, and Email Address can be updated directly without formal documentation, provided the new mailing address is residential and located within the same registered state."
+
+  - trigger: ";y_addr_service"
+    replace: "Your Service Address represents your physical residence for federal 911 dispatch and USAC Lifeline qualification. Updating your Service Address strictly requires submitting verifiable Proof of Residence (utility bill, lease agreement, or government letter) located within the same state."
+
+  - trigger: ";y_addr_state"
+    replace: "Under federal Lifeline and USAC program rules, your registered state of service CANNOT be modified on an active enrollment. If you have permanently relocated to a different state, federal regulations require de-enrolling your current account and submitting a fresh application in your new state of residence."
+
+  - trigger: ";y_pii_update"
+    replace: "Core personal identity records—including your legal First Name, Last Name, Date of Birth, and Social Security Number—cannot be modified over phone or chat. Official legal documentation (such as a certified marriage certificate, divorce decree, or court-ordered name change) must be submitted to our compliance team."
+
+  - trigger: ";g_addr_update"
+    replace: "I have successfully updated your account contact and mailing records in our CRM system. Your updated details are now reflected in your profile. Please ensure future correspondence is directed to this newly updated address."
+
+  # ----------------------------------------------------------------------------
+  # 2. SUBSCRIBER LOGIN & CREDENTIAL MANAGEMENT (Slides 156-157)
+  # ----------------------------------------------------------------------------
+  - trigger: ";g_login_info"
+    replace: "Your account login credentials were automatically generated and emailed to your registered email address upon application approval. Your username is your registered email address or enrollment phone number. If you need to reset your password, please visit https://airtalkwireless.com/forgot-password."
+
+  - trigger: ";g_login_reset"
+    replace: "I have triggered an automated password reset email to your registered email address: [[email]]. Please check your inbox (and spam/junk folder), click the secure verification link, and establish a new password for your subscriber portal."

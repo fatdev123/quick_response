@@ -1,0 +1,81 @@
+# ==============================================================================
+# 05_HARDWARE_WARRANTY.YML - WARRANTY, REFUND, BLACKLIST & MDM LOCK MANAGEMENT
+# Architecture: Hardware Domain | ST Slides 119-141 & 215-229
+# Representative: Martin (Softel Solutions)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. HARDWARE WARRANTY (Slides 223-229)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_war"
+    replace: "I am very sorry to hear that your device is malfunctioning. Relying on a phone that is not working properly is a major inconvenience, and I want to help you find a prompt solution."
+
+  - trigger: ";y_war_free"
+    replace: "Our equipment warranty provides 15 calendar days of limited warranty coverage for Free Pre-Owned Lifeline devices and included accessories from the date of carrier delivery. This covers internal mechanical and functional defects under normal operating use."
+
+  - trigger: ";y_war_paid"
+    replace: "Brand-New devices and Paid Upgrade phones include an extended 30 calendar days limited warranty from the date of carrier delivery, covering manufacturer functional and hardware defects."
+
+  - trigger: ";y_war_cosmetic"
+    replace: "Any cosmetic imperfections, transit scratches, or screen cracks must be formally reported within 48 hours of carrier delivery. Physical, liquid, or cosmetic damages reported after 48 hours are classified as customer-induced and are excluded from warranty coverage."
+
+  - trigger: ";y_war_foxx"
+    replace: "For FoxxD handsets experiencing severe overheating or unexpected power shutdowns, company policy extends the warranty evaluation window up to 60 calendar days. Our technicians evaluate whether background applications, gaming, or charging habits contributed to the temperature elevation prior to replacement authorization."
+
+  - trigger: ";y_war_void"
+    replace: "Please note that warranty coverage strictly covers internal functional and component defects. Devices exhibiting cracked screens, casing dents, water submersion, unauthorized modification, or third-party repair are void of warranty coverage."
+
+  - trigger: ";g_war_label"
+    replace: "I have submitted your warranty exchange claim and emailed a prepaid USPS Return Shipping Label to your registered email address. Please securely package the device and drop it off at any USPS postal facility within 7 business days so our repair center can process your replacement."
+
+  # ----------------------------------------------------------------------------
+  # 2. REFUND POLICY (Slides 215-222)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_refund"
+    replace: "I completely understand that you are requesting a refund for your order, and I know that financial clarity is important. I am here to review your payment records thoroughly."
+
+  - trigger: ";y_refund_terms"
+    replace: "Under our official refund policy: Free Pre-Owned devices are eligible for return and refund within 15 calendar days of carrier delivery. Brand-New and Paid Upgrade devices carry a 30 calendar day return window. Non-defective equipment returns must be reported within 7 days (customer is responsible for return shipping postage)."
+
+  - trigger: ";y_refund_nonref"
+    replace: "Please be aware that monthly recurring plan fees, activated data top-ups, International Long Distance (ILD) credits, and expedited express shipping fees are strictly non-refundable once provisioned on the cellular network."
+
+  - trigger: ";g_refund_ticket"
+    replace: "I have submitted an official Refund Request ticket to our Accounting department. Once the returned equipment is logged into our fulfillment facility, approved refunds are credited back to your original payment card within 3 to 5 business days."
+
+  # ----------------------------------------------------------------------------
+  # 3. BLACKLIST & UNBLACKLIST (Slides 119-125)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_blacklist_rule"
+    replace: "Under federal telecommunications industry standards, when an IMEI is placed on the National Device Blacklist due to loss, theft, or freight disruption, only the specific carrier that placed the original block has the technical authority to unblock it."
+
+  - trigger: ";g_blacklist_submit"
+    replace: "To secure your account and protect against unauthorized equipment use, I have submitted a formal National Blacklist request for your device IMEI: [[imei]]. The handset will be permanently blocked across all major carrier cellular networks."
+
+  - trigger: ";g_unblacklist_submit"
+    replace: "I am delighted that you recovered your device! Having successfully verified your identity and confirmed that our company placed the initial block, I have submitted an Unblacklist Request to restore your device IMEI to active service status within 24 business hours."
+
+  # ----------------------------------------------------------------------------
+  # 4. MOBILE DEVICE MANAGEMENT - MDM LOCK (Slides 126-141)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_mdm"
+    replace: "I understand you are inquiring about the management lock screen on your device, and I am glad to provide full clarity regarding our hardware policies and unlock options."
+
+  - trigger: ";y_mdm_disclosure"
+    replace: "Subsidized promotional Apple devices (iPhone 7 and above) are managed through Mobile Device Management (MDM) software to enforce the subscriber's 180-day continuous active service agreement. MDM manages carrier line connectivity only and never accesses personal files, photos, or private communications."
+
+  - trigger: ";y_mdm_triggers"
+    replace: "MDM remote lock is triggered automatically under specific conditions: (1) Benefit Transfer-Out (Day 3 warning wallpaper, Day 8 Lost Mode lock), (2) Non-Usage (Day 35 warning wallpaper, Day 45 Lost Mode lock), (3) Account cancellation prior to fulfilling 180 active days, or (4) Inserting an unauthorized non-AirTalk carrier SIM card."
+
+  - trigger: ";y_mdm_buyout"
+    replace: "If you wish to unlock an MDM-subsidized device before completing the 180-day active service requirement, you may buy out the remaining subsidy balance. The buyout amount is calculated by our Commitment Fee Calculator based on the number of unfulfilled days remaining in your 180-day agreement."
+
+  - trigger: ";g_mdm_buyout_link"
+    replace: "I have calculated your remaining subsidy balance and generated a secure MDM Device Buyout payment link. Once your payment is confirmed, an automated over-the-air signal will remove the MDM profile from your phone within 24 to 48 hours."
+
+  - trigger: ";g_mdm_wifi_fix"
+    replace: "If the Wi-Fi toggle appears greyed out on an MDM-managed iPhone, please perform a hardware force-restart: Press and quickly release Volume Up, press and quickly release Volume Down, then press and hold the Power/Side button until the Apple logo appears. Ensure cellular data is active so the device can sync its management profile."
+
+  - trigger: ";g_mdm_wrong_sim"
+    replace: "If your screen displays a carrier lock notification after inserting a different SIM card, please re-insert your active AirTalk Wireless SIM, connect the device to an active Wi-Fi connection, and leave the phone powered on for 10 to 15 minutes. The system will automatically verify the SIM and restore access."

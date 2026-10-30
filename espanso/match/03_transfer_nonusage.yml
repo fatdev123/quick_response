@@ -1,0 +1,60 @@
+# ==============================================================================
+# 03_TRANSFER_NONUSAGE.YML - BENEFIT TRANSFERS, NON-USAGE & SNU ORDERS
+# Architecture: Lifecycle Domain | ST Slides 38-75 & FCC 47 CFR § 54.405/407
+# Representative: Martin (Softel Solutions)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. BENEFIT TRANSFERS (Slides 38-53)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_transfer"
+    replace: "I understand you have questions regarding your Lifeline benefit transfer status, and I am glad to review your account records to ensure your service remains active."
+
+  - trigger: ";y_transfer_def"
+    replace: "Under federal Lifeline regulations, each eligible consumer is entitled to exactly one Lifeline benefit per household. A Benefit Transfer moves this federal subsidy from one carrier to another and strictly requires the subscriber's affirmative consent."
+
+  - trigger: ";y_transfer_10m"
+    replace: "If you received a Transfer-Out notice and accidentally selected 'Yes, I'm Moving On', our system initiates an automated 10-minute verification check. If you wish to remain with AirTalk, you must access your notification link and select 'I Want to Stay with AirTalk' within 10 minutes before the line transitions to Inactive status."
+
+  - trigger: ";y_transfer_ca"
+    replace: "For California Lifeline subscribers holding Combo plans (California LifeLine + Federal subsidy), if California LifeLine benefits are suspended or transferred out, your service automatically downgrades to the Federal Lifeline Plan within 48 hours to 30 days, preserving your continuous wireless connectivity."
+
+  - trigger: ";y_transfer_unauth"
+    replace: "If your Lifeline benefit was transferred to another provider without your explicit permission, this may be due to an inadvertent application submission elsewhere. To protect your service, we can immediately execute an electronic Transfer Agreement (TA) to bring your government benefit back to our network."
+
+  - trigger: ";y_transfer_hardblock"
+    replace: "Please note that if an account holder has explicitly requested a cancellation or port-out, company policy establishes a strict Hard Block: our representatives cannot submit a Transfer Agreement to bring the benefit back unless requested directly by the subscriber."
+
+  - trigger: ";g_transfer_back_active"
+    replace: "Great news! I have verified your account in NLAD, and your Lifeline benefit is currently active with our service. Your transfer back has been successfully completed, and no additional Transfer Agreement form is required."
+
+  - trigger: ";g_transfer_send_ta"
+    replace: "I have dispatched an electronic Lifeline Transfer Agreement (TA) link directly to your registered email and mobile number. Please click the link to review and electronically sign the consent so we can restore your benefit to our network immediately."
+
+  - trigger: ";g_transfer_inactive"
+    replace: "According to federal database records, your Lifeline account has transitioned to Inactive status due to an completed transfer to an alternate provider. Because the line has been deactivated, a direct reactivation is not possible, and we kindly invite you to submit a new application at https://airtalkwireless.com."
+
+  # ----------------------------------------------------------------------------
+  # 2. NON-USAGE (NU / NUC / SNU) OPERATIONS (Slides 54-75)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_nonusage"
+    replace: "I completely understand your concern regarding the non-usage warning on your line. Having reliable phone service is essential, and I am here to help you keep your account active."
+
+  - trigger: ";y_nonusage_rule"
+    replace: "FCC federal Lifeline regulations require subscribers to generate at least one billable usage event every 30 calendar days. If no usage is recorded for 30 consecutive days, an automated 15-day Cure Notice is issued. If zero usage continues through Day 45, the service is permanently de-enrolled on Day 46, releasing the telephone number and triggering remote MDM lock on subsidized devices."
+
+  - trigger: ";y_nonusage_def"
+    replace: "Acceptable billable usage events under federal rules include: completing an outbound voice call, answering an inbound call from an outside party, sending an SMS text message, or using cellular data on our network. Inactive standby or Wi-Fi data usage does NOT qualify as cellular usage."
+
+  - trigger: ";g_nonusage_cuu"
+    replace: "Fortunately, your account is still within the 15-day cure window! I have recorded your verbal 'Keep Service' consent and created an urgent Non-Usage Cure (NUC) ticket in our system. To immediately satisfy federal usage rules, please place an outbound voice call or send a text message right now while connected to our cellular network."
+
+  - trigger: ";g_nonusage_hetcuu"
+    replace: "I have thoroughly investigated your CRM record, and your account reached Day 46 of zero cellular usage and was de-enrolled under federal USAC mandates. Once a line is de-enrolled, the telephone number is released into the national pool and cannot be restored. To regain service, please visit https://airtalkwireless.com to submit a fresh application."
+
+  - trigger: ";y_snu_limits"
+    replace: "For qualifying subscribers facing non-usage due to defective equipment, our System Non-Usage (CO-SNU) project can auto-generate a replacement order. Please be aware of strict SNU policies: SNU replacement equipment does NOT include warranty coverage, does NOT qualify for Lost-in-Transit (LIT) claims, and exhausts your eligibility for courtesy replacement SIMs."
+
+  - trigger: ";g_snu_consent_app"
+    replace: "You can instantly record your 'Keep Service' consent by opening the official AirTalk Wireless Mobile App or tapping the confirmation link in our reminder SMS. Selecting 'I want to keep my service' immediately resets your compliance status in our network database."

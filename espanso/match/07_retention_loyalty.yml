@@ -1,0 +1,42 @@
+# ==============================================================================
+# 07_RETENTION_LOYALTY.YML - RETENTION PITCHES, LOYALTY PROGRAM & INT'L COMM
+# Architecture: Growth & Retention Domain | ST Slides 100-109
+# Representative: Martin (Softel Solutions)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. RETENTION PITCHES & COURTESY LEVERS (Slides 100-105)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_retain_pitch"
+    replace: "Your satisfaction is truly our top priority, and we deeply value having you as a subscriber. Before making a final decision to cancel or transfer, please allow me the opportunity to explore our best available options and courtesy offers to make your service work perfectly for you."
+
+  - trigger: ";g_ret_tradein"
+    replace: "If your current phone is experiencing performance issues, you are eligible for our Trade-In Program! Even devices with cosmetic wear, battery degradation, software glitches, or missing accessories qualify for trade-in value toward an upgraded, fully refreshed model."
+
+  - trigger: ";g_ret_voucher"
+    replace: "To thank you for your ongoing loyalty, I can apply an exclusive promotional hardware voucher directly to your subscriber account. You can apply this voucher immediately in our web store toward an upgraded smartphone model with zero long-term contracts."
+
+  - trigger: ";g_ret_courtesy_data"
+    replace: "As a courtesy gesture to ensure you stay connected without interruption, I have applied a complimentary 2GB high-speed data boost to your line right now, free of charge. You should see this active in your account balance within a few moments!"
+
+  # ----------------------------------------------------------------------------
+  # 2. INTERNATIONAL CALLING & ROAMING (Slides 103-104)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_ild_rules"
+    replace: "Our plans include Free International Long Distance calling to over 200 destinations, allowing calls to a maximum of 15 unique international telephone numbers with a complimentary $10 monthly credit. Dial structure must follow: [+] + [Country Code] + [Area Code] + [Local Number]. Additional top-ups cannot be purchased."
+
+  - trigger: ";y_roam_rules"
+    replace: "Standard plan allocations provide domestic cellular coverage within the 50 United States and Puerto Rico. International Roaming is not active by default and requires purchasing a Pay-As-You-Go (PAYG) roaming pass directly through your subscriber portal at https://airtalkwireless.com prior to international travel."
+
+  # ----------------------------------------------------------------------------
+  # 3. LOYALTY REWARDS PROGRAM (Slides 106-109)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_loyalty_info"
+    replace: "Under our 3-Month Loyalty Rewards Program (active since July 14, 2025), active subscribers are automatically enrolled as soon as their initial device is delivered or eSIM is activated. Points accrue continuously each month you maintain active service."
+
+  - trigger: ";y_loyalty_rewards"
+    replace: "Loyalty points can be redeemed directly in our AirTalk App for either high-speed cellular data packages (valid for 30 calendar days) or AirTalk equipment store vouchers (valid for 2 months). In addition, referring friends or family earns referral rewards redeemable for Amazon E-gift cards (valid for 6 months)."
+
+  - trigger: ";g_loyalty_portal"
+    replace: "To view your accumulated reward balance and redeem rewards, simply open the official AirTalk Wireless App on your phone, log in with your account credentials, and navigate to the 'Loyalty Rewards' section."

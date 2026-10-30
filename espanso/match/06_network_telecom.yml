@@ -1,0 +1,78 @@
+# ==============================================================================
+# 06_NETWORK_TELECOM.YML - PORTING, PUK, VOICEMAIL, MDN CHANGE & APN SERVICE
+# Architecture: Telecom Domain | ST Slides 158-172 & 230-248
+# Representative: Martin (Softel Solutions)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. NUMBER PORTABILITY - PORT-IN & PORT-OUT (Slides 158-172)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_portin"
+    replace: "I understand you are checking on the transfer status of your telephone number to our network, and I am here to help you get your number connected seamlessly."
+
+  - trigger: ";y_portin_types"
+    replace: "We support two primary Port-In methods: Enrollment Port-In (submitted during initial application) and Existing Port-In (requested after activation via self-service portal or CSR). Please note that numbers originating from MVNO-C network partners cannot be ported into our service."
+
+  - trigger: ";g_portin_assist"
+    replace: "To resolve the porting hold with your previous carrier, I have resubmitted your porting request with your updated account credentials: Account Number, Number Transfer PIN (NTP), and Billing ZIP Code. The transfer typically completes within 2 to 24 business hours."
+
+  - trigger: ";r_portout"
+    replace: "I can certainly assist you with your transfer credentials today. At the same time, we are truly sorry to see that you are considering leaving AirTalk Wireless, and we appreciate the opportunity to resolve any concerns you have."
+
+  - trigger: ";y_portout_pin"
+    replace: "Per federal telecommunications guidelines, your Number Transfer PIN (NTP) is strictly valid for exactly 4 calendar days (96 hours) from generation. If not completed within 4 days, a new PIN must be requested."
+
+  - trigger: ";y_portout_warning"
+    replace: "Important regulatory disclosure: Successfully porting your number to another carrier will permanently release and cancel your government Lifeline benefit with our company. In addition, if you received a subsidized promotional phone and transfer before completing 180 continuous active service days, hardware non-fulfillment fees may apply."
+
+  - trigger: ";g_portout_generate"
+    replace: "Here are your official transfer credentials: **Account Number:** [[account_number]] | **Transfer PIN:** [[transfer_pin]]. This PIN is strictly valid for 4 calendar days. Please provide these exact details to your new carrier to complete your transfer."
+
+  - trigger: ";g_portout_cancel"
+    replace: "Per your request, I have successfully cancelled your pending port-out request and invalidated the active Transfer PIN. Your telephone number and Lifeline service remain fully active and secured with AirTalk Wireless."
+
+  # ----------------------------------------------------------------------------
+  # 2. TECHNICAL SERVICE & APN TROUBLESHOOTING (Slides 230-235)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_service"
+    replace: "I am very sorry to hear that you are experiencing service disruptions. Having reliable voice, text, and data is critical, and I will guide you through step-by-step troubleshooting to get your connection restored."
+
+  - trigger: ";g_apn_setup"
+    replace: "Let's configure your Access Point Name (APN) settings: Open Settings > Cellular (or Mobile Networks) > Access Point Names > Add New APN. Enter **Name:** AirTalk | **APN:** wholesale | **APN Type:** default,mms,supl | **MMSC:** http://wholesale.mmsmvno.com/mms/wapenc. Save the APN, select it, and restart your device."
+
+  - trigger: ";g_network_reset"
+    replace: "To refresh your cellular connection to nearby towers: Open Settings > General (or System) > Reset > Reset Network Settings. Please note this will reboot your phone and clear saved Wi-Fi passwords, allowing your SIM to re-register on our cellular towers."
+
+  - trigger: ";g_sim_reseat"
+    replace: "Let's perform a physical SIM inspection: Please power off your handset completely, remove the SIM tray using a SIM ejector tool, inspect the golden contacts for dust or damage, firmly re-seat the card, and power the device back on."
+
+  # ----------------------------------------------------------------------------
+  # 3. VOICEMAIL OPERATIONS (Slides 236-240)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_vm_info"
+    replace: "Your voicemail service is pre-activated on your line. To initialize your mailbox for the first time, open your phone keypad, press and hold key [1] until the automated system answers, and follow the voice prompts to establish your personal security PIN."
+
+  - trigger: ";g_vm_reset"
+    replace: "I have successfully reset your voicemail passcode in our network portal. Your temporary passcode is set to the last 4 digits of your phone number. Please restart your handset, dial and hold [1], and enter your temporary passcode to personalize your greeting."
+
+  - trigger: ";g_vm_setup_guide"
+    replace: "To set up your voicemail: (1) Press and hold [1] on your dialer, (2) When prompted, enter your temporary PIN (last 4 digits of your MDN), (3) Follow the recorded instructions to record your legal name and personal greeting, and (4) Press # to save."
+
+  # ----------------------------------------------------------------------------
+  # 4. PUK CODE (SIM UNBLOCKING - Slides 241-244)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_puk_warning"
+    replace: "A PUK (Personal Unblocking Key) is required after three consecutive incorrect SIM PIN entries. CRITICAL WARNING: You have a maximum of 10 attempts to enter the correct PUK code. If entered incorrectly 10 times, the SIM card will be permanently disabled and burned, requiring a complete physical SIM replacement."
+
+  - trigger: ";g_puk_provide"
+    replace: "Having verified your SIM card ICCID in our network registry, here are your official unblocking keys: **PUK1:** [[puk1_code]] | **PUK2:** [[puk2_code]]. Please enter PUK1 carefully on your device screen to unlock your SIM card and establish a new 4-digit PIN."
+
+  # ----------------------------------------------------------------------------
+  # 5. MDN (PHONE NUMBER) CHANGE (Slides 245-248)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_mdn_policy"
+    replace: "Under company policy, subscribers are permitted up to two (2) free phone number (MDN) changes every 3 billing cycles (calculated by calendar month for free plans, or renewal date for paid plans). Any additional number change within that window incurs a standard $25 administrative fee."
+
+  - trigger: ";g_mdn_execute"
+    replace: "I have processed your phone number change in our provisioning system. Your new telephone number is: [[new_mdn]]. Please turn your handset off, wait 2 minutes, and power it back on so your SIM can download its newly assigned network credentials."

@@ -1,0 +1,78 @@
+# ==============================================================================
+# 04_LOGISTICS_SHIPMENT.YML - SHIPMENT, DCNR, LIT, RTS & HOT RUSH ESCALATION
+# Architecture: Logistics Domain | ST Slides 173-214
+# Representative: Martin (Softel Solutions)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. SHIPMENT & CARRIER INFORMATION (Slides 173-184)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_ship_stages"
+    replace: "Our fulfillment process follows three strict operational steps: (1) Device provisioning and SIM insertion (pre-owned devices ship with SIM inserted; brand-new devices ship with SIM alongside), (2) Over-The-Air (OTA) network provisioning, and (3) Carrier dispatch with automated tracking generation (standard fulfillment window is 3 to 5 business days)."
+
+  - trigger: ";y_ship_methods"
+    replace: "Standard shipping via USPS or FedEx Ground is provided completely free of charge. Optional FedEx Express shipping ($4.99) provides expedited transit once the package is dispatched from our fulfillment center."
+
+  - trigger: ";y_ship_stamps"
+    replace: "SIM-only orders dispatched via regular postal mail (Stamps.com) do not provide live online tracking numbers. Postal transit typically takes between 7 and 14 business days to arrive in your residential mailbox."
+
+  - trigger: ";g_ship_tracking"
+    replace: "Your shipment has been dispatched! You can track live transit progress with the carrier using your tracking number: [[tracking_number]] at https://tools.usps.com or https://www.fedex.com. Standard delivery is estimated within 3 to 5 business days."
+
+  # ----------------------------------------------------------------------------
+  # 2. DELIVERED CLAIMED NOT RECEIVED - DCNR (Slides 185-193)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_dcnr"
+    replace: "I am truly sorry to hear that you have not located your package despite the carrier reporting it delivered. I know how eagerly you have been waiting for your phone, and I am here to assist you with a missing package investigation."
+
+  - trigger: ";y_dcnr_auto"
+    replace: "When a delivery discrepancy is reported for the first time, our system initiates our Automated Resolution Flow. To get your service up and running without waiting for lengthy postal investigations, an electronic device voucher is credited to your account ($10 for SIM-Only, $30 for Free Phone, $70 for Tribal/CA, $40 for Kentucky, $30 for 925 states)."
+
+  - trigger: ";y_dcnr_manual"
+    replace: "If a package is reported missing after a prior replacement was already dispatched, our policy requires an escalated Manual Review Flow. This requires our accounting and logistics supervisors to audit GPS coordinates and delivery scans before an additional replacement can be authorized."
+
+  - trigger: ";y_dcnr_stamps"
+    replace: "Because regular postal SIM cards sent via Stamps.com do not carry scanned GPS tracking, postal guidelines require subscribers to allow the full 7 to 14 business days delivery timeframe before filing a lost package claim."
+
+  - trigger: ";g_dcnr_ticket"
+    replace: "I have filed an official Delivery Claimed Not Received (DCNR) investigation ticket and placed a Non-Usage Hold on your account to safeguard your Lifeline benefit while our logistics team coordinates with the carrier. Please allow 24 to 48 business hours for an update."
+
+  # ----------------------------------------------------------------------------
+  # 3. LOST IN TRANSIT - LIT (Slides 204-208)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_lit"
+    replace: "I understand how frustrating it is when carrier tracking stops updating. When transit stalls, you can count on us to step in and ensure you receive the equipment you need."
+
+  - trigger: ";y_lit_rules"
+    replace: "Under carrier agreements, a shipment is officially classified as Lost In Transit (LIT) when tracking remains stalled with zero transit scans for more than 7 consecutive business days. Once confirmed, the undelivered device IMEI is blacklisted, and a replacement shipment is approved."
+
+  - trigger: ";g_lit_reship"
+    replace: "Because carrier scans have remained frozen for over 7 business days, I have submitted a Lost In Transit claim ticket. We have suspended the original line credentials and blacklisted the lost device to protect your account, and our warehouse has been queued to dispatch a replacement."
+
+  # ----------------------------------------------------------------------------
+  # 4. RETURN TO SENDER - RTS (Slides 209-214)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_rts"
+    replace: "I see that your package was returned to our fulfillment warehouse by the carrier due to an address delivery issue. Let's make sure we verify your exact residential details so we can get your package to the right destination."
+
+  - trigger: ";y_rts_rules"
+    replace: "Packages returned to sender (RTS) require the subscriber to provide verified Proof of Address within 10 calendar days. If valid proof is confirmed, our warehouse reships the order via FedEx ground."
+
+  - trigger: ";y_rts_no2nd"
+    replace: "Important company policy: If a reshipped package is returned to sender a second time, company policy strictly prohibits a second courtesy reshipment. If you still wish to receive the package, a re-order fee applies ($6.99 for Standard Shipping or $9.99 for Express Shipping) upon supervisor approval."
+
+  - trigger: ";g_rts_verify"
+    replace: "To release your returned package for reshipment, please confirm your complete physical street address (including any apartment, unit, or suite number). Once verified against our postal database, our warehouse team will print a fresh shipping label."
+
+  # ----------------------------------------------------------------------------
+  # 5. DELAYED FULFILLMENT & HOT RUSH ESCALATION (Slides 194-199)
+  # ----------------------------------------------------------------------------
+  - trigger: ";r_delay"
+    replace: "I sincerely apologize for the delay in processing and dispatching your order. Waiting longer than anticipated for your phone is completely understandable frustration, and I am personally reviewing your order pipeline right now."
+
+  - trigger: ";y_hotrush_criteria"
+    replace: "Orders qualify for Hot Rush Priority Fulfillment escalation if: (1) More than 14 business days have elapsed since approval with no tracking generated, (2) Tracking status has remained in NEW status for over 7 business days, (3) Paid hardware orders are delayed and customer is requesting cancellation, or (4) A customer from California, Kentucky, or Tribal lands reaches out for a second time."
+
+  - trigger: ";g_hotrush_ticket"
+    replace: "I have escalated your order directly to our Warehouse Operations Lead via a High-Priority Hot Rush Ticket. Our dispatch manager will expedite your order through warehouse staging with targeted shipment dispatch within 24 to 48 business hours."
