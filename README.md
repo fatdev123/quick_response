@@ -166,16 +166,17 @@ e:\softel\
 │   ├── QA_SURVIVAL_PLAYBOOK.md         # Sổ tay sinh tồn QA, rubric 100 điểm & kịch bản de-escalation
 │   ├── RAPID_LOOKUP_CTRL_F.md          # Từ điển tra cứu nhanh và phím tắt định tuyến
 │   ├── CONCURRENCY_WORKFLOW.md         # Quy trình xử lý đồng thời 3-5 phiên chat
-│   └── EMAIL_TICKET_MASTER_PLAYBOOK.md # Sổ tay vận hành xử lý Email & Ticket khách hàng 5 giai đoạn
+│   ├── EMAIL_TICKET_MASTER_PLAYBOOK.md # Sổ tay vận hành xử lý Email & Ticket khách hàng 5 giai đoạn
+│   └── PLAN_AND_ORDER_CONVERSIONS.md   # Cẩm nang chuyển đổi gói cước & thay đổi đơn hàng 10 case chuẩn
 │
 ├── espanso/                            # Cấu hình phần mềm Espanso Text Expander
 │   ├── config/
 │   │   └── default.yml                 # Cấu hình engine clipboard và phím tắt hệ thống
 │   ├── archive/                        # Lưu trữ an toàn các file match cũ bị trùng lặp
-│   └── match/                          # Tầng Match tách biệt theo Domain (288 Phím tắt)
+│   └── match/                          # Tầng Match tách biệt theo Domain (300 Phím tắt)
 │       ├── 00_core_system.yml          # Lời chào, giữ máy, chốt ca, ranh giới thô tục (15 snippets)
 │       ├── 01_cpni_fraud.yml           # Xác thực CPNI 3 yếu tố, phòng chống gian lận (12 snippets)
-│       ├── 02_application_order.yml    # Giấy tờ duyệt hồ sơ, CA Maximus, chính sách BYOD 365d (14 snippets)
+│       ├── 02_application_order.yml    # Giấy tờ duyệt hồ sơ, CA Maximus, chính sách BYOD 365d (20 snippets)
 │       ├── 03_transfer_nonusage.yml    # Transfer 10m, cứu line Non-usage, giới hạn SNU (16 snippets)
 │       ├── 04_logistics_shipment.yml   # Giao nhận, DCNR đền voucher, LIT, RTS cấm gửi lần 3 (19 snippets)
 │       ├── 05_hardware_warranty.yml    # Bảo hành 15d/30d/48h/60d Foxx, Hoàn tiền, Khóa MDM (21 snippets)
@@ -184,7 +185,7 @@ e:\softel\
 │       ├── 08_account_maintenance.yml  # Đổi địa chỉ Mailing vs Service, khóa cấm đổi bang (7 snippets)
 │       ├── 09_speed_combos.yml         # Tổ hợp Lego 3-Zone (Red + Yellow + Green) phản xạ nhanh (20 snippets)
 │       ├── 10_crm_notes.yml            # Mẫu biểu ghi chú nội bộ CRM Activity Notes (11 snippets)
-│       └── 11_vietnamese_qr.yml        # Toàn bộ phản hồi chuẩn mực bằng Tiếng Việt (;vi_) (125 snippets)
+│       └── 11_vietnamese_qr.yml        # Toàn bộ phản hồi chuẩn mực bằng Tiếng Việt (;vi_) (131 snippets)
 │
 └── scripts/                            # Bộ công cụ tự động hóa và kiểm toán hệ thống
     ├── validate_snippets.py            # Kiểm toán cú pháp, bắt lệch SLA, bắt lỗi QA & lộ nội bộ

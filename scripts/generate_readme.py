@@ -189,7 +189,8 @@ e:\\softel\\
 │   ├── QA_SURVIVAL_PLAYBOOK.md         # Sổ tay sinh tồn QA, rubric 100 điểm & kịch bản de-escalation
 │   ├── RAPID_LOOKUP_CTRL_F.md          # Từ điển tra cứu nhanh và phím tắt định tuyến
 │   ├── CONCURRENCY_WORKFLOW.md         # Quy trình xử lý đồng thời 3-5 phiên chat
-│   └── EMAIL_TICKET_MASTER_PLAYBOOK.md # Sổ tay vận hành xử lý Email & Ticket khách hàng 5 giai đoạn
+│   ├── EMAIL_TICKET_MASTER_PLAYBOOK.md # Sổ tay vận hành xử lý Email & Ticket khách hàng 5 giai đoạn
+│   └── PLAN_AND_ORDER_CONVERSIONS.md   # Cẩm nang chuyển đổi gói cước & thay đổi đơn hàng 10 case chuẩn
 │
 ├── espanso/                            # Cấu hình phần mềm Espanso Text Expander
 │   ├── config/

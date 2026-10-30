@@ -128,6 +128,24 @@ matches:
   - trigger: ";vi_pay_portal"
     replace: "Dạ nhân viên tổng đài không được phép thao tác thu tiền hay đặt mua máy thay khách trên kênh chat; tuy nhiên, quý khách hoàn toàn có thể tự đăng nhập vào cổng tài khoản cá nhân tại https://airtalkwireless.com vào mục 'Shop Devices' để đặt mua máy nâng cấp với mức giá ưu đãi đặc quyền dành riêng cho thuê bao ạ."
 
+  - trigger: ";vi_paylater_fail"
+    replace: "Dạ nếu quý khách chọn hình thức Thanh toán sau (Pay Later) khi nâng cấp máy, hệ thống sẽ gửi 3 thông báo nhắc thanh toán trong vòng 3 ngày kể từ khi hồ sơ được duyệt. Do quá thời hạn thanh toán không thành công, đơn hàng được tự động chuyển sang gói Dịch vụ Không dây (SIM Only) để đảm bảo quyền lợi sóng di động của quý khách không bị gián đoạn. Sau khi kích hoạt SIM, quý khách có thể đăng nhập vào trang tài khoản cá nhân để đặt mua máy với mức giá ưu đãi dành cho thuê bao hiện hữu ạ."
+
+  - trigger: ";vi_ca_fail"
+    replace: "Dạ theo quy định của chương trình California LifeLine, nếu hồ sơ trợ cấp cấp bang không được cơ quan quản lý bang (Maximus) phê duyệt, quyền lợi của quý khách sẽ được tự động chuyển sang Gói Cơ bản Lifeline Liên bang (Federal Basic Plan) dạng chỉ gửi thẻ SIM, giúp quý khách duy trì quyền lợi nghe gọi và data miễn phí hàng tháng mà không bị gián đoạn ạ."
+
+  - trigger: ";vi_plan_downgrade"
+    replace: "Dạ các gói cước nâng cấp Lifeline (Plus, Premium, Unlimited) áp dụng chu kỳ cước 30 ngày. Nếu quý khách không gia hạn thanh toán trước ngày hết hạn, hệ thống sẽ tự động hạ cấp (downgrade) gói cước về Gói Cơ bản Lifeline miễn phí (Basic Plan) để đảm bảo liên lạc thông suốt. Dung lượng data miễn phí sẽ tiếp tục được tự động nạp lại vào ngày đầu tiên của mỗi tháng ạ."
+
+  - trigger: ";vi_ca_dual_suspend"
+    replace: "Dạ đối với tài khoản hưởng quyền lợi kép California (CA Combo), nếu quyền lợi bang California bị tạm ngưng (Suspend) nhưng quyền lợi Liên bang (Federal) vẫn đang Hoạt động (Active), hệ thống sẽ tự động chuyển đổi gói cước về Gói Liên bang (Federal Plan) để quý khách duy trì dịch vụ liên tục trong thời gian xử lý hồ sơ bang ạ."
+
+  - trigger: ";vi_recert_fail"
+    replace: "Dạ theo quy định của chính phủ liên bang, nếu thuê bao không hoàn thành thủ tục tái chứng nhận Lifeline hàng năm trước thời hạn quy định, USAC sẽ tiến hành hủy đăng ký (de-enroll). Tuy nhiên, hệ thống vẫn duy trì kết nối tạm thời. Nếu thông tin cá nhân của quý khách không thay đổi, chúng tôi sẽ hỗ trợ quý khách nộp lại hồ sơ để khôi phục quyền lợi và giữ nguyên số điện thoại hiện tại ạ."
+
+  - trigger: ";vi_recert_airvoice"
+    replace: "Dạ nếu quý khách không còn đủ điều kiện tiếp tục tham gia chương trình trợ cấp Lifeline sau đợt tái chứng nhận, quý khách đủ điều kiện chuyển đổi sang mạng di động trả trước AirVoice Prepaid để giữ nguyên số điện thoại đang dùng với các gói cước trả trước linh hoạt mà không cần thẩm định lại hồ sơ chính phủ ạ."
+
   - trigger: ";vi_oos"
     replace: "Dạ do nhu cầu đặt hàng rất cao, dòng máy quý khách chọn ban đầu hiện đang tạm hết hàng tại kho (Out of Stock). Công ty có thể hỗ trợ điều phối một dòng máy khác có cấu hình và tính năng tương đương để xuất kho ngay, hoặc quý khách có thể giữ đơn chờ đợt hàng mới về kho ạ."
 

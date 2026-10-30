@@ -52,3 +52,24 @@ matches:
 
   - trigger: ";g_oos_sub"
     replace: "I have reviewed your order status, and the model you initially selected is currently out of stock. I can arrange for an equivalent replacement device with matching specifications to be dispatched immediately, or we can keep your order queued for the next warehouse shipment batch."
+
+  # ----------------------------------------------------------------------------
+  # 3. PLAN CONVERSIONS, PAY LATER & RECERTIFICATION (Slides 24-50, 76-99 & Upgrade Plans)
+  # ----------------------------------------------------------------------------
+  - trigger: ";y_paylater_fail"
+    replace: "If an upgraded phone is selected with the Pay Later option, payment must be completed within 3 calendar days of approval following three automated payment reminders. Because payment could not be captured, the order was automatically converted to a Wireless Service Only (BYOD SIM) package so your free service is not interrupted. Once you activate your SIM, you can log into your account dashboard to purchase a device at discounted subscriber rates."
+
+  - trigger: ";y_ca_fail"
+    replace: "Under California LifeLine regulations, if state eligibility is not approved by the California administrator (Maximus), your enrollment transitions to a standard Federal Lifeline Basic Plan with SIM-only service, keeping your monthly federal talk, text, and data benefits active."
+
+  - trigger: ";y_plan_downgrade"
+    replace: "Lifeline Upgrade Plans (Plus, Premium, Unlimited) operate on a 30-day billing cycle. If the renewal payment is not completed prior to the cycle expiration date, our billing system automatically downgrades your service to the free Lifeline Standard Basic Plan so you will never experience complete loss of service. Data will continue to refill automatically on the first of each month."
+
+  - trigger: ";y_ca_dual_suspend"
+    replace: "For accounts with California Dual/Combo benefits, if your California LifeLine benefit is suspended or pending verification while your Federal Lifeline remains active, your account is temporarily downgraded to the Federal Lifeline Plan to ensure uninterrupted service while state records are resolved."
+
+  - trigger: ";y_recert_fail"
+    replace: "According to federal program guidelines, subscribers who do not complete their annual Lifeline recertification before the regulatory deadline are de-enrolled by USAC. However, our system maintains temporary hotline service. If your account information remains unchanged, we can assist you with re-applying to restore your full Lifeline service and retain your current phone number."
+
+  - trigger: ";g_recert_airvoice"
+    replace: "If you no longer qualify for the federal Lifeline program following recertification closure, you are eligible for an immediate transition to our AirVoice Prepaid network, allowing you to retain your existing mobile number with affordable monthly prepaid plans without needing a new credit check."
