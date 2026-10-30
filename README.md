@@ -108,7 +108,7 @@ e:\softel\
 
 ├── README.md                           # Master system documentation and operational guide
 
-├── unikey_macro.txt                    # 163-entry macro definition file (Clean Architecture) for Unikey / EVKey
+├── unikey_macro.txt                    # 288-entry macro definition file (Clean Architecture & Dual EN/VI) for Unikey / EVKey
 
 │
 
@@ -134,7 +134,7 @@ e:\softel\
 
 │   ├── archive/                        # Archived legacy/monolithic configuration files
 
-│   └── match/                          # Domain-Driven Decoupled Match Layer (163 Standardized Snippets)
+│   └── match/                          # Domain-Driven Decoupled Match Layer (288 Standardized Snippets (163 EN + 125 VI))
 
 │       ├── 00_core_system.yml          # System greetings, hold updates, keep-alive & boundary enforcement (;)
 
@@ -156,7 +156,8 @@ e:\softel\
 
 │       ├── 09_speed_combos.yml         # Pre-assembled 3-Zone full-turn speed responses (;)
 
-│       └── 10_crm_notes.yml            # Interactive standardized CRM Activity Notes templates (;)
+│       ├── 10_crm_notes.yml            # Interactive standardized CRM Activity Notes templates (;)
+│       └── 11_vietnamese_qr.yml        # Vietnamese Quick Response Layer (125 Standardized VI Snippets) (;vi_)
 
 │
 

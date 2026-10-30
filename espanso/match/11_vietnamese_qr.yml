@@ -1,0 +1,414 @@
+# ==============================================================================
+# 11_VIETNAMESE_QR.YML - QUICK RESPONSE TIẾNG VIỆT CHUẨN CSKH VIỄN THÔNG HOA KỲ
+# Architecture: Vietnamese Localization Layer | ST Training Slide Coverage
+# Representative: Martin | Softel Solutions (AirTalk Wireless & TAG Mobile)
+# ==============================================================================
+
+matches:
+  # ----------------------------------------------------------------------------
+  # 1. HỆ THỐNG & CHÀO HỎI (GREETINGS & CORE CONTROLS)
+  # ----------------------------------------------------------------------------
+  - trigger: ";vi_hi"
+    replace: "Dạ xin kính chào quý khách! Cảm ơn quý khách đã liên hệ với Bộ phận Chăm sóc Khách hàng hôm nay. Em tên là Martin. Em có thể hỗ trợ gì cho dịch vụ của quý khách ạ?"
+
+  - trigger: ";vi_hi_airtalk"
+    replace: "Dạ xin kính chào quý khách! Cảm ơn quý khách đã liên hệ với Tổng đài Hỗ trợ AirTalk Wireless. Em là Martin, rất hân hạnh được đồng hành và hỗ trợ quý khách hôm nay ạ!"
+
+  - trigger: ";vi_hi_tag"
+    replace: "Dạ xin kính chào quý khách! Cảm ơn quý khách đã liên hệ với Dịch vụ Khách hàng TAG Mobile. Em là Martin. Em có thể kiểm tra hoặc hỗ trợ gì cho tài khoản của quý khách ạ?"
+
+  - trigger: ";vi_h_check"
+    replace: "Dạ em đang trực tiếp kiểm tra dữ liệu tài khoản của quý khách trên hệ thống. Xin quý khách vui lòng giữ máy giúp em từ 1 đến 2 phút, em sẽ quay lại phản hồi ngay ạ. Em cảm ơn quý khách rất nhiều!"
+
+  - trigger: ";vi_h_still"
+    replace: "Dạ em chân thành cảm ơn quý khách đã kiên nhẫn đợi em! Em vẫn đang rà soát chi tiết hồ sơ trên hệ thống máy chủ để đảm bảo tính chuẩn xác. Em sẽ có thông tin cập nhật gửi đến quý khách ngay ạ."
+
+  - trigger: ";vi_h_lead"
+    replace: "Dạ để đảm bảo quyền lợi và phương án xử lý tốt nhất cho trường hợp này, em đang xin ý kiến tham vấn từ Chuyên viên Hỗ trợ Cấp cao. Quý khách vui lòng đợi em trong khoảng 2 phút nhé ạ."
+
+  - trigger: ";vi_h_tool"
+    replace: "Dạ hệ thống công cụ chẩn đoán đường truyền đang tiến hành quét cấu hình mạng và trạng thái sim của quý khách. Quá trình này mất khoảng 60 đến 90 giây. Em cảm ơn quý khách đã kiên nhẫn ạ!"
+
+  - trigger: ";vi_h_there"
+    replace: "Dạ em chưa nhận được phản hồi từ quý khách trong ít phút vừa qua. Quý khách vẫn đang trực tuyến trên khung chat chứ ạ? Em muốn đảm bảo quý khách nhận được sự hỗ trợ trọn vẹn nhất ạ!"
+
+  - trigger: ";vi_h_warn_idle"
+    replace: "Dạ khung chat của chúng ta đã không có hoạt động trong một lúc. Nếu quý khách vẫn cần em hỗ trợ thêm, xin vui lòng nhắn phản hồi giúp em nhé. Nếu không, hệ thống có thể sẽ tự động kết thúc phiên chat này trong ít phút tới ạ."
+
+  - trigger: ";vi_h_close_idle"
+    replace: "Dạ do không nhận được phản hồi từ quý khách, em xin phép được đóng phiên chat này tại đây. Bất cứ khi nào quý khách cần hỗ trợ, xin đừng ngần ngại liên hệ lại với tổng đài. Kính chúc quý khách một ngày thật an lành!"
+
+  - trigger: ";vi_deescalate"
+    replace: "Dạ em hoàn toàn thấu hiểu nỗi bức xúc và sự bất tiện mà quý khách đang gặp phải, và em rất lấy làm tiếc về sự cố này. Em ở đây để trực tiếp chịu trách nhiệm và đồng hành cùng quý khách từng bước để giải quyết thỏa đáng vấn đề này ạ!"
+
+  - trigger: ";vi_warn_profane"
+    replace: "Dạ em rất chân thành muốn giúp quý khách giải quyết dứt điểm sự cố hôm nay; tuy nhiên, em xin phép nhờ quý khách cùng giữ lời lẽ giao tiếp lịch sự và tôn trọng lẫn nhau, để chúng ta có thể tập trung xử lý vấn đề một cách nhanh nhất ạ."
+
+  - trigger: ";vi_disconnect"
+    replace: "Dạ do ngôn từ khiếm nhã vẫn tiếp tục lặp lại sau khi em đã đưa ra cảnh báo, em xin phép được ngắt kết nối phiên chat này. Quý khách luôn được chào đón liên hệ lại khi đã sẵn sàng trao đổi trên tinh thần chuyên nghiệp. Em cảm ơn quý khách."
+
+  - trigger: ";vi_wrapup"
+    replace: "Dạ em rất vui vì đã hỗ trợ được quý khách hôm nay! Không biết quý khách còn điều gì thắc mắc về điện thoại, sóng mạng hay tài khoản cần em giải đáp thêm trước khi chúng ta kết thúc không ạ?"
+
+  - trigger: ";vi_bye"
+    replace: "Dạ cảm ơn quý khách đã tin tưởng và đồng hành cùng dịch vụ của chúng em! Nếu sau này cần bất kỳ hỗ trợ nào khác, đội ngũ tổng đài luôn sẵn sàng phục vụ quý khách. Kính chúc quý khách và gia đình luôn dồi dào sức khỏe!"
+
+  # ----------------------------------------------------------------------------
+  # 2. XÁC THỰC CPNI & PHÒNG CHỐNG GIAN LẬN (CPNI & FRAUD DEFENSE)
+  # ----------------------------------------------------------------------------
+  - trigger: ";vi_v_cpni"
+    replace: "Dạ để bảo mật an toàn tuyệt đối cho tài khoản của quý khách theo đúng quy định bảo mật viễn thông liên bang (CPNI), quý khách vui lòng xác nhận giúp em: **Họ và Tên đầy đủ**, **Ngày tháng năm sinh (MM/DD/YYYY)**, và **4 số cuối của số An sinh Xã hội (SSN)** ạ."
+
+  - trigger: ";vi_v_pass"
+    replace: "Dạ em cảm ơn quý khách đã cung cấp thông tin! Dữ liệu đã hoàn toàn trùng khớp với hồ sơ bảo mật. Em có thể hỗ trợ xử lý vấn đề gì cho dịch vụ của quý khách hôm nay ạ?"
+
+  - trigger: ";vi_v_fail"
+    replace: "Dạ em cảm ơn sự hợp tác của quý khách; tuy nhiên, thông tin vừa cung cấp chưa trùng khớp với dữ liệu lưu trên hệ thống. Theo luật bảo mật liên bang, em không được phép tiết lộ chi tiết tài khoản. Quý khách vui lòng kiểm tra lại thông tin và cung cấp lại giúp em nhé ạ."
+
+  - trigger: ";vi_v_lockout"
+    replace: "Dạ để bảo vệ tài khoản của quý khách, phiên xác thực đã vượt quá số lần cho phép. Để tiếp tục kiểm tra hoặc thay đổi thông tin, xin quý khách vui lòng tải ảnh giấy tờ tùy thân do chính phủ cấp lên cổng xác thực an toàn. Sau khi đội ngũ kiểm duyệt xong, chúng em sẽ mở lại quyền truy cập ạ."
+
+  - trigger: ";vi_v_contact"
+    replace: "Dạ em cảm ơn quý khách đã xác thực! Xin quý khách vui lòng cho em xin thêm **Số điện thoại liên hệ thuận tiện nhất** và **Địa chỉ Email** để em cập nhật hồ sơ liên lạc chính xác cho mình nhé ạ."
+
+  - trigger: ";vi_v_id_proof"
+    replace: "Dạ để xác thực danh tính và phòng ngừa gian lận mạo danh, xin quý khách vui lòng chụp ảnh rõ nét giấy tờ tùy thân (Bằng lái xe, Căn cước/ID bang, hoặc Hộ chiếu) và tải lên đường link bảo mật: https://airtalkwireless.com/upload-proof. Sau khi gửi xong quý khách báo em nhé ạ!"
+
+  - trigger: ";vi_v_behalf"
+    replace: "Dạ theo luật bảo mật viễn thông CPNI của liên bang, tổng đài chỉ được phép trao đổi thông tin với chính chủ đứng tên trên hồ sơ. Trường hợp người thân gọi hộ, bắt buộc chủ tài khoản phải có mặt bên cạnh để vượt qua các bước xác minh danh tính và trực tiếp nói lời ủy quyền trên cuộc gọi/chat ạ."
+
+  - trigger: ";vi_v_deceased"
+    replace: "Dạ em xin gửi lời chia buồn sâu sắc nhất đến quý khách và gia quyến về sự mất mát này. Để hỗ trợ đóng hoặc quản lý đường truyền của người thân đã qua đời, quý khách vui lòng cung cấp bản sao Giấy chứng tử kèm giấy tờ xác nhận quyền thừa kế/đại diện pháp lý gửi về bộ phận tuân thủ của chúng em ạ."
+
+  - trigger: ";vi_v_unauth"
+    replace: "Dạ em cảm ơn quý khách đã phản ánh. Nếu quý khách chưa từng đăng ký hoặc nghi ngờ có ai đó dùng thông tin của mình để lập tài khoản trái phép, công ty chúng em rất xem trọng vấn đề này. Em sẽ lập tức khóa tạm thời tài khoản để chặn hành vi gian lận và hỗ trợ quý khách làm hồ sơ khiếu nại đánh cắp danh tính ạ."
+
+  - trigger: ";vi_v_weird"
+    replace: "Dạ em rất hiểu sự lo lắng của quý khách khi thấy có hoạt động lạ trên tài khoản. Em đang tiến hành rà soát lại toàn bộ lịch sử đơn hàng và nhật ký hệ thống. Trong thời gian này, quý khách tuyệt đối không chia sẻ mật khẩu đăng nhập hay mã OTP gửi về máy cho bất kỳ ai nhé ạ."
+
+  - trigger: ";vi_v_vishing"
+    replace: "Dạ để phòng chống triệt để các hành vi lừa đảo chiếm quyền SIM và cấp eSIM trái phép, quy trình cấp mã QR eSIM yêu cầu kiểm duyệt an ninh tăng cường. Quý khách vui lòng cung cấp số IMEI của máy và tải ảnh giấy tờ tùy thân của chính chủ lên cổng duyệt trước khi hệ thống kích hoạt eSIM ạ."
+
+  - trigger: ";vi_v_sim_protect"
+    replace: "Dạ đường truyền của quý khách hiện đang kích hoạt tính năng Bảo vệ Đổi SIM (SIM Port Protection) để ngăn chặn kẻ gian chiếm đoạt số. Để mở khóa tính năng này cho các thay đổi chính đáng, xin quý khách vui lòng tự đăng nhập vào cổng tài khoản tại web và chọn mục 'Account > My SIM > SIM - Port Unlock' ạ."
+
+  # ----------------------------------------------------------------------------
+  # 3. HỒ SƠ ĐĂNG KÝ & ĐƠN HÀNG (APPLICATION, ORDER & BYOD CHEAT)
+  # ----------------------------------------------------------------------------
+  - trigger: ";vi_app_proofs"
+    replace: "Dạ để hoàn tất hồ sơ xét duyệt trợ cấp, quý khách cần cung cấp đủ 3 nhóm giấy tờ: Giấy tờ tùy thân (ID/Bằng lái xe), Giấy tờ chứng minh đủ điều kiện trợ cấp (Thư hưởng SNAP/Food Stamps, Medicaid, SSI...), và Giấy tờ xác nhận địa chỉ cư trú (Hóa đơn điện nước, hợp đồng thuê nhà). Nhân viên tổng đài tuyệt đối không được phép nộp đơn thay khách hàng theo luật liên bang ạ."
+
+  - trigger: ";vi_app_upload_cx"
+    replace: "Dạ quý khách có thể chủ động tải các giấy tờ còn thiếu lên hệ thống xét duyệt trực tuyến tại đường link: https://airtalkwireless.com/upload-proof. Sau khi tải lên, hệ thống thẩm định tự động sẽ kiểm tra hồ sơ của mình rất nhanh ạ."
+
+  - trigger: ";vi_app_upload_rv"
+    replace: "Dạ em đã tiếp nhận các chứng từ của quý khách và chuyển thẳng lên Đội ngũ Xét duyệt Hồ sơ (RV Team) để được ưu tiên thẩm định. Để bảo vệ an toàn dữ liệu cá nhân cho quý khách, toàn bộ ảnh giấy tờ vừa gửi sẽ được xóa hoàn toàn khỏi máy hỗ trợ của em ngay sau khi nộp ạ."
+
+  - trigger: ";vi_app_status_925"
+    replace: "Dạ em đã kiểm tra trạng thái hồ sơ của quý khách trên cổng Cơ sở dữ liệu Lifeline Quốc gia (NLAD/NV). Hồ sơ của quý khách hiện đang trong quá trình thẩm định của bộ phận xác minh liên bang. Ngay khi được duyệt, hệ thống sẽ tự động gửi email thông báo cho mình ạ."
+
+  - trigger: ";vi_app_status_ca"
+    replace: "Dạ đối với hồ sơ trợ cấp bang California (CA LifeLine), cơ quan thẩm định là Đơn vị Quản lý California (Maximus). Khi ở trạng thái tiền duyệt (Pre-approved), hồ sơ sẽ cần khoảng 7 ngày làm việc để Maximus đối soát dữ liệu của bang trước khi chuyển sang trạng thái duyệt chính thức ạ."
+
+  - trigger: ";vi_app_expire"
+    replace: "Dạ theo yêu cầu của quý khách, em đã tạo lệnh hủy và cho hết hạn hồ sơ đăng ký đang treo trên hệ thống. Bất cứ khi nào quý khách muốn đăng ký lại, quý khách hoàn toàn có thể nộp một hồ sơ mới tại website của công ty ạ."
+
+  - trigger: ";vi_byod_365d"
+    replace: "Dạ theo quy định chính sách thiết bị của công ty, mỗi hộ gia đình và khách hàng đủ điều kiện sẽ được nhận **duy nhất 1 điện thoại miễn phí trong vòng 365 ngày**. Điện thoại miễn phí là do AirTalk tự bỏ kinh phí tài trợ, không phải từ chính phủ. Nếu nộp hồ sơ lại trong vòng 365 ngày kể từ máy trước, hệ thống sẽ tự động chuyển sang gói BYOD (nhận SIM miễn phí để dùng trên máy cá nhân) ạ."
+
+  - trigger: ";vi_byod_explain"
+    replace: "Dạ em xin phép được giải thích rõ cho mình: Trợ cấp Lifeline của chính phủ là hỗ trợ cước phí nghe gọi, nhắn tin và data 4G/5G hàng tháng; còn máy điện thoại là món quà khuyến mãi do công ty chúng em tài trợ tặng kèm. Do hệ thống ghi nhận hộ gia đình mình đã nhận một máy trợ cấp trong vòng 365 ngày qua, đơn này được duyệt dưới dạng SIM-Only để đảm bảo quý khách không bị gián đoạn cước gọi miễn phí mỗi tháng ạ."
+
+  - trigger: ";vi_tribal_fail"
+    replace: "Dạ chương trình ưu đãi thiết bị cao cấp Tribal Lifeline chỉ áp dụng cho người cư trú trên các vùng đất bộ tộc thổ dân được liên bang công nhận (như tại Oklahoma, Arizona, Alaska). Khi cơ quan liên bang không xác minh được địa chỉ thuộc vùng Tribal, hệ thống sẽ tự động điều chỉnh đơn về dòng máy tiêu chuẩn (như A67L hoặc Verde) thay vì dòng máy cao cấp ạ."
+
+  - trigger: ";vi_pay_fail"
+    replace: "Dạ khi quý khách chọn mua máy nâng cấp hoặc chọn cước giao hỏa tốc, hệ thống thanh toán tự động gửi tối đa 4 lần hóa đơn trừ tiền. Nếu sau 4 lần thẻ ngân hàng đều không thanh toán được, hệ thống sẽ tự động chuyển đổi đơn về gói cước BYOD cơ bản miễn phí kèm giao hàng tiêu chuẩn, để đảm bảo quý khách không bị hủy mất quyền lợi trợ cấp ạ."
+
+  - trigger: ";vi_pay_portal"
+    replace: "Dạ nhân viên tổng đài không được phép thao tác thu tiền hay đặt mua máy thay khách trên kênh chat; tuy nhiên, quý khách hoàn toàn có thể tự đăng nhập vào cổng tài khoản cá nhân tại https://airtalkwireless.com vào mục 'Shop Devices' để đặt mua máy nâng cấp với mức giá ưu đãi đặc quyền dành riêng cho thuê bao ạ."
+
+  - trigger: ";vi_oos"
+    replace: "Dạ do nhu cầu đặt hàng rất cao, dòng máy quý khách chọn ban đầu hiện đang tạm hết hàng tại kho (Out of Stock). Công ty có thể hỗ trợ điều phối một dòng máy khác có cấu hình và tính năng tương đương để xuất kho ngay, hoặc quý khách có thể giữ đơn chờ đợt hàng mới về kho ạ."
+
+  # ----------------------------------------------------------------------------
+  # 4. CHUYỂN GIAO TRỢ CẤP LIFELINE (TRANSFER BENEFIT FLOW)
+  # ----------------------------------------------------------------------------
+  - trigger: ";vi_transfer_def"
+    replace: "Dạ theo quy định của chương trình Lifeline liên bang, mỗi khách hàng chỉ được sở hữu duy nhất 1 suất trợ cấp trên toàn nước Mỹ. Quy trình Chuyển giao Trợ cấp (Benefit Transfer) sẽ chuyển suất hỗ trợ này từ nhà mạng khác về công ty chúng em và bắt buộc phải có sự đồng thuận chủ động từ quý khách ạ."
+
+  - trigger: ";vi_transfer_10m"
+    replace: "Dạ nếu quý khách nhận được thông báo chuyển mạng ra và lỡ tay bấm nhầm 'Yes, I'm Moving On' (Đồng ý chuyển đi), hệ thống sẽ có cơ chế kiểm tra tự động **mỗi 10 phút**. Nếu quý khách vẫn muốn ở lại với AirTalk, quý khách phải truy cập lại đường link thông báo và bấm chọn **'I Want to Stay with AirTalk'** trong vòng 10 phút trước khi trạng thái line bị chuyển sang Inactive ạ."
+
+  - trigger: ";vi_transfer_ca"
+    replace: "Dạ đối với thuê bao tại California đăng ký gói Combo (gồm trợ cấp bang California và trợ cấp liên bang), nếu phần trợ cấp bang California bị tạm ngưng hoặc chuyển đi, hệ thống sẽ tự động hạ cấp gói cước về Gói Federal Lifeline trong vòng từ 48 giờ đến 30 ngày để đảm bảo quý khách vẫn có sóng liên lạc bình thường ạ."
+
+  - trigger: ";vi_transfer_unauth"
+    replace: "Dạ nếu trợ cấp của quý khách bị nhà mạng khác chuyển đi mà chưa có sự đồng ý của quý khách (chuyển mạng lén/Slamming), có thể do thông tin bị trùng khi đăng ký ở nơi khác. Em có thể hỗ trợ gửi đường link Thỏa thuận Chuyển giao (Transfer Agreement) để quý khách ký điện tử và kéo quyền lợi về lại ngay ạ."
+
+  - trigger: ";vi_transfer_hardblock"
+    replace: "Dạ xin quý khách lưu ý: Trường hợp chính chủ tài khoản đã chủ động yêu cầu Hủy dịch vụ hoặc Chuyển mạng đi (Port-out), quy định công ty nghiêm cấm nhân viên không được tự ý gửi giấy tờ níu kéo chuyển trợ cấp về lại nếu khách hàng không trực tiếp yêu cầu ạ."
+
+  - trigger: ";vi_transfer_active"
+    replace: "Dạ tin rất vui là em vừa kiểm tra trên cơ sở dữ liệu quốc gia NLAD, trợ cấp Lifeline của quý khách hiện đã Active hoàn toàn trên hệ thống AirTalk của chúng em! Quyền lợi đã được đưa về an toàn và quý khách không cần phải ký thêm giấy tờ nào nữa ạ."
+
+  - trigger: ";vi_transfer_send_ta"
+    replace: "Dạ em đã gửi đường link Thỏa thuận Chuyển giao Trợ cấp (Transfer Agreement - TA) qua tin nhắn và email đăng ký của quý khách. Xin quý khách vui lòng mở link, xem lại thông tin và ký xác nhận điện tử để hệ thống kích hoạt lại đường truyền cho mình nhé ạ."
+
+  - trigger: ";vi_transfer_inactive"
+    replace: "Dạ theo ghi nhận từ cơ sở dữ liệu liên bang, tài khoản Lifeline của quý khách đã chuyển sang trạng thái Inactive (Hết hạn/Hủy hoàn toàn) do đã chuyển xong sang nhà mạng khác. Do đường truyền đã hủy, hệ thống không thể kích hoạt lại trực tiếp, kính mời quý khách nộp đơn mới tại https://airtalkwireless.com ạ."
+
+  # ----------------------------------------------------------------------------
+  # 5. QUẢN TRỊ KHÔNG SỬ DỤNG (NON-USAGE - NU / NUC / SNU)
+  # ----------------------------------------------------------------------------
+  - trigger: ";vi_nonuse_rule"
+    replace: "Dạ theo luật của Ủy ban Truyền thông Liên bang (FCC/USAC), thuê bao nhận trợ cấp Lifeline bắt buộc phải phát sinh ít nhất 1 lần sử dụng cước mạng trong vòng **30 ngày liên tục**. Sau 30 ngày không dùng, hệ thống sẽ gửi Cảnh báo 15 ngày (Cure Notice). Nếu đến Ngày 45 vẫn không có hoạt động, vào **Ngày 46** line sẽ bị hủy vĩnh viễn, mất số điện thoại và điện thoại trợ cấp sẽ bị khóa MDM Lost Mode ạ."
+
+  - trigger: ";vi_nonuse_def"
+    replace: "Dạ các hoạt động được tính là phát sinh cước hợp lệ theo luật liên bang bao gồm: Thực hiện một cuộc gọi đi, Trả lời cuộc gọi đến từ số khác, Gửi một tin nhắn SMS, hoặc Bật dữ liệu di động 4G/5G để truy cập internet bằng sóng SIM. Lưu ý rằng việc chỉ mở máy chờ hoặc dùng Wi-Fi sẽ KHÔNG được tính là dùng cước di động ạ."
+
+  - trigger: ";vi_nonuse_cuu"
+    replace: "Dạ rất may mắn là tài khoản của quý khách vẫn đang nằm trong thời hạn 15 ngày cứu line! Em đã ghi nhận sự đồng thuận 'Giữ Dịch Vụ' (Keep Service) của quý khách và tạo vé NUC khẩn cấp trên hệ thống. Để hoàn tất quy định liên bang ngay lập tức, xin quý khách vui lòng thực hiện ngay 1 cuộc gọi đi hoặc gửi 1 tin nhắn bằng sóng SIM nhé ạ!"
+
+  - trigger: ";vi_nonuse_hetcuu"
+    replace: "Dạ em đã kiểm tra rất kỹ trên hệ thống CRM, đường truyền của quý khách đã chạm mốc Ngày 46 không sử dụng và đã bị hủy theo quy định bắt buộc của chính phủ liên bang (USAC). Khi đã de-enroll trên hệ thống quốc gia, số điện thoại đã bị thu hồi về kho số và không thể khôi phục lại được. Kính mời quý khách truy cập https://airtalkwireless.com để nộp hồ sơ đăng ký mới ạ."
+
+  - trigger: ";vi_snu_limits"
+    replace: "Dạ đối với đơn hàng đổi máy/SIM tự động từ Dự án Khách hàng Không sử dụng (đơn bắt đầu bằng mã CO-SNU), chính sách quy định rất nghiêm ngặt: Thiết bị theo đơn SNU **KHÔNG ĐƯỢC HỖ TRỢ BẢO HÀNH**, **KHÔNG ĐƯỢC CLAIM HÀNG THẤT LẠC (LIT)**, không được cấp voucher, và quý khách sẽ mất quyền xin SIM miễn phí ở lần tiếp theo ạ."
+
+  - trigger: ";vi_snu_consent_app"
+    replace: "Dạ quý khách có thể xác nhận giữ dịch vụ ngay lập tức bằng cách mở Ứng dụng AirTalk Wireless trên máy hoặc bấm vào link trong tin nhắn SMS cảnh báo và chọn 'I want to keep my service'. Thao tác này sẽ tự động cập nhật trạng thái hợp lệ trên hệ thống mạng ạ."
+
+  # ----------------------------------------------------------------------------
+  # 6. VẬN CHUYỂN, KHO VẬN & KHIẾU NẠI (LOGISTICS, DCNR, LIT, RTS, HOT RUSH)
+  # ----------------------------------------------------------------------------
+  - trigger: ";vi_ship_stages"
+    replace: "Dạ quy trình xử lý đơn hàng tại kho gồm 3 bước: (1) Lắp SIM và đóng gói (máy đã qua sử dụng được lắp sẵn SIM, máy mới nguyên seal để SIM rời bên cạnh), (2) Kích hoạt thông số mạng từ xa OTA, và (3) Bàn giao cho bưu điện và xuất mã tracking (thời gian xử lý xuất kho từ 3 đến 5 ngày làm việc) ạ."
+
+  - trigger: ";vi_ship_methods"
+    replace: "Dạ phương thức vận chuyển tiêu chuẩn qua bưu điện USPS hoặc FedEx Ground được công ty miễn phí hoàn toàn. Nếu chọn dịch vụ chuyển phát hỏa tốc FedEx Express ($4.99), kiện hàng sẽ được ưu tiên phát nhanh hơn sau khi xuất kho ạ."
+
+  - trigger: ";vi_ship_stamps"
+    replace: "Dạ đối với các đơn chỉ gửi thẻ SIM qua đường thư bưu chính thông thường (Stamps.com), bưu điện sẽ không cấp mã số tracking trực tuyến. Thời gian bưu tá phát thư vào thùng thư nhà quý khách thường mất từ **7 đến 14 ngày làm việc** ạ."
+
+  - trigger: ";vi_ship_tracking"
+    replace: "Dạ đơn hàng của quý khách đã được xuất kho bưu điện! Quý khách có thể theo dõi tiến trình di chuyển của gói hàng bằng mã vận đơn: [[tracking_number]] trên trang web bưu điện USPS (tools.usps.com) hoặc FedEx (fedex.com). Thời gian phát hàng ước tính từ 3 đến 5 ngày làm việc ạ."
+
+  - trigger: ";vi_dcnr_auto"
+    replace: "Dạ em rất lấy làm tiếc khi bưu điện báo đã giao hàng nhưng quý khách chưa tìm thấy gói hàng. Để quý khách sớm có máy dùng mà không phải đợi điều tra bưu điện lâu, chính sách báo mất lần đầu sẽ hỗ trợ tặng ngay Voucher mua thiết bị mới vào tài khoản: ($10 cho SIM-only, $30 cho máy miễn phí, $70 cho vùng Tribal/CA, $40 cho Kentucky, $30 cho các bang 925) ạ."
+
+  - trigger: ";vi_dcnr_manual"
+    replace: "Dạ trường hợp kiện hàng đã từng được hỗ trợ gửi lại mà quý khách vẫn báo chưa nhận được lần thứ hai, quy định bắt buộc phải chuyển sang Luồng Thẩm định Thủ công (Manual Flow). Bộ phận Quản lý và Kế toán sẽ phối hợp với bưu điện kiểm tra tọa độ GPS quét phát hàng trước khi có quyết định tiếp theo ạ."
+
+  - trigger: ";vi_dcnr_stamps"
+    replace: "Dạ vì thẻ SIM gửi thư Stamps.com không có quét mã định vị từng chặng, theo quy định bưu điện, quý khách vui lòng đợi đủ trọn vẹn từ **7 đến 14 ngày làm việc**. Nếu sau thời gian này vẫn chưa có thư trong hòm thư, tổng đài sẽ hỗ trợ cấp lại thẻ SIM mới cho mình ạ."
+
+  - trigger: ";vi_dcnr_ticket"
+    replace: "Dạ em đã tạo vé khiếu nại giao nhận DCNR và đặt lệnh bảo lưu hạn sử dụng (NUC Hold) trên tài khoản của quý khách để bảo vệ trợ cấp trong khi chờ bưu điện rà soát. Thời gian xử lý phối hợp là từ 24 đến 48 giờ làm việc ạ."
+
+  - trigger: ";vi_lit_rules"
+    replace: "Dạ theo quy định bưu chính, một kiện hàng được xếp vào diện Thất lạc trên đường vận chuyển (Lost In Transit - LIT) khi mã tracking không có bất kỳ lượt quét di chuyển nào trong hơn **7 ngày làm việc liên tục**. Khi đó, công ty sẽ khóa IMEI máy cũ và cấp lệnh gửi kiện hàng mới thay thế ạ."
+
+  - trigger: ";vi_rts_rules"
+    replace: "Dạ kiện hàng của quý khách đã bị bưu điện gửi trả ngược về kho (Return to Sender - RTS) do lỗi địa chỉ không phát được. Quý khách vui lòng cung cấp giấy tờ xác nhận lại địa chỉ cư trú chính xác trong vòng 10 ngày để kho làm thủ tục gửi lại hàng ạ."
+
+  - trigger: ";vi_rts_no2nd"
+    replace: "Dạ xin quý khách đặc biệt lưu ý: **Nếu kiện hàng gửi lại lần thứ hai mà vẫn tiếp tục bị bưu điện trả về (RTS) lần nữa, công ty TUYỆT ĐỐI KHÔNG GỬI LẠI LẦN THỨ 3 MIỄN PHÍ**. Quý khách muốn nhận hàng sẽ phải trả phí vận chuyển ($6.99 cho gửi thường hoặc $9.99 cho gửi hỏa tốc) sau khi được Quản lý duyệt ạ."
+
+  - trigger: ";vi_hotrush_ticket"
+    replace: "Dạ em thành thật xin lỗi quý khách về sự chậm trễ đơn hàng. Quá 14 ngày làm việc chưa có mã tracking là điều không đạt chuẩn cam kết. Em đã trực tiếp tạo vé **Hot Rush Khẩn cấp** gửi thẳng cho Trưởng bộ phận Kho vận để ưu tiên đóng gói và xuất kho kiện hàng cho quý khách trong vòng **24 đến 48 giờ làm việc** tới ạ!"
+
+  # ----------------------------------------------------------------------------
+  # 7. PHẦN CỨNG, BẢO HÀNH, HOÀN TIỀN & KHÓA MDM (HARDWARE & MDM)
+  # ----------------------------------------------------------------------------
+  - trigger: ";vi_war_free"
+    replace: "Dạ chính sách bảo hành của công ty áp dụng thời hạn **15 ngày theo lịch** (tính từ ngày bưu điện giao hàng thành công) cho điện thoại đã qua sử dụng (Pre-Owned) và phụ kiện đi kèm đối với các lỗi phần cứng do nhà sản xuất ạ."
+
+  - trigger: ";vi_war_paid"
+    replace: "Dạ đối với dòng máy Mới 100% (Brand-New) và các dòng máy Nâng cấp có trả phí, thời hạn bảo hành phần cứng do lỗi kỹ thuật của nhà sản xuất là **30 ngày theo lịch** kể từ ngày bưu điện giao hàng thành công ạ."
+
+  - trigger: ";vi_war_cosmetic"
+    replace: "Dạ các sự cố về nứt vỡ màn hình, cấn móp vỏ máy, trầy xước ngoại quan hoặc hư hỏng do vận chuyển **BẮT BUỘC PHẢI BÁO CHO TỔNG ĐÀI TRONG VÒNG 48 GIỜ** kể từ lúc bưu điện phát hàng. Mọi khiếu nại nứt vỡ báo sau 48 giờ đều bị coi là lỗi do người sử dụng và bị từ chối bảo hành ạ."
+
+  - trigger: ";vi_war_foxx"
+    replace: "Dạ riêng đối với dòng máy FoxxD gặp hiện tượng quá nhiệt (nóng máy bất thường) hoặc tự động sập nguồn, chính sách công ty đặc cách gia hạn thời gian đánh giá bảo hành lên đến **60 ngày**. Kỹ thuật viên sẽ kiểm tra các ứng dụng chạy ngầm và thói quen cắm sạc khi dùng máy trước khi duyệt đổi máy mới cho quý khách ạ."
+
+  - trigger: ";vi_war_void"
+    replace: "Dạ xin quý khách lưu ý: Bảo hành chỉ áp dụng cho lỗi linh kiện bên trong máy. Công ty sẽ từ chối bảo hành đối với các trường hợp máy bị nứt vỡ màn hình, móp méo do va đập, rơi vào nước, ẩm ướt chân sạc hoặc đã bị tháo máy sửa chữa ở bên ngoài ạ."
+
+  - trigger: ";vi_war_label"
+    replace: "Dạ em đã tạo hồ sơ bảo hành và gửi nhãn gửi hàng miễn phí của bưu điện USPS (Return Shipping Label) về email của quý khách. Quý khách vui lòng đóng gói máy cẩn thận và mang ra bưu điện gửi đi trong vòng **7 ngày làm việc** để trung tâm bảo hành tiến hành đổi máy cho mình nhé ạ."
+
+  - trigger: ";vi_refund_terms"
+    replace: "Dạ theo chính sách hoàn tiền: Điện thoại cũ miễn phí được yêu cầu hoàn tiền trong vòng 15 ngày; Điện thoại mới và điện thoại trả phí là 30 ngày kể từ ngày giao. Trường hợp máy không lỗi nhưng khách không thích muốn trả lại phải báo trong vòng 7 ngày (khách tự trả cước bưu điện gửi về) ạ."
+
+  - trigger: ";vi_refund_nonref"
+    replace: "Dạ xin quý khách lưu ý: Tiền cước gói dịch vụ hàng tháng, tiền mua thêm dung lượng data, cước gọi quốc tế và phí vận chuyển hỏa tốc là các khoản phí dịch vụ viễn thông đã kích hoạt trên trạm phát sóng nên **HOÀN TOÀN KHÔNG ĐƯỢC HOÀN TIỀN** dưới mọi hình thức ạ."
+
+  - trigger: ";vi_blacklist_rule"
+    replace: "Dạ theo tiêu chuẩn viễn thông Hoa Kỳ, khi một số IMEI điện thoại bị đưa vào Danh sách Đen Quốc gia (Blacklist) do mất cắp hoặc thất lạc, **chỉ có duy nhất nhà mạng đã thực hiện lệnh khóa mới có thẩm quyền kỹ thuật để mở khóa (Unblacklist)** cho thiết bị đó ạ."
+
+  - trigger: ";vi_unblacklist"
+    replace: "Dạ em rất mừng vì quý khách đã tìm lại được điện thoại! Sau khi xác thực đúng danh tính chính chủ và kiểm tra đúng số IMEI do công ty chúng em khóa, em đã gửi lệnh yêu cầu Mở khóa Blacklist. Thiết bị sẽ được khôi phục kết nối mạng bình thường trong vòng 24 giờ làm việc ạ."
+
+  - trigger: ";vi_mdm_disclosure"
+    replace: "Dạ các dòng máy iPhone trợ cấp (từ iPhone 7 trở lên) được cài đặt phần mềm quản lý thiết bị doanh nghiệp (MDM) để giám sát cam kết sử dụng dịch vụ liên tục trong **180 ngày**. Phần mềm MDM chỉ quản lý trạng thái kết nối mạng của máy, tuyệt đối không can thiệp hay đọc trộm hình ảnh, tin nhắn hay dữ liệu riêng tư của quý khách ạ."
+
+  - trigger: ";vi_mdm_triggers"
+    replace: "Dạ khóa MDM từ xa sẽ tự động kích hoạt trong các trường hợp: (1) Chuyển mạng ra (Ngày 3 cảnh báo hình nền, Ngày 8 khóa cứng Lost Mode), (2) Bỏ không dùng cước (Ngày 35 cảnh báo, Ngày 45 khóa), (3) Hủy dịch vụ khi chưa đủ 180 ngày, hoặc (4) Tháo SIM AirTalk ra lắp SIM của nhà mạng khác vào máy ạ."
+
+  - trigger: ";vi_mdm_wrong_sim"
+    replace: "Dạ nếu màn hình máy báo khóa do lắp sai SIM, quý khách chỉ cần lắp lại đúng thẻ SIM AirTalk đang hoạt động vào máy, kết nối vào mạng Wi-Fi và giữ máy mở trong khoảng **10 đến 15 phút**, hệ thống máy chủ sẽ tự động nhận diện và mở khóa bình thường cho quý khách ạ."
+
+  - trigger: ";vi_mdm_buyout"
+    replace: "Dạ nếu quý khách muốn mở khóa vĩnh viễn điện thoại iPhone MDM trước khi hoàn thành đủ 180 ngày sử dụng, quý khách có thể chọn phương án Mua đứt Hợp đồng (Device Buyout). Số tiền bồi hoàn sẽ được tính tự động dựa trên số ngày còn thiếu trong cam kết 180 ngày của quý khách ạ."
+
+  - trigger: ";vi_mdm_wifi_fix"
+    replace: "Dạ nếu nút bật Wi-Fi trên iPhone MDM bị mờ/ẩn không bấm được (Wi-Fi Greyed Out), quý khách vui lòng thao tác Hard-Reset: Bấm nhả nút Tăng âm lượng, bấm nhả nút Giảm âm lượng, sau đó nhấn giữ nút Nguồn cho đến khi hiện logo quả Táo. Đồng thời giữ dữ liệu di động (Cellular) luôn bật để máy tải lại chứng chỉ mạng nhé ạ."
+
+  # ----------------------------------------------------------------------------
+  # 8. HẠ TẦNG VIỄN THÔNG & KỸ THUẬT (TELECOM, PORTING, PUK, VOICEMAIL, MDN)
+  # ----------------------------------------------------------------------------
+  - trigger: ";vi_portin_types"
+    replace: "Dạ chúng em hỗ trợ 2 hình thức chuyển số vào: Chuyển lúc nộp đơn (Enrollment Port-In, SIM nhận về đã có sẵn số) và Chuyển sau khi đã nhận SIM (Existing Port-In). Xin lưu ý rằng các số điện thoại từ đối tác mạng MVNO-C sẽ không thể chuyển số vào hệ thống của chúng em được ạ."
+
+  - trigger: ";vi_portin_assist"
+    replace: "Dạ để tháo gỡ lệnh nghẽn chuyển số từ nhà mạng cũ, em đã cập nhật lại đúng thông tin gồm: Số tài khoản (Account Number), Mã PIN chuyển mạng (NTP PIN) và Mã bưu chính (ZIP Code). Quá trình chuyển số thường hoàn tất trong vòng từ 2 đến 24 giờ làm việc ạ."
+
+  - trigger: ";vi_portout_pin"
+    replace: "Dạ theo quy định của Ủy ban Truyền thông Liên bang, Mã PIN Chuyển mạng (Transfer PIN / NTP) có giá trị hiệu lực chính xác trong **4 ngày theo lịch (96 giờ)** kể từ lúc tạo. Quá 4 ngày mã sẽ tự hủy và phải xin cấp lại ạ."
+
+  - trigger: ";vi_portout_warning"
+    replace: "Dạ thông báo pháp lý bắt buộc: Việc chuyển số điện thoại sang nhà mạng khác sẽ làm hủy vĩnh viễn suất trợ cấp Lifeline của quý khách tại công ty chúng em. Ngoài ra, nếu quý khách từng nhận điện thoại iPhone trợ cấp mà chuyển mạng trước khi dùng đủ 180 ngày liên tục, máy sẽ bị khóa MDM và có thể bị truy thu phí bồi hoàn thiết bị ạ."
+
+  - trigger: ";vi_portout_give"
+    replace: "Dạ đây là thông tin chuyển mạng chính thức của quý khách: **Số tài khoản (Account #):** [[account_number]] | **Mã PIN Chuyển mạng (NTP PIN):** [[transfer_pin]]. Mã PIN này có hạn trong 4 ngày. Quý khách vui lòng cung cấp thông tin này cho nhà mạng mới để họ tiến hành kéo số nhé ạ."
+
+  - trigger: ";vi_portout_cancel"
+    replace: "Dạ theo yêu cầu của quý khách, em đã hủy thành công yêu cầu chuyển mạng ra và vô hiệu hóa mã PIN trên hệ thống. Số điện thoại và gói trợ cấp Lifeline của quý khách vẫn được giữ nguyên vẹn và an toàn tại AirTalk Wireless ạ!"
+
+  - trigger: ";vi_apn_setup"
+    replace: "Dạ em hướng dẫn quý khách cài đặt cấu hình sóng APN: Vào Cài đặt (Settings) > Di động (Cellular) > Tên điểm truy cập (Access Point Names / APN) > Thêm APN mới. Điền **Name:** AirTalk | **APN:** wholesale | **APN Type:** default,mms,supl | **MMSC:** http://wholesale.mmsmvno.com/mms/wapenc. Sau đó lưu lại, chọn cấu hình này và khởi động lại máy là có mạng 4G/5G ạ."
+
+  - trigger: ";vi_network_reset"
+    replace: "Dạ để làm mới kết nối với cột sóng: Quý khách vào Cài đặt (Settings) > Cài đặt chung (General) > Đặt lại (Reset) > Đặt lại cài đặt mạng (Reset Network Settings). Máy sẽ tự khởi động lại và kết nối lại trạm phát sóng mạng gần nhất ạ."
+
+  - trigger: ";vi_sim_reseat"
+    replace: "Dạ quý khách vui lòng tắt nguồn máy hoàn toàn, dùng que chọc SIM tháo khay thẻ SIM ra, lấy khăn mềm lau nhẹ bề mặt vi mạch đồng màu vàng, sau đó lắp chặt lại vào khay và mở nguồn máy lên để máy nhận lại SIM nhé ạ."
+
+  - trigger: ";vi_vm_info"
+    replace: "Dạ hộp thư thoại (Voicemail) đã được tích hợp sẵn trên SIM của quý khách. Để kích hoạt lần đầu, quý khách chỉ cần mở bàn phím gọi điện, nhấn và giữ phím số [1] cho đến khi hệ thống tự động trả lời, rồi làm theo hướng dẫn bằng giọng nói để đặt mã PIN cá nhân ạ."
+
+  - trigger: ";vi_vm_reset"
+    replace: "Dạ em đã thực hiện reset lại mật khẩu hộp thư thoại của quý khách trên hệ thống máy chủ về mặc định (chính là 4 số cuối của số điện thoại của mình). Quý khách vui lòng khởi động lại máy, nhấn giữ phím [1] và nhập 4 số cuối để cài lại lời chào thoại nhé ạ."
+
+  - trigger: ";vi_puk_warning"
+    replace: "Dạ thẻ SIM bị khóa đòi mã PUK khi bị nhập sai mã PIN quá 3 lần. **CẢNH BÁO CỰC KỲ QUAN TRỌNG:** Quý khách có tối đa 10 lần nhập mã PUK. **NẾU NHẬP SAI MÃ PUK QUÁ 10 LẦN, THẺ SIM SẼ BỊ CHÁY HỎNG HOÀN TOÀN** và bắt buộc phải vứt bỏ để mua SIM mới thay thế ạ!"
+
+  - trigger: ";vi_puk_provide"
+    replace: "Dạ sau khi đối soát đúng số seri ICCID trên thẻ SIM, đây là mã mở khóa chính thức của quý khách: **PUK1:** [[puk1_code]] | **PUK2:** [[puk2_code]]. Xin quý khách vui lòng nhìn từng số và nhập cẩn thận mã PUK1 vào máy để mở khóa SIM và đặt lại mã PIN mới nhé ạ."
+
+  - trigger: ";vi_mdn_policy"
+    replace: "Dạ theo chính sách của nhà mạng, mỗi khách hàng được hỗ trợ **đổi số điện thoại MIỄN PHÍ tối đa 2 lần trong vòng 3 chu kỳ cước**. Kể từ lần đổi số thứ 3 trở đi trong khoảng thời gian này, hệ thống sẽ tính phí dịch vụ tiêu chuẩn là **$25.00/lần đổi số** ạ."
+
+  - trigger: ";vi_mdn_execute"
+    replace: "Dạ em đã cập nhật đổi số điện thoại mới cho quý khách trên hệ thống. Số điện thoại mới của quý khách là: **[[new_mdn]]**. Quý khách vui lòng tắt nguồn máy, đợi khoảng 2 phút rồi bật máy lại để thẻ SIM cập nhật số mới từ trạm phát sóng nhé ạ."
+
+  # ----------------------------------------------------------------------------
+  # 9. GIỮ CHÂN KHÁCH HÀNG & CHƯƠNG TRÌNH THÂN THIẾT (RETENTION & LOYALTY)
+  # ----------------------------------------------------------------------------
+  - trigger: ";vi_retain_pitch"
+    replace: "Dạ sự hài lòng của quý khách luôn là ưu tiên cao nhất của chúng em, và chúng em rất trân quý việc quý khách gắn bó cùng mạng. Trước khi đưa ra quyết định chuyển đi hoặc hủy dịch vụ, xin cho phép em được gửi tặng quý khách những ưu đãi và phương án hỗ trợ tốt nhất dành riêng cho mình nhé ạ!"
+
+  - trigger: ";vi_ret_tradein"
+    replace: "Dạ nếu điện thoại hiện tại của quý khách dùng bị giật lag hoặc pin yếu, quý khách hoàn toàn đủ điều kiện tham gia chương trình Thu cũ Đổi mới (Trade-In)! Ngay cả máy bị nứt kính nhẹ, pin chai, lỗi phần mềm hay thiếu phụ kiện vẫn được tính giá trị quy đổi để nâng cấp lên dòng máy đời cao hơn ạ."
+
+  - trigger: ";vi_ret_voucher"
+    replace: "Dạ để tri ân sự gắn bó của quý khách, em xin phép được gửi tặng một mã Voucher giảm giá độc quyền vào tài khoản của quý khách. Quý khách có thể dùng mã này trên web store để đổi lấy các dòng điện thoại thông minh nâng cấp với giá vô cùng ưu đãi ạ."
+
+  - trigger: ";vi_ret_courtesy_data"
+    replace: "Dạ để hỗ trợ quý khách duy trì kết nối mạng không bị gián đoạn, em vừa kích hoạt tặng thêm gói **2GB Data tốc độ cao miễn phí** vào tài khoản của quý khách. Dung lượng sẽ hiển thị trên máy trong ít phút tới ạ!"
+
+  - trigger: ";vi_ild_rules"
+    replace: "Dạ gói cước của quý khách được miễn phí gọi quốc tế đến hơn 200 quốc gia, cho phép gọi tối đa 15 số điện thoại khác nhau mỗi tháng với hạn mức tặng sẵn $10 credit. Cú pháp quay số chuẩn: [+] + [Mã quốc gia] + [Mã vùng] + [Số điện thoại]. Lưu ý không hỗ trợ nạp thêm tiền gọi ngoài gói ạ."
+
+  - trigger: ";vi_roam_rules"
+    replace: "Dạ thẻ SIM mặc định được cung cấp để sử dụng trong lãnh thổ 50 tiểu bang Hoa Kỳ và Puerto Rico. Khi quý khách đi ra nước ngoài, tính năng Chuyển vùng Quốc tế (Roaming) bắt buộc phải mua gói Pay-As-You-Go (PAYG) trước trên cổng tài khoản tại airtalkwireless.com thì mới dùng được sóng ở nước ngoài ạ."
+
+  - trigger: ";vi_loyalty_info"
+    replace: "Dạ Chương trình Khách hàng Thân thiết (bắt đầu từ 14/07/2025) sẽ tự động tích điểm cho quý khách ngay từ ngày đơn hàng đầu tiên được giao thành công hoặc kích hoạt eSIM. Điểm thưởng sẽ tăng dần theo mỗi tháng quý khách duy trì đường truyền ạ."
+
+  - trigger: ";vi_loyalty_rewards"
+    replace: "Dạ điểm thưởng tích lũy quý khách có thể đổi lấy các gói data tốc độ cao (hạn dùng 30 ngày) hoặc Voucher mua hàng trên web shop AirTalk (hạn dùng 2 tháng). Đặc biệt, khi giới thiệu bạn bè đăng ký sẽ nhận được quà tặng là thẻ **Amazon E-gift Card** (hạn dùng 6 tháng) ạ."
+
+  # ----------------------------------------------------------------------------
+  # 10. BẢO TRÌ TÀI KHOẢN & ĐỊA CHỈ (ACCOUNT MAINTENANCE)
+  # ----------------------------------------------------------------------------
+  - trigger: ";vi_addr_mailing"
+    replace: "Dạ Địa chỉ nhận thư (Mailing Address - nơi nhận thư từ và bưu kiện SIM thay thế), Số điện thoại phụ và Email có thể thay đổi trực tiếp mà không cần cung cấp giấy tờ, miễn là địa chỉ nhận thư mới vẫn là nhà ở và nằm trong cùng tiểu bang đã đăng ký ạ."
+
+  - trigger: ";vi_addr_service"
+    replace: "Dạ Địa chỉ cư trú (Service Address) là địa chỉ phục vụ cứu hộ khẩn cấp 911 và xét duyệt trợ cấp chính phủ USAC. Việc thay đổi địa chỉ Service **BẮT BUỘC PHẢI CUNG CẤP GIẤY TỜ CHỨNG MINH NƠI CƯ TRÚ** (hóa đơn điện, nước, ga hoặc hợp đồng thuê nhà) và phải nằm trong cùng bang ạ."
+
+  - trigger: ";vi_addr_state"
+    replace: "Dạ theo luật của chương trình Lifeline liên bang, **TUYỆT ĐỐI KHÔNG ĐƯỢC PHÉP ĐỔI TIỂU BANG TRÊN ĐƯỜNG TRUYỀN ĐANG HOẠT ĐỘNG**. Nếu quý khách chuyển nơi sinh sống sang một bang khác, quý khách bắt buộc phải làm thủ tục hủy tài khoản tại bang cũ và nộp một đơn đăng ký hoàn toàn mới tại bang mới ạ."
+
+  - trigger: ";vi_pii_update"
+    replace: "Dạ các thông tin nhận dạng cá nhân cốt lõi gồm Họ tên pháp lý, Ngày sinh và Số An sinh Xã hội (SSN) không thể thay đổi qua kênh chat được ạ. Nếu quý khách có thay đổi họ tên sau hôn nhân hoặc theo phán quyết của tòa án, quý khách vui lòng gửi bản sao giấy đăng ký kết hôn hoặc quyết định của tòa án về cho bộ phận pháp lý của chúng em ạ."
+
+  - trigger: ";vi_login_info"
+    replace: "Dạ thông tin đăng nhập cổng tài khoản đã được hệ thống gửi tự động về email đăng ký của quý khách ngay khi hồ sơ được duyệt. Tên đăng nhập là Email hoặc Số điện thoại của mình. Quý khách có thể tự lấy lại mật khẩu tại trang web: https://airtalkwireless.com/forgot-password ạ."
+
+  # ----------------------------------------------------------------------------
+  # 11. SPEED COMBOS TIẾNG VIỆT HOÀN CHỈNH (RED + YELLOW + GREEN PHẢN XẠ NHANH)
+  # ----------------------------------------------------------------------------
+  - trigger: ";vi_c_refund_free"
+    replace: "Dạ em rất hiểu quý khách đang muốn làm thủ tục hoàn tiền cho đơn hàng của mình. Theo chính sách hoàn tiền chính thức của công ty, điện thoại cũ miễn phí đủ điều kiện trả máy hoàn tiền trong vòng 15 ngày kể từ ngày bưu điện giao hàng. Hàng không lỗi muốn trả lại phải báo trong 7 ngày, và cước thuê bao cũng như data mua thêm sẽ không được hoàn trả. Em đã tạo vé yêu cầu hoàn tiền (Mã vé: [[ticket_id]]) gửi sang Bộ phận Kế toán. Tiền hoàn sẽ được chuyển ngược về thẻ thanh toán ban đầu của quý khách trong vòng từ 3 đến 5 ngày làm việc sau khi kho nhận lại máy ạ."
+
+  - trigger: ";vi_c_refund_paid"
+    replace: "Dạ em rất hiểu quý khách đang có yêu cầu hoàn tiền cho đơn máy nâng cấp của mình. Theo quy định, các dòng máy mới và máy nâng cấp có trả phí được áp dụng thời hạn hoàn tiền trong vòng 30 ngày kể từ ngày bưu điện giao hàng. Các khoản phí cước cuộc gọi và phí chuyển phát nhanh sẽ không được hoàn lại. Em đã tạo vé hoàn tiền (Mã vé: [[ticket_id]]) chuyển tiếp sang phòng Kế toán. Sau khi kho kiểm tra máy gửi về, số tiền hoàn sẽ được ghi có vào thẻ ngân hàng của quý khách trong vòng 3 đến 5 ngày làm việc ạ."
+
+  - trigger: ";vi_c_war_free"
+    replace: "Dạ em thành thật xin lỗi quý khách về sự cố kỹ thuật của điện thoại. Theo chính sách bảo hành, các dòng máy miễn phí được bảo hành lỗi kỹ thuật 15 ngày kể từ ngày nhận hàng. Các sự cố nứt vỡ hay cấn móp ngoại quan bắt buộc phải báo trong vòng 48 giờ từ khi bưu điện phát hàng. Em đã lập hồ sơ yêu cầu bảo hành (Mã vé: [[ticket_id]]) và gửi nhãn bưu điện USPS miễn phí về email của quý khách. Xin quý khách vui lòng gửi máy ra bưu điện trong vòng 7 ngày làm việc để trung tâm bảo hành gửi máy đổi cho mình nhé ạ."
+
+  - trigger: ";vi_c_war_paid"
+    replace: "Dạ em rất tiếc khi biết điện thoại nâng cấp của quý khách gặp trục trặc kỹ thuật. Các dòng máy mới và máy trả phí nâng cấp được công ty bảo hành toàn diện trong thời hạn 30 ngày kể từ ngày giao hàng. Hư hỏng vật lý ngoại quan phải được báo trong 48 giờ. Em đã tạo hồ sơ đổi máy bảo hành (Mã vé: [[ticket_id]]) và gửi nhãn gửi bưu điện miễn phí qua email của quý khách. Quý khách vui lòng mang máy ra bưu điện gửi lại trong vòng 7 ngày làm việc để kho xuất máy mới cho mình nhé ạ."
+
+  - trigger: ";vi_c_war_foxx"
+    replace: "Dạ em rất hiểu sự bất tiện khi điện thoại FoxxD của quý khách bị nóng máy bất thường hoặc tự sập nguồn. Riêng dòng máy FoxxD, công ty hỗ trợ chính sách bảo hành mở rộng lên tới 60 ngày. Quý khách lưu ý tắt các ứng dụng chạy ngầm và hạn chế vừa cắm sạc vừa dùng máy. Em đã tạo vé kiểm tra kỹ thuật ưu tiên (Mã vé: [[ticket_id]]) kèm nhãn bưu điện gửi về email để tiếp nhận máy về kiểm định và đổi thiết bị mới cho quý khách ạ."
+
+  - trigger: ";vi_c_po"
+    replace: "Dạ em có thể hỗ trợ cung cấp thông tin chuyển mạng cho quý khách hôm nay, dù công ty chúng em rất buồn khi biết quý khách đang cân nhắc rời khỏi AirTalk. Theo quy định liên bang, Mã PIN Chuyển mạng chỉ có giá trị chính xác trong 4 ngày (96 giờ). Việc chuyển mạng sẽ làm mất vĩnh viễn trợ cấp Lifeline của quý khách với công ty, và nếu chưa dùng đủ 180 ngày cam kết trên điện thoại iPhone trợ cấp, máy sẽ bị khóa MDM và có thể bị truy thu bồi hoàn. Thông tin của quý khách: **Số tài khoản:** [[account_number]] | **Mã PIN:** [[transfer_pin]]."
+
+  - trigger: ";vi_c_dcnr"
+    replace: "Dạ em rất chia sẻ với sự thất vọng của quý khách khi bưu điện báo đã giao mà quý khách chưa tìm thấy gói hàng. Để quý khách có máy dùng ngay không phải chờ điều tra bưu điện, chính sách báo mất lần đầu sẽ hỗ trợ tặng một Voucher mua máy trực tiếp vào tài khoản của quý khách. Em đã nạp tiền voucher vào tài khoản và đặt lệnh bảo vệ trợ cấp Non-usage. Quý khách có thể truy cập airtalkwireless.com để chọn chiếc điện thoại thay thế ngay hôm nay ạ!"
+
+  - trigger: ";vi_c_lit"
+    replace: "Dạ em rất hiểu sự sốt ruột khi theo dõi tracking bưu điện mà không thấy di chuyển. Do bưu điện đã dừng quét quá 7 ngày làm việc liên tục, kiện hàng chính thức được xác nhận là Thất lạc trong vận chuyển (LIT). Để bảo vệ tài khoản, em đã khóa thông tin thẻ SIM cũ, đưa IMEI máy thất lạc vào Danh sách Đen quốc gia và gửi lệnh xuất kiện hàng thay thế mới (Mã vé: [[ticket_id]]) gửi đến địa chỉ của quý khách ạ."
+
+  - trigger: ";vi_c_rts"
+    replace: "Dạ em kiểm tra thấy kiện hàng của quý khách đã bị bưu điện chuyển hoàn về kho do sai lệch hoặc thiếu thông tin địa chỉ nhà. Theo quy định, kiện hàng bị trả về cần được xác minh lại địa chỉ trong vòng 10 ngày. Xin quý khách vui lòng nhắn lại đầy đủ số nhà, tên đường, số phòng/căn hộ (nếu có) ngay tại đây để kho in nhãn mới và gửi lại hàng cho quý khách ạ."
+
+  - trigger: ";vi_c_hotrush"
+    replace: "Dạ em thành thật xin lỗi quý khách vì sự chậm trễ trong khâu đóng gói đơn hàng. Việc chờ đợi quá 14 ngày làm việc mà chưa có mã vận đơn là điều rất đáng tiếc. Em đã tạo ngay một vé **Hot Rush Khẩn cấp** (Mã vé: [[ticket_id]]) chuyển thẳng cho Trưởng kho vận để trực tiếp xử lý đóng gói và bàn giao bưu điện gửi đi cho quý khách trong vòng 24 đến 48 giờ làm việc tới ạ."
+
+  - trigger: ";vi_c_byod_cheat"
+    replace: "Dạ em rất hiểu thắc mắc của quý khách về việc nhận được thẻ SIM BYOD thay vì điện thoại mới. Gói trợ cấp chính phủ Lifeline là hỗ trợ cước đàm thoại và data miễn phí mỗi tháng; còn máy điện thoại là quà tặng riêng do AirTalk tự tài trợ. Theo quy định công ty, mỗi hộ gia đình chỉ được nhận duy nhất 1 máy miễn phí mỗi 365 ngày. Do hệ thống ghi nhận hồ sơ nhà mình đã được nhận máy trong vòng 1 năm qua, đơn này được cấp gói BYOD SIM miễn phí để quý khách có thể lắp vào bất kỳ máy điện thoại mở mạng nào sẵn có để dùng sóng gọi miễn phí không bị gián đoạn ạ."
+
+  - trigger: ";vi_c_nonuse_cuu"
+    replace: "Dạ em hiểu quý khách đang lo lắng về tin nhắn cảnh báo không dùng cước. Theo luật FCC, thuê bao trợ cấp cần phát sinh ít nhất 1 lần cước mỗi 30 ngày và có 15 ngày thông báo khắc phục. Do tài khoản của quý khách vẫn đang trong hạn 15 ngày này, em đã ghi nhận xác nhận 'Giữ Dịch Vụ' của quý khách và tạo vé NUC giữ line (Mã vé: [[ticket_id]]). Quý khách vui lòng thực hiện ngay 1 cuộc gọi đi hoặc gửi 1 tin nhắn bằng sóng SIM để hoàn tất quy chuẩn liên bang nhé ạ!"
+
+  - trigger: ";vi_c_nonuse_het"
+    replace: "Dạ em đã kiểm tra kỹ trên hệ thống cơ sở dữ liệu, đường truyền của quý khách đã vượt qua mốc Ngày 46 hoàn toàn không sử dụng và đã bị de-enroll hủy theo luật bắt buộc của cơ quan quản lý liên bang (USAC). Khi đường truyền đã hủy theo luật chính phủ, số điện thoại đã được thu hồi và không thể mở lại được nữa. Kính mời quý khách truy cập https://airtalkwireless.com để nộp một hồ sơ đăng ký mới hoàn toàn ạ."
+
+  - trigger: ";vi_c_mdm_buyout"
+    replace: "Dạ em rất hiểu quý khách đang muốn gỡ bỏ hoàn toàn khóa quản lý MDM trên máy iPhone. Điện thoại trợ cấp có cam kết sử dụng dịch vụ 180 ngày liên tục. Nếu quý khách muốn mở khóa trước thời hạn này, quý khách có thể chọn phương án mua đứt hợp đồng. Em đã tính toán số ngày còn thiếu và tạo vé link thanh toán (Mã vé: [[ticket_id]]). Sau khi thanh toán hoàn tất, lệnh gỡ bỏ MDM sẽ được truyền qua sóng không dây để mở khóa máy vĩnh viễn trong 24 đến 48 giờ ạ."
+
+  - trigger: ";vi_c_puk"
+    replace: "Dạ em có thể hỗ trợ cấp mã PUK để mở khóa SIM cho quý khách ngay. Quý khách lưu ý máy bị khóa PUK sau 3 lần nhập sai PIN. **CẢNH BÁO QUAN TRỌNG:** Quý khách có 10 lần nhập; nếu nhập sai quá 10 lần mã PUK, thẻ SIM sẽ bị cháy vĩnh viễn và phải mua SIM mới. Sau khi kiểm tra đúng seri SIM ICCID, mã mở khóa của quý khách là: **PUK1:** [[puk1_code]] | **PUK2:** [[puk2_code]]. Quý khách vui lòng nhìn kỹ và nhập chính xác mã PUK1 vào màn hình nhé ạ."
+
+  - trigger: ";vi_c_mdn"
+    replace: "Dạ em rất hiểu quý khách đang có nhu cầu đổi số điện thoại mới. Theo chính sách, mỗi thuê bao được đổi số miễn phí tối đa 2 lần trong vòng 3 chu kỳ cước, lần thứ 3 sẽ tính phí $25. Em đã thực hiện đổi số trên hệ thống máy chủ cho quý khách. Số điện thoại mới của quý khách là: **[[new_mdn]]**. Quý khách vui lòng tắt nguồn điện thoại, đợi 2 phút rồi bật máy lại để thẻ SIM cập nhật số mới từ cột sóng nhé ạ."
+
+  - trigger: ";vi_c_service"
+    replace: "Dạ em rất tiếc về sự cố gián đoạn sóng mạng mà quý khách đang gặp phải. Để khôi phục kết nối: Đầu tiên quý khách kiểm tra chế độ Máy bay đã TẮT và Dữ liệu di động đã BẬT. Tiếp theo, vào cài đặt mạng di động chọn APN và điền tên APN: 'wholesale'. Sau đó khởi động lại máy để kết nối lại trạm phát sóng. Em cũng vừa thực hiện làm mới tín hiệu đường truyền của quý khách trên hệ thống máy chủ mạng rồi ạ!"
