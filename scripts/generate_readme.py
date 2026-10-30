@@ -188,7 +188,8 @@ e:\\softel\\
 │   ├── SOFTEL_INTERNAL_SOP_DEEP_DIVE.md# Phân tích kỹ thuật chi tiết 57 SOP nội bộ
 │   ├── QA_SURVIVAL_PLAYBOOK.md         # Sổ tay sinh tồn QA, rubric 100 điểm & kịch bản de-escalation
 │   ├── RAPID_LOOKUP_CTRL_F.md          # Từ điển tra cứu nhanh và phím tắt định tuyến
-│   └── CONCURRENCY_WORKFLOW.md         # Quy trình xử lý đồng thời 3-5 phiên chat
+│   ├── CONCURRENCY_WORKFLOW.md         # Quy trình xử lý đồng thời 3-5 phiên chat
+│   └── EMAIL_TICKET_MASTER_PLAYBOOK.md # Sổ tay vận hành xử lý Email & Ticket khách hàng 5 giai đoạn
 │
 ├── espanso/                            # Cấu hình phần mềm Espanso Text Expander
 │   ├── config/
