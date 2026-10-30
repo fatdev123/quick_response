@@ -256,7 +256,7 @@ flowchart TD
     CarrierTrace -- "Marked Delivered (Customer claims not received)" --> DCNR_Path["DCNR V3.1 Investigation"]
     DCNR_Path --> CheckAddr{"Address Matches Approved Application?"}
     CheckAddr -- "Customer Error" --> CX_Liable["Customer Liability: No free hardware replacement.<br/>Provide free replacement BYOD SIM."]
-    CheckAddr -- "Address Confirmed" --> DCNR_Process["Carrier GPS Scan & Proof of Delivery Audit<br/>Assignee: Khang Tran (khangtran@hthcomm.com)<br/>Mandatory: Create NUC Ticket to protect account<br/>Resolution SLA: 24 to 48 business hours"]
+    CheckAddr -- "Address Confirmed" --> DCNR_Process["Carrier GPS Scan & Proof of Delivery Audit<br/>Assignee: Logistics & Fraud Audit Team<br/>Mandatory: Create NUC Ticket to protect account<br/>Resolution SLA: 24 to 48 business hours"]
 
     CarrierTrace -- "Stalled > 7 Business Days Past SLA" --> LIT_Path["Lost In Transit V2.1 Protocol"]
     LIT_Path --> CheckVal{"Declared Hardware Value"}
@@ -267,7 +267,7 @@ flowchart TD
     RTS_Path --> RTS_Hold["Request Proof of Address (POA)<br/>10 Calendar Days Submission Window<br/>If POA Verified: Warehouse Re-ships via FedEx<br/>If POA Missing at Day 10: Automatic Cancellation & Refund"]
 
     CarrierTrace -- "FCC/BBB Complaint or Paid Priority" --> Rush_Path["Hot Rush Fulfillment Protocol"]
-    Rush_Path --> Rush_Exec["Create Ticket: 'Hot Rush - EO / CO - High Priority Fulfillment'<br/>Assignee: Cuong Nguyen<br/>Target Warehouse Dispatch: 24 to 48 Hours<br/>Exclusion: Partner Store Orders (PAT Prefix) Ineligible"]
+    Rush_Path --> Rush_Exec["Create Ticket: 'Hot Rush - EO / CO - High Priority Fulfillment'<br/>Assignee: Warehouse Operations Lead<br/>Target Warehouse Dispatch: 24 to 48 Hours<br/>Exclusion: Partner Store Orders (PAT Prefix) Ineligible"]
 ```
 
 ---
@@ -395,8 +395,8 @@ flowchart TD
 
 | Operational Domain | Governing SOP | SLA Commitment | Assignee / Department | Escalation Route |
 | :--- | :--- | :--- | :--- | :--- |
-| **Logistics Freight Claims (DCNR/LIT)** | DCNR V3.1 / LIT V2.1 | 24 to 48 Business Hours | Khang Tran (`khangtran@hthcomm.com`) | Logistics Supervisor / FAQ Channel |
-| **Hot Rush Priority Fulfillment** | Hot Rush SOP | 24 to 48 Hours to Dispatch | Cuong Nguyen (Fulfillment Lead) | Executive Office Escalations |
+| **Logistics Freight Claims (DCNR/LIT)** | DCNR V3.1 / LIT V2.1 | 24 to 48 Business Hours | Khang Tran (`logistics-audit@airtalkwireless.com`) | Logistics Supervisor / FAQ Channel |
+| **Hot Rush Priority Fulfillment** | Hot Rush SOP | 24 to 48 Hours to Dispatch | Warehouse Operations Lead (Fulfillment Lead) | Executive Office Escalations |
 | **Hardware Cosmetic Defect Notice** | Handset Policy V1.2 | Strictly <= 48 Hours | Tier 1 CSR (Martin) | Reverse Logistics Lead |
 | **Hardware RMA Label Validity** | Handset Policy V1.2 | 7 Business Days Postmark | Warehouse Receiving Team | Accounting Inventory Desk |
 | **Port-Out PIN Validity** | Port-Out SOP V2.1 | 4 Calendar Days (96h) | Automated OCS Provisioning | Tech Support / OCS Engineering |

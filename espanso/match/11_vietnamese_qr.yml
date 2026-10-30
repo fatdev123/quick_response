@@ -93,7 +93,7 @@ matches:
     replace: "Dạ đường truyền của quý khách hiện đang kích hoạt tính năng Bảo vệ Đổi SIM (SIM Port Protection) để ngăn chặn kẻ gian chiếm đoạt số. Để mở khóa tính năng này cho các thay đổi chính đáng, xin quý khách vui lòng tự đăng nhập vào cổng tài khoản tại web và chọn mục 'Account > My SIM > SIM - Port Unlock' ạ."
 
   # ----------------------------------------------------------------------------
-  # 3. HỒ SƠ ĐĂNG KÝ & ĐƠN HÀNG (APPLICATION, ORDER & BYOD CHEAT)
+  # 3. HỒ SƠ ĐĂNG KÝ & ĐƠN HÀNG (APPLICATION, ORDER & 365-DAY BYOD POLICY)
   # ----------------------------------------------------------------------------
   - trigger: ";vi_app_proofs"
     replace: "Dạ để hoàn tất hồ sơ xét duyệt trợ cấp, quý khách cần cung cấp đủ 3 nhóm giấy tờ: Giấy tờ tùy thân (ID/Bằng lái xe), Giấy tờ chứng minh đủ điều kiện trợ cấp (Thư hưởng SNAP/Food Stamps, Medicaid, SSI...), và Giấy tờ xác nhận địa chỉ cư trú (Hóa đơn điện nước, hợp đồng thuê nhà). Nhân viên tổng đài tuyệt đối không được phép nộp đơn thay khách hàng theo luật liên bang ạ."
@@ -234,7 +234,7 @@ matches:
     replace: "Dạ riêng đối với dòng máy FoxxD gặp hiện tượng quá nhiệt (nóng máy bất thường) hoặc tự động sập nguồn, chính sách công ty đặc cách gia hạn thời gian đánh giá bảo hành lên đến **60 ngày**. Kỹ thuật viên sẽ kiểm tra các ứng dụng chạy ngầm và thói quen cắm sạc khi dùng máy trước khi duyệt đổi máy mới cho quý khách ạ."
 
   - trigger: ";vi_war_void"
-    replace: "Dạ xin quý khách lưu ý: Bảo hành chỉ áp dụng cho lỗi linh kiện bên trong máy. Công ty sẽ từ chối bảo hành đối với các trường hợp máy bị nứt vỡ màn hình, móp méo do va đập, rơi vào nước, ẩm ướt chân sạc hoặc đã bị tháo máy sửa chữa ở bên ngoài ạ."
+    replace: "Dạ xin quý khách lưu ý: Bảo hành chỉ áp dụng cho lỗi linh kiện bên trong máy. Công ty từ chối bảo hành đối với các trường hợp máy bị nứt vỡ màn hình, cấn móp hoặc rơi vào nước nếu không được báo trong vòng 48 giờ kể từ khi bưu điện phát hàng, hoặc máy đã bị tháo sửa chữa ở bên ngoài ạ."
 
   - trigger: ";vi_war_label"
     replace: "Dạ em đã tạo hồ sơ bảo hành và gửi nhãn gửi hàng miễn phí của bưu điện USPS (Return Shipping Label) về email của quý khách. Quý khách vui lòng đóng gói máy cẩn thận và mang ra bưu điện gửi đi trong vòng **7 ngày làm việc** để trung tâm bảo hành tiến hành đổi máy cho mình nhé ạ."
@@ -392,14 +392,14 @@ matches:
   - trigger: ";vi_c_hotrush"
     replace: "Dạ em thành thật xin lỗi quý khách vì sự chậm trễ trong khâu đóng gói đơn hàng. Việc chờ đợi quá 14 ngày làm việc mà chưa có mã vận đơn là điều rất đáng tiếc. Em đã tạo ngay một vé **Hot Rush Khẩn cấp** (Mã vé: [[ticket_id]]) chuyển thẳng cho Trưởng kho vận để trực tiếp xử lý đóng gói và bàn giao bưu điện gửi đi cho quý khách trong vòng 24 đến 48 giờ làm việc tới ạ."
 
-  - trigger: ";vi_c_byod_cheat"
+  - trigger: ";vi_c_byod_365d"
     replace: "Dạ em rất hiểu thắc mắc của quý khách về việc nhận được thẻ SIM BYOD thay vì điện thoại mới. Gói trợ cấp chính phủ Lifeline là hỗ trợ cước đàm thoại và data miễn phí mỗi tháng; còn máy điện thoại là quà tặng riêng do AirTalk tự tài trợ. Theo quy định công ty, mỗi hộ gia đình chỉ được nhận duy nhất 1 máy miễn phí mỗi 365 ngày. Do hệ thống ghi nhận hồ sơ nhà mình đã được nhận máy trong vòng 1 năm qua, đơn này được cấp gói BYOD SIM miễn phí để quý khách có thể lắp vào bất kỳ máy điện thoại mở mạng nào sẵn có để dùng sóng gọi miễn phí không bị gián đoạn ạ."
 
   - trigger: ";vi_c_nonuse_cuu"
     replace: "Dạ em hiểu quý khách đang lo lắng về tin nhắn cảnh báo không dùng cước. Theo luật FCC, thuê bao trợ cấp cần phát sinh ít nhất 1 lần cước mỗi 30 ngày và có 15 ngày thông báo khắc phục. Do tài khoản của quý khách vẫn đang trong hạn 15 ngày này, em đã ghi nhận xác nhận 'Giữ Dịch Vụ' của quý khách và tạo vé NUC giữ line (Mã vé: [[ticket_id]]). Quý khách vui lòng thực hiện ngay 1 cuộc gọi đi hoặc gửi 1 tin nhắn bằng sóng SIM để hoàn tất quy chuẩn liên bang nhé ạ!"
 
   - trigger: ";vi_c_nonuse_het"
-    replace: "Dạ em đã kiểm tra kỹ trên hệ thống cơ sở dữ liệu, đường truyền của quý khách đã vượt qua mốc Ngày 46 hoàn toàn không sử dụng và đã bị de-enroll hủy theo luật bắt buộc của cơ quan quản lý liên bang (USAC). Khi đường truyền đã hủy theo luật chính phủ, số điện thoại đã được thu hồi và không thể mở lại được nữa. Kính mời quý khách truy cập https://airtalkwireless.com để nộp một hồ sơ đăng ký mới hoàn toàn ạ."
+    replace: "Dạ em đã kiểm tra kỹ trên hệ thống cơ sở dữ liệu, đường truyền của quý khách đã vượt qua mốc Ngày 46 hoàn toàn không sử dụng (sau 30 ngày không dùng cước và 15 ngày thông báo khắc phục) và đã bị de-enroll hủy theo luật bắt buộc của cơ quan quản lý liên bang (USAC). Khi đường truyền đã hủy theo luật chính phủ, số điện thoại đã được thu hồi và không thể mở lại được nữa. Kính mời quý khách truy cập https://airtalkwireless.com để nộp một hồ sơ đăng ký mới hoàn toàn ạ."
 
   - trigger: ";vi_c_mdm_buyout"
     replace: "Dạ em rất hiểu quý khách đang muốn gỡ bỏ hoàn toàn khóa quản lý MDM trên máy iPhone. Điện thoại trợ cấp có cam kết sử dụng dịch vụ 180 ngày liên tục. Nếu quý khách muốn mở khóa trước thời hạn này, quý khách có thể chọn phương án mua đứt hợp đồng. Em đã tính toán số ngày còn thiếu và tạo vé link thanh toán (Mã vé: [[ticket_id]]). Sau khi thanh toán hoàn tất, lệnh gỡ bỏ MDM sẽ được truyền qua sóng không dây để mở khóa máy vĩnh viễn trong 24 đến 48 giờ ạ."

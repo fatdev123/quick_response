@@ -63,7 +63,7 @@ flowchart TD
     TrackingStatus -- "Delivered" --> DCNR["Delivered Claimed Not Received (DCNR V3.1)"]
     DCNR --> DCNR_Addr{"Address on File Matches Application?"}
     DCNR_Addr -- "Customer Error in Address" --> DCNR_CX["Customer Liability<br/>No Free Hardware Replacement<br/>Provide Free BYOD SIM or Paid Hardware Link"]
-    DCNR_Addr -- "Address Fully Validated" --> DCNR_Audit["Carrier GPS & Photo Scan Audit<br/>Assignee: Khang Tran (khangtran@hthcomm.com)<br/>File NUC Protection Ticket<br/>Resolution Window: 24-48 Business Hours"]
+    DCNR_Addr -- "Address Fully Validated" --> DCNR_Audit["Carrier GPS & Photo Scan Audit<br/>Assignee: Logistics & Fraud Audit Team<br/>File NUC Protection Ticket<br/>Resolution Window: 24-48 Business Hours"]
 
     TrackingStatus -- "Stalled > 7 Business Days" --> LIT["Lost In Transit (LIT V2.1)"]
     LIT --> LIT_Val{"Declared Hardware Value"}
@@ -74,7 +74,7 @@ flowchart TD
     RTS --> RTS_Action["Issue Proof of Address (POA) Request<br/>Customer Submission Deadline: 10 Calendar Days<br/>If POA Verified: Warehouse Re-ships via FedEx<br/>If POA Missing at Day 10: Automatic Order Void & Refund"]
 
     TrackingStatus -- "Regulatory / VIP Escalation" --> HotRush["Hot Rush Fulfillment"]
-    HotRush --> HotRush_Proc["Create Ticket Type: 'Hot Rush - EO / CO - High Priority Fulfillment'<br/>Assignee: Cuong Nguyen<br/>Target Warehouse Dispatch: 24-48 Hours<br/>Exclusion: Partner Store Orders (Prefix PAT) Ineligible"]
+    HotRush --> HotRush_Proc["Create Ticket Type: 'Hot Rush - EO / CO - High Priority Fulfillment'<br/>Assignee: Warehouse Operations Lead<br/>Target Warehouse Dispatch: 24-48 Hours<br/>Exclusion: Partner Store Orders (Prefix PAT) Ineligible"]
 ```
 
 ### 3.2 Detailed Operational Parameters
@@ -308,10 +308,10 @@ Under SOP_Spam Handling V2.2, accounts placed under active Spam Investigation ar
 | Operational Action | Governing SOP Reference | Standard SLA / Timeline | Assigned Department / Contact |
 | :--- | :--- | :--- | :--- |
 | **CPNI Authentication Lockout** | Account Verification V1.2 | Immediate upon 3rd failed attempt | Tier 1 CSR (Martin) / Self-Service Portal |
-| **DCNR Freight Investigation** | DCNR Handling V3.1 | 24 to 48 Business Hours | Khang Tran (`khangtran@hthcomm.com`) |
-| **LIT Carrier Claim Settlement** | Lost In Transit V2.1 | 24 to 48 Business Hours | Khang Tran (`khangtran@hthcomm.com`) |
+| **DCNR Freight Investigation** | DCNR Handling V3.1 | 24 to 48 Business Hours | Khang Tran (`logistics-audit@airtalkwireless.com`) |
+| **LIT Carrier Claim Settlement** | Lost In Transit V2.1 | 24 to 48 Business Hours | Khang Tran (`logistics-audit@airtalkwireless.com`) |
 | **RTS Proof of Address Window** | Return To Sender V1.1 | 10 Calendar Days maximum | Fulfillment Review Team |
-| **Hot Rush Warehouse Dispatch** | Hot Rush Fulfillment SOP | 24 to 48 Hours to Carrier Scan | Cuong Nguyen (Fulfillment Lead) |
+| **Hot Rush Warehouse Dispatch** | Hot Rush Fulfillment SOP | 24 to 48 Hours to Carrier Scan | Warehouse Operations Lead (Fulfillment Lead) |
 | **Hardware RMA Label Validity** | Warranty Replacement V1.2 | 7 Business Days to postmark | Reverse Logistics Team |
 | **Cosmetic Damage Filing Window** | Warranty Replacement V1.2 | Strictly 48 Hours from delivery | Tier 1 CSR (Martin) |
 | **Port-Out PIN Validity Window** | Port-Out SOP V2.1 | Exactly 4 Calendar Days (96 Hours) | Automated OCS Integration Engine |

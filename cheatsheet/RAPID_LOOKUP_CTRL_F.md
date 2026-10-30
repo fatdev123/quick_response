@@ -35,7 +35,7 @@ Use `Ctrl + F` to jump directly to any operational term, symptom, or system code
 | **Delivered But Missing (DCNR)** | Logistics Claim | DCNR V3.1 | Audit GPS/photo; file NUC ticket; SLA **24-48h**. | `:atw-dcnr-combo` | `;c_dcnr` |
 | **Tracking Stalled (LIT)** | Logistics Claim | Lost In Transit V2.1 | Under \$100 vs Over \$100 claim; SLA **24-48h**. | `:atw-lit-combo` | `;c_lit` |
 | **Package Returned (RTS)** | Logistics Claim | Return To Sender V1.1 | Require Proof of Address within **10 calendar days**. | `:atw-rts-combo` | `;c_rts` |
-| **Hot Rush / Urgent Order** | Priority Fulfillment | Hot Rush SOP | Dispatch in **24-48h** (Cuong Nguyen); no PAT stores. | `:atw-rush-combo` | `;g_hotrush` |
+| **Hot Rush / Urgent Order** | Priority Fulfillment | Hot Rush SOP | Dispatch in **24-48h** (Warehouse Operations Lead); no PAT stores. | `:atw-rush-combo` | `;g_hotrush` |
 | **Out of Stock Handset** | Inventory Operations | Out of Stock SOP | Offer equivalent replacement or re-selection link. | `:atw-oos-combo` | `;c_oos` |
 | **Free Phone Warranty** | Hardware RMA | Warranty V1.2 | Warranty period is **15 calendar days** from delivery. | `:atw-war-ylw` | `;p_war` |
 | **Paid Phone Warranty** | Hardware RMA | Warranty V1.2 | Warranty period is **30 calendar days** from delivery. | `:atw-war-ylw` | `;p_war` |

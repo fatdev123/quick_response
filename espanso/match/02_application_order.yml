@@ -1,5 +1,5 @@
 # ==============================================================================
-# 02_APPLICATION_ORDER.YML - ENROLLMENT, PROOFS, BYOD CHEAT & ORDER CHANGES
+# 02_APPLICATION_ORDER.YML - ENROLLMENT, PROOFS & 365-DAY BYOD POLICY
 # Architecture: Order Domain | ST Slides 1-37 & 76-99
 # Representative: Martin (Softel Solutions)
 # ==============================================================================
@@ -27,7 +27,7 @@ matches:
     replace: "As requested, I have submitted a formal cancellation request to expire your pending enrollment application in our system. You are welcome to submit a fresh application whenever you are ready."
 
   # ----------------------------------------------------------------------------
-  # 2. ORDER CHANGES & BYOD CHEAT POLICY (Slides 76-99)
+  # 2. ORDER CHANGES & 365-DAY EQUIPMENT POLICY (Slides 76-99)
   # ----------------------------------------------------------------------------
   - trigger: ";r_order_change"
     replace: "I understand your surprise regarding the device or plan received with your shipment, and I appreciate the opportunity to explain our enrollment and fulfillment records clearly for you."

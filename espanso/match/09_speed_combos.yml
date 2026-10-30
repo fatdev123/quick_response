@@ -54,16 +54,16 @@ matches:
     replace: "I sincerely apologize for the unexpected delay in fulfilling your order. Waiting over 14 business days without tracking is completely unacceptable, and I am stepping in to expedite this immediately. I have generated a High-Priority Hot Rush Ticket (Ticket ID: [[ticket_id]]) directly to our Warehouse Operations Lead to ensure your equipment is packaged and dispatched within 24 to 48 business hours."
 
   # ----------------------------------------------------------------------------
-  # 5. ORDER & POLICY EDGE CASE COMBOS (BYOD CHEAT, NON-USAGE, MDM)
+  # 5. ORDER & POLICY EDGE CASE COMBOS (BYOD 365-DAY, NON-USAGE, MDM)
   # ----------------------------------------------------------------------------
-  - trigger: ";c_byod_cheat"
+  - trigger: ";c_byod_policy"
     replace: "I understand your question regarding why a BYOD SIM-only package was dispatched instead of a new promotional phone. While federal Lifeline covers your free monthly talk, text, and data, physical phones are promotional gifts sponsored directly by AirTalk Wireless. Under company policy, each household is eligible for exactly one free phone every 365 calendar days. Because our database records indicate a device was issued to your household within the past year, your service was approved under our BYOD plan so you can enjoy uninterrupted free monthly service with any compatible unlocked phone."
 
   - trigger: ";c_nonuse_cuu"
     replace: "I understand your concern regarding the non-usage alert on your phone. FCC regulations require at least one cellular usage event every 30 days, followed by a 15-day cure window. Because your account is still within this cure window, I have recorded your verbal 'Keep Service' consent and filed an urgent NUC ticket (Ticket ID: [[ticket_id]]). To complete compliance, please place an outbound phone call or send a text message right now while connected to our network!"
 
   - trigger: ";c_nonuse_het"
-    replace: "I have reviewed your account in our database, and your line reached Day 46 of zero cellular usage and was de-enrolled in accordance with federal USAC Lifeline regulations. Once a line is de-enrolled under federal rules, the telephone number is automatically released and cannot be restored. To re-establish your free government service, please visit https://airtalkwireless.com to submit a new enrollment application."
+    replace: "I have reviewed your account in our database, and your line reached Day 46 of zero cellular usage (following 30 consecutive days of inactivity and the 15-day cure notice) and was permanently de-enrolled in accordance with federal USAC Lifeline regulations. Once a line is de-enrolled under federal rules, the telephone number is automatically released and cannot be restored. To re-establish your free government service, please visit https://airtalkwireless.com to submit a new enrollment application."
 
   - trigger: ";c_mdm_buyout"
     replace: "I understand you are seeking to remove the MDM management lock on your device. Promotional iPhones carry a 180-day continuous active service agreement. If you wish to unlock the phone before completing 180 days, you can buy out the remaining subsidy balance. I have calculated your remaining commitment period and submitted an MDM Buyout payment link ticket (Ticket ID: [[ticket_id]]). Once payment is settled, the MDM profile is removed over-the-air within 24 to 48 hours."
